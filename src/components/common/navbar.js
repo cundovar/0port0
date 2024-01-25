@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ButtonNavBar } from "./button/button";
+
+
 
 
 const Navbar=()=>{
-
+    const [clicked, setClicked]=useState(false)
+const handleChange=()=>{
+setClicked(!clicked)
+   
+}
 
     return(
         <div className="fixed w-2/6 h-full">
@@ -13,15 +20,39 @@ const Navbar=()=>{
         <div>
 
             <ul className="space-y-10 max-sm:flex max-sm:space-x-3">
-                <NavLink to="/">
-                    <li className="text-4xl mb-10 mt-10">Accueil</li>
-                </NavLink>
-                <NavLink to="/portfolio">
-                    <li className="text-4xl mb-10">portfolio</li>
-                </NavLink>
-                <NavLink to="/contact">
-                    <li className="text-4xl mb-10">Contact</li>
-                </NavLink>
+            <NavLink to="/">
+            <li>
+            <ButtonNavBar
+                className={`text-4xl mb-10  ${clicked ? "font-bold backcolor" : ""}`}
+              onClick={handleChange}
+              text="Accueil"/>
+                </li>
+            
+          </NavLink>
+          <NavLink to="/portfolio">
+           <li>
+             <ButtonNavBar
+               
+              className={`text-4xl mb-10  ${clicked ? "font-bold backcolor" : ""}`}
+              onClick={handleChange}
+              text="Portfolio"
+            />
+            
+            </li>
+            
+          </NavLink>
+          <NavLink to="/contact">
+           <li>
+            <ButtonNavBar
+               className={`text-4xl mb-10  ${clicked ? "font-bold backcolor" : ""}`}
+              onClick={handleChange}
+              text="Contact"
+            />
+            
+            </li> 
+          </NavLink>
+                    
+                
             </ul>
 
         </div>

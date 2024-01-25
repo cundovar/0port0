@@ -3,16 +3,22 @@ import projects from "../classObject/portfolio/objetPortfolio";
 import { Link } from "react-router-dom";
 import DetailPage from "./detaiPage.js";
 import CardCrea1 from "../components/cardCrea/cardCrea.js";
-
+import { Stack } from "@mui/material";
+import{ ButtonNavBar, OutlinedButtons} from "../components/common/button/button.js";
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-
+  const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("projet");
 
   const openDetailPage = (project) => {
     console.log("Ouverture de la page de détails avec le projet :", project);
     setSelectedProject(project);
   };
+
+  const handleClick=()=>{
+    console.log("testtt")
+    setIsActive(!isActive)
+  }
 
   const closeDetailPage = () => {
     setSelectedProject(null);
@@ -28,8 +34,27 @@ const Portfolio = () => {
         <div className="flex space-x-28 items-end p-2 border-b ">
           <h1>portfolio</h1>
           <div>
-            <ul className="flex space-x-11 justify-arround items-center">
-              <li
+            {/* <ul className="flex space-x-11 justify-arround items-center"> */}
+
+            <Stack direction="row" spacing={2}>
+              
+              <OutlinedButtons 
+               sx={{ backgroundColor: activeMenuItem === "projet" ? "rgba(255, 255, 255, 0.1)" : "transparent",color:"wheat" }}
+              text="projet"  
+                onClick={() => setActiveMenuItem("projet")}
+                
+                isActive={activeMenuItem === "projet"} 
+                />
+                    <OutlinedButtons text="intégration"
+                                     onClick={() => setActiveMenuItem("integration")}
+                                     sx={{ backgroundColor: activeMenuItem === "integration" ?" rgba(255, 255, 255, 0.1)": "transparent",color:"wheat" }}
+                                     isActive={activeMenuItem === "integration"} 
+                                     />
+            </Stack>
+
+           
+
+              {/* <li
                 className={`cursor-pointer ${
                   activeMenuItem === "projet" ? "font-bold" : ""
                 }`}
@@ -45,7 +70,7 @@ const Portfolio = () => {
               >
                 intégration
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className="h-full w-full   overflow-y-scroll">
