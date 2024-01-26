@@ -223,4 +223,17 @@ body {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+.opacity_middle {
+  opacity: 0.5;
+  border: 1px red solid;
+}
+
+.opacity_full {
+  opacity: 1;
+}
+
+.competence_card {
+  width: 40rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

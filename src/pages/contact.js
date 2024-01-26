@@ -7,12 +7,22 @@ const Contact=()=>{
 
     return(
         
-        <div className="w-full border flex flex-col justify-center items-end 2xl:pr-10">
-            <div className="mb-10 w-1/2 border-b">
+        <div className="w-full flex   2xl:pr-10">
+
+
+          <div className="w-1/3 flex justify-center items-center h-full">
+            <div className="w-96 h-96 shadow-2xl  flex justify-center items-center">
+                         <div className=" shadow-2xl  w-56 h-56 bg-red-950">
+                          <img src="images/moi.jpg" alt="photo présentation"/>
+                         </div>
+            </div>
+          </div>
+          <div className="w-2/3  flex flex-col justify-center">
+            <div className="mb-10  border-b">
             <h1 className="  ">contact</h1>
 
             </div>
-        <div className="flex w-1/2 max-md:w-full max-md:flex-col max-md:space-y-5 max-md:mt-5   justify-between item-center ">
+        <div className="flex  max-md:w-full max-md:flex-col max-md:space-y-5 max-md:mt-5   justify-between item-center ">
           <div className="w-1/2  max-md:w-full space-y-5 max-md:flex max-md:flex-col max:md:justify-center max-md:bg-cyan-100 max-md:p-1 ">
             <div className=" p-3 pl-0">
               <p className="text-2xl">JAVIER VARAS</p>
@@ -67,6 +77,8 @@ const Contact=()=>{
             </div>
           </div>
         </div>
+
+          </div>
 
         <div>
         </div>

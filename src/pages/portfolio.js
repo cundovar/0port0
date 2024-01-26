@@ -73,7 +73,7 @@ const Portfolio = () => {
             </ul> */}
           </div>
         </div>
-        <div className="h-full w-full   overflow-y-scroll">
+        <div className="h-full w-full pb-32   overflow-y-scroll">
           {activeMenuItem === "projet" &&
             projects &&
             projects.map((item) => (
@@ -82,7 +82,7 @@ const Portfolio = () => {
                 className=" flex   justify-end   2xl:m-10 xl:m-5 "
               >
                 <div
-                  className="flex justify-end w-6/6 space-x-3 xl:visible xl:relative sm:absolute cursor-pointer hover:opacity-100 opacity-50  "
+                  className="flex  justify-end w-6/6 space-x-3 xl:visible xl:relative sm:absolute cursor-pointer hover:opacity-100 opacity-50  "
                   onClick={() => openDetailPage(item)}
                 >
                   <div className="w-2/3 ">

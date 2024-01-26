@@ -3,7 +3,7 @@ import CardCrea from "../../classObject/cardCea/cardcea";
 
 const CardCrea1 = () => {
   return (
-    <>
+    <div className="pb-32">
  
 
       <CardCrea dataImage="/images/design-crea/Crea1.PNG">
@@ -33,7 +33,7 @@ const CardCrea1 = () => {
             </CardCrea>
 
 
-    </>
+    </div>
   );
 };
 

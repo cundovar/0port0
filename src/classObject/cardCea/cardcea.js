@@ -53,11 +53,11 @@ class CardCrea extends Component {
 
     const cardStyle = {
         
-      transform: `rotateY(${mouseX / width * 55}deg) rotateX(${mouseY / height * 3}deg)`,
+      transform: `rotateY(${mouseX / width * 20}deg) rotateX(${mouseY / height * 3}deg)`,
     };
 
     const cardBgTransform = {
-      transform: `translateX(${mouseX / width * -40}px) translateY(${mouseY / height *100}px)`,
+      transform: `translateX(${mouseX / width * 10}px) translateY(${mouseY / height *50}px)`,
     };
 
     const cardBgImage = {
