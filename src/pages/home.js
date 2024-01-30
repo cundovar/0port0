@@ -3,6 +3,7 @@ import Presentation from "../components/home/presentation";
 import Competence from "../components/home/competence";
 import CardCrea1 from "../components/cardCrea/cardCrea";
 import { ProgressBar } from "../components/home/graphique";
+import { CSSTransition } from "react-transition-group";
 
 const Home = () => {
   const [isVisible, setIsvisible] = useState(false);
@@ -14,14 +15,22 @@ const Home = () => {
   return (
     <div className="flex w-full ">
       <div className="w-1/2 flex items-center justify-center border-blue-700   border h-full ">
-       
-        <div className={`w-full   ${isVisible ? "visible" : "invisible absolute"}`}>
+      <CSSTransition
+            in={isVisible}
+            timeout={5000}
+            classNames={{
+              enter: "fade-enter",
+              enterActive: "fade-enter-active",
+              exit: "fade-exit",
+              exitActive: "fade-exit-active",
+            }}
+            unmountOnExit
+          >
+        <div className={`w-full   ${isVisible ? "visible" : "invisible"}`}>
           <Competence />
         </div>
-        <div className="">
-        <ProgressBar/>
-
-        </div>
+        </CSSTransition>
+       
 
       </div>
       <div className=" w-1/2 border-orange-600 relative h-full ">
@@ -35,10 +44,12 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <div className="w-2/3 absolute right-0   h-full border-emerald-500   overflow-scroll ">
+       
+        <div className="2xl:w-2/3 lg:w-3/4 absolute right-0 mr-10 2xl:mr-0 h-full border-emerald-500   overflow-scroll ">
           <Presentation />
           
         </div>
+       
       </div>
     </div>
   );

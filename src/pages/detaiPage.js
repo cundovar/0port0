@@ -1,23 +1,74 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import projects from "../classObject/portfolio/objetPortfolio";
+import VideoPlayer from "../components/video/videoPlayer";
 
 const DetailPage = ({ project, onClose }) => {
   const { id } = useParams();
-  console.log("ID from URL:", id)
+  // console.log("ID from URL:", id);
   const numericId = parseInt(id, 10);
-  console.log("Numeric ID:", numericId);
+  // console.log("Numeric ID:", numericId);
   const selectedItem = projects.find((item) => item.id == numericId);
-  console.log("Selected Item:", selectedItem);
+  // console.log("Selected Item:", selectedItem);
+
+
+//au l'image dans la div
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const handleThumbnailClick = (index) => {
+  
+  
+      setCurrentImageIndex(index);
+
+    
+  };
+
 
   return (
     <div className="">
       {project ? (
-          <div className="w-full h-full space-x-5 flex flex-col items-center justify-center">
-            <button className="close-btn" onClick={onClose}>close</button>
-          <div className=" pr-6  ">
-            <img src={project.imageSrc} alt={project.titre} />
+        <div className="w-full h-full space-x-5 flex flex-col items-center justify-center">
+          <button className="close-btn" onClick={onClose}>
+            close
+          </button>
+          <div className=" overflow-hidden border w-full ">
+          {project.imageSrc.length > 1 ? (
+        currentImageIndex === 3 ? (
+          <VideoPlayer videoSrc={project.video}  />
+        ) : (
+          <img
+            className=" object-cover  w-full"
+            src={project.imageSrc[currentImageIndex]}
+            alt={project.titre}
+          />
+        )
+      ) : (
+        <img
+          className=" object-cover w-full"
+          src={project.imageSrc[0]}
+          alt={project.titre}
+        />
+      )}
+
           </div>
+            {project.imageSrc.length > 1 ? (
+              <div className="flex h-20 border  border-red-600 w-full ">
+                {project.imageSrc.map((image, index) => (
+                  <div key={index} className="border w-1/4 h-full "
+                  onClick={() => handleThumbnailClick(index)}
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.titre}-image : ${index}`}
+                      className={currentImageIndex === index ? "opacity-50 bg-slate-100" : ""}
+                     
+                    />
+                  </div>
+                ))}
+           
+              </div>
+            ) : (
+              ""
+            )}
           <div className=" flex flex-col space-y-5 items-start justify-start ">
             <h2 className="border-b">{project.titre}</h2>
             <p>{project.tekno}</p>
@@ -48,7 +99,7 @@ const DetailPage = ({ project, onClose }) => {
           </div>
         </div>
       ) : (
-        <div>Projet non trouvé</div>
+        <div></div>
       )}
     </div>
   );

@@ -10,6 +10,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { ButtonNavBar } from "../common/button/button";
 
 
 Chartjs.register(
@@ -29,7 +30,7 @@ export const options = {
     legend: {
       position: "top",
       labels: {
-        color: "rgb(93, 173, 226 )",
+        color: " wheat",
 
         font: {
           size: 15,
@@ -39,6 +40,7 @@ export const options = {
     title: {
       display: true,
       text: "Ma progression en graphique",
+      color:"wheat",
       font: {
         size: 20,
       },
@@ -61,7 +63,8 @@ const labels = [
   "bootcamp",
   "après bootcamp",
   "to continue...",
-];
+  
+]
 
 const frameworkData = {
   labels,
@@ -71,6 +74,7 @@ const frameworkData = {
       data: [, 0, 10, 70],
       borderColor: "rgb(133, 193, 233)",
       backgroundColor: "rgb(133, 193, 233)",
+      
     },
     {
       label: "symfony",
@@ -103,6 +107,7 @@ const languageData = {
       borderColor: "rgb(241, 196, 15)",
       backgroundColor: "rgb(241, 196, 15)",
       tension: 0.5,
+      
     },
     {
       label: "php",
@@ -170,7 +175,10 @@ export function ProgressBar() {
 
       <div className="mt-10  flex justify-center items-center">
     
-        <p>Languages framework Divers</p>
+        
+        <ButtonNavBar text="Languages" onClick={handleButtonLanguage}/>
+        <ButtonNavBar text="Framework" onClick={handleButtonFramework}/>
+        <ButtonNavBar text="Divers" onClick={handleButtonDivers}/>
       </div>
 
     </>

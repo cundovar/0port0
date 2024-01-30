@@ -1,9 +1,12 @@
+import { Skeleton } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
 
 const Contact=()=>{
-
+const item={
+  imageSrc:"images/moi.jpg"
+}
 
     return(
         
@@ -12,9 +15,15 @@ const Contact=()=>{
 
           <div className="w-1/3 flex justify-center items-center h-full">
             <div className="w-96 h-96 shadow-2xl  flex justify-center items-center">
-                         <div className=" shadow-2xl  w-56 h-56 bg-red-950">
-                          <img src="images/moi.jpg" alt="photo présentation"/>
+            {item ? (
+                         <div className=" shadow-2xl  w-56 h-56">
+                          <img src={item.imageSrc} alt="photo présentation"/>
                          </div>
+                           ) : (
+                            <div className=" shadow-2xl  w-56 h-56">
+                            <Skeleton variant="rectangular"  />
+                            </div>
+                            )}
             </div>
           </div>
           <div className="w-2/3  flex flex-col justify-center">

@@ -8,8 +8,8 @@ const Presentation=()=>{
 
 
     return(
-        <div className="  "> 
-        <div className=" xl:pt-10 xl:mt-10 space-y-10    mr-20 2xl:mb-10 ">
+        <div className="  w-full "> 
+        <div className=" xl:pt-10 xl:mt-10 space-y-10   2xl:mr-20 2xl:mb-10 ">
         <p className="text-xl text-justify">
         Enthousiaste et passionné par le monde du développement web, je suis Javier, un intégrateur web et développeur front-end. Mon parcours a débuté avec un bootcamp, une première étape qui a déclenché ma passion pour le code.
         </p>
