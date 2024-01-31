@@ -30,7 +30,7 @@ const Portfolio = () => {
 
   return (
     <div className="flex  border-lime-400 w-full  ">
-        <div className="lg:w-1/2 flex sm:w-full">
+        <div className="lg:w-1/2 justify-center flex sm:w-full">
          <CSSTransition
             in={selectedProject }
             timeout={5000}
@@ -50,7 +50,7 @@ const Portfolio = () => {
       </div>
       
 
-      <div className="  border-red-600 w-1/2  2xl:pt-10  xl:pt-40  ">
+      <div className="  border-red-600 w-1/2  2xl:pt-10  lg:pt-10  ">
         <div className="flex space-x-28 items-end p-2 border-b ">
           <h1>portfolio</h1>
           <div>
@@ -102,17 +102,17 @@ const Portfolio = () => {
             projects.map((item) => (
                 <div
                   key={item.id}
-                  className=" flex   justify-end   2xl:m-10 xl:m-5 "
+                  className=" flex   justify-end   2xl:m-10 lg:m-5  "
                 >
                   <div
-                    className="flex  justify-end w-6/6 space-x-3 xl:visible xl:relative sm:absolute cursor-pointer hover:opacity-100 opacity-50  "
+                    className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative sm:absolute cursor-pointer hover:opacity-100 opacity-50  "
                     onClick={() => openDetailPage(item)}
                   >
                     <div className="w-2/3 ">
                     {item ? (
             <>
-              <h2 className="text-4xl">{item.titre}</h2>
-              <p>{item.tekno}</p>
+              <h2 className="xl:text-4xl lg:text-2xl">{item.titre}</h2>
+              <p>{item.type}</p>
             </>
           ) : (
             <Skeleton animation="wave" variant="text" width={200} />
@@ -134,7 +134,7 @@ const Portfolio = () => {
                     <div className="w-2/3 ">
                     {item ? (
             <>
-              <h2 className="text-4xl">{item.titre}</h2>
+              <h2 className="xl:text-4xl lg:text-xl">{item.titre}</h2>
               <p>{item.tekno}</p>
             </>
           ) : (

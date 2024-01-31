@@ -4,7 +4,7 @@ import PortfolioModel from "./modelPortfolio";
 const projects = [
     new PortfolioModel({
       id:0,
-      type: ["react", "scss"],
+      type: "react, scss",
       titre: "Mini-projet space-tourism",
       tekno: "javascript/react",
       lien: "https://espace.varascundo.com/",
@@ -24,16 +24,16 @@ const projects = [
     }),
     new PortfolioModel({
       id:1,
-      type: ["wordpress", "php"],
+      type: "wordpress, php",
       titre: "Maison édition",
       tekno: "php",
       lien: "https://la-magicieuse.varascundo.com/",
       lienCode: "",
       description: "Refonte site WordPress de la maison édition la magicieuse",
-      imageSrc:[ "/images/portfolio/magi/magi0.PNG,",
-      "/images/portfolio/magi/magi1.PNG,",
-      "/images/portfolio/magi/magi2.PNG,",
-      "/images/portfolio/magi/magi3.PNG,"],
+      imageSrc:[ "/images/portfolio/magi/magi0.PNG",
+      "/images/portfolio/magi/magi1.PNG",
+      "/images/portfolio/magi/magi2.PNG",
+      "/images/portfolio/magi/magi3.PNG"],
       titreHover: "",
       text1: "Travail basé sur WordPress",
       text2: "Refonte du site, changement de thème",
@@ -44,7 +44,7 @@ const projects = [
     }),
     new PortfolioModel({
       id:2,
-        type: ["twig", "bootstrap"],
+        type: "twig, bootstrap",
         titre: "Mon premier portfolio",
         tekno: "twig",
         lien: "https://portfolio.varascundo.com/",
@@ -60,7 +60,7 @@ const projects = [
       }),
       new PortfolioModel({
         id:3,
-        type: ["wordpress", "php"],
+        type: "wordpress, php",
         titre: "Asso d'artistes",
         tekno: "php",
         lien: "https://duboutdesetangs.com/",
@@ -80,7 +80,7 @@ const projects = [
       }),
       new PortfolioModel({
         id:4,
-        type: ["symfony", "php", "twig", "javascrip"],
+        type: "symfony, php, twig ,javascript",
         titre: "Site de peintures",
         tekno: "php",
         lien: "https://varascundo.com/",
@@ -100,7 +100,7 @@ const projects = [
       }),
       new PortfolioModel({
         id:5,
-        type: ["react", "scss"],
+        type: "react, scss",
         titre: "Tableau de bord",
         tekno: "javascript/react",
         lien: "https://dashboard.varascundo.com/",
@@ -116,7 +116,7 @@ const projects = [
       }),
       new PortfolioModel({
         id:6,
-        type: ["react", "tailwind", "scss"],
+        type: "react, tailwind, scss",
         titre: "Mon portfolio",
         tekno: "React",
         lien: "https://portfolio2.2.varascundo.com/",
@@ -133,7 +133,7 @@ const projects = [
     
        new PortfolioModel({
         id:7,
-        type: ["javascript", "bootstrap"],
+        type: "javascript, bootstrap",
         titre: "carte",
         tekno: "javascript, bootstrap",
         lien: "https://portfolio.varascundo.com/noir/noir",
