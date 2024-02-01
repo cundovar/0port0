@@ -1,6 +1,9 @@
 import { Skeleton } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 const Contact=()=>{
@@ -27,7 +30,7 @@ const item={
             </div>
           </div>
           <div className="w-2/3  flex flex-col justify-center">
-            <div className="mb-10  border-b">
+            <div className="mb-10  border-b xl:w-2/3 2xl:w-full p-2">
             <h1 className="  ">contact</h1>
 
             </div>
@@ -48,16 +51,16 @@ const item={
           </div>
 
           <div className="w-1/2  max-md:w-full space-y-5">
-            <div className="border hover:bg-cyan-100 p-3 flex text-6xl">
+            <div className="border hover:bg-cyan-100 hover:text-slate-700 p-3 w-2/3 text-6xl">
               <div className="w-1/12  max-sm:mr-2">
                 {/* <FontAwesomeIcon
                   icon={faPhone}
                   className="text-xl text-pink-300"
                 /> */}
               </div>
-              <div className="text-xl">06 23 84 84 45</div>
+              <div className="text-xl "><PhoneIcon/> 06 23 84 84 45</div>
             </div>
-            <div className="border hover:bg-cyan-100 p-3 flex">
+            <div className="border hover:bg-cyan-100 hover:text-slate-700  p-3 w-2/3">
               <div className="w-1/12 max-sm:mr-2 ">
                 {/* <FontAwesomeIcon
                   icon={faEnvelopeOpen}
@@ -71,18 +74,17 @@ const item={
                   className="hover:text-slate-400"
                   href="mailto: varas.cundo@gmail.com"
                 >
-                  {" "}
-                  varas.cundo@gmail.com
+               <EmailIcon/>   varas.cundo@gmail.com
                 </a>{" "}
               </div>
             </div>
-            <div className="border hover:bg-cyan-100 p-3 flex  ">
+            <div className="border hover:bg-cyan-100 hover:text-slate-700  p-3 w-2/3  ">
               <div className="w-1/12 max-sm:mr-2">
                 {/* <a href="https://www.linkedin.com/in/facundo-varas/">
                   <i className="fa-brands pink  fa-linkedin fa-xl text-pink-300"></i>
                 </a> */}
               </div>
-              <div>Mon profil LinkedIn</div>
+              <div> <LinkedInIcon/> Mon profil LinkedIn</div>
             </div>
           </div>
         </div>

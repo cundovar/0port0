@@ -17,14 +17,17 @@ const Page = () => {
     <Router>
         <div
         
-        className="h-full border relative  border-stone-600 overflow-hidden ">
-            <Blackwhite/>
+        className="h-full border relative flex border-stone-600 overflow-hidden ">
+         
 
       
     
              <AnimationSVG/>
+           
             <Navbar/>
-<div className="w-5/6 absolute h-full right-0 ">
+
+             
+<div className=" w-11/12 absolute h-full right-0 ">
         <div className="w-full h-full flex  relative ">
       <Routes>
         <Route path="/" element={<Home />}  />

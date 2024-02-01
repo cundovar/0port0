@@ -9,18 +9,20 @@ import {
   OutlinedButtons,
 } from "../components/common/button/button.js";
 import { CSSTransition } from "react-transition-group";
+
+
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("projet");
 
   const openDetailPage = (project) => {
-    console.log("Ouverture de la page de détails avec le projet :", project);
+    // console.log("Ouverture de la page de détails avec le projet :", project);
     setSelectedProject(project);
   };
 
   const handleClick = () => {
-    console.log("testtt");
+  
     setIsActive(!isActive);
   };
 
@@ -29,8 +31,8 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex  border-lime-400 w-full  ">
-        <div className="lg:w-1/2 justify-center flex sm:w-full">
+    <div className="flex  border-lime-400 w-full ">
+        <div className=" lg:w-2/3 xl:1/2  justify-center flex sm:w-full">
          <CSSTransition
             in={selectedProject }
             timeout={5000}
@@ -50,13 +52,13 @@ const Portfolio = () => {
       </div>
       
 
-      <div className="  border-red-600 w-1/2  2xl:pt-10  lg:pt-10  ">
-        <div className="flex space-x-28 items-end p-2 border-b ">
+      <div className="  border-red-600 x lg:w-1/3 xl:1/2  2xl:pt-10  lg:pt-10  ">
+        <div className="flex space-x-10 items-end p-2 border-b  ">
           <h1>portfolio</h1>
-          <div>
+          <div className="flex xl:flex-col xl:justify-center 2xl:flex-row">
             {/* <ul className="flex space-x-11 justify-arround items-center"> */}
 
-            <Stack direction="row" spacing={2}>
+          
               <OutlinedButtons
                 sx={{
                   backgroundColor:
@@ -81,7 +83,7 @@ const Portfolio = () => {
                 }}
                 isActive={activeMenuItem === "integration"}
               />
-            </Stack>
+           
           </div>
         </div>
         <div className="h-full w-full pb-32   overflow-y-scroll">

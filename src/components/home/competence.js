@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { ButtonNavBar } from "../common/button/button";
 import { ProgressBar } from "./graphique";
 import { CSSTransition } from "react-transition-group";
+import { Icon } from "@mui/material";
+import { FiberManualRecord } from "@mui/icons-material";
 const Competence = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("technologies");
@@ -38,9 +40,9 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full  flex-col    items-center justify-center">
+      <div className="flex w-full  flex-col p-20     items-center justify-center">
         
-        <div className=" w-full mb-5 ">
+        <div className=" w-full  mb-5 ">
           <ul className="flex space-x-5 border-b w-2/4">
             <li>
               <ButtonNavBar
@@ -58,10 +60,10 @@ const Competence = () => {
             </li>
           </ul>
         </div>
-        <div className=" w-full h-96 border">
+        <div className=" w-full xl:p-10 h-96 ">
         <div className=" w-full flex justify-center  ">
       
-          <div className="w-3/4 h-full      ">
+          <div className="w-full h-full      ">
           <CSSTransition
             in={activeMenuItem === "technologies"}
             timeout={5000}
@@ -73,27 +75,27 @@ const Competence = () => {
             }}
             unmountOnExit
           >
-            <div>
+            <div className="">
             {activeMenuItem === "technologies" && (
               <div className="relative">
                 <div className=" bg-slate-400 absolute right-0 z-50 top-0">
                   <ButtonNavBar onClick={nextSlide} text="suivant" />
                 </div>
 
-                <Slider {...settings} ref={sliderRef} className=" m-auto ">
+                <Slider {...settings} ref={sliderRef} className=" m-auto w-full ">
                   {tekno &&
                     tekno.map((items) => (
                       <div
                         key={items.id}
-                        className="  min-h-full backdrop-blur-xl h-1/2  space-y-5   "
+                        className=" w-full  min-h-full backdrop-blur-xl  space-y-5   "
                       >
-                        <p className="text-xl">{items.titre}</p>
-                        <p className="text-xl">{items.l1}</p>
-                        <p className="text-xl">{items.l2}</p>
-                        <p className="text-xl">{items.l3}</p>
-                        <p className="text-xl">{items.l4}</p>
-                        <p className="text-xl">{items.l5}</p>
-                        <p className="text-xl">{items.l6}</p>
+                        <p className="text-xl">   {items.titre}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l1}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l2}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l3}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l4}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l5}</p>
+                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l6}</p>
                       </div>
                     ))}
                 </Slider>

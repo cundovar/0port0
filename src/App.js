@@ -10,7 +10,7 @@ function App() {
 
   
   return (
-    <div className="2xl:p-20 xl:p-10 h-screen">
+    <div className="2xl:p-20 xl:p-5 h-screen">
    
     <Page/>
     </div>
