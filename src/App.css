@@ -1,4 +1,7 @@
+* {
+  box-sizing: border-box !important;
 
+}
 @layer base {
   h1 {
     @apply text-5xl;

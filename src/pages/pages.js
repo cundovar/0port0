@@ -17,7 +17,7 @@ const Page = () => {
     <Router>
         <div
         
-        className="h-full border relative flex border-stone-600 overflow-hidden ">
+        className="h-full border   relative flex border-stone-600 overflow-hidden ">
          
 
       
@@ -27,14 +27,14 @@ const Page = () => {
             <Navbar/>
 
              
-<div className=" w-11/12 absolute h-full right-0 ">
+<div className=" w-11/12 max-sm:w-full absolute h-full right-0 ">
         <div className="w-full h-full flex  relative ">
       <Routes>
         <Route path="/" element={<Home />}  />
         <Route path="/portfolio" element={<Portfolio />}  />
         <Route path="/contact" element={<Contact />}  />
-        <Route path="/portfolio/detail/:id" element={<DetailPage />}  />
-        <Route path="/portfolio/compétence" element={<Competence />}  />
+   
+       
         <Route path="/portfolio/crea" element={<CardCrea1 />}  />
       </Routes>
 

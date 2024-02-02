@@ -1,12 +1,11 @@
 @import './cardCea/cardcea.scss';
+@import './navbar/responsiveNavNar.scss';
 
-
-*{
-  box-sizing: border-box;
-}
 
 
 body{
+  box-sizing: border-box;
+
     background-color: black;
     color: wheat;
     transition: background-color 0.5s ease; /* Ajoutez une transition pour la couleur de fond */
