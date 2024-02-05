@@ -38,7 +38,7 @@ const DetailPage = ({ project, onClose }) => {
   };
 
   return (
-    <div className="lg:w-3/4 max-md:hidden z-20  xl:flex ">
+    <div className="lg:w-3/4 max-lg:hidden z-20  xl:flex ">
       {project ? (
         <div className="w-full h-full relative  flex flex-col items-center justify-center">
           <div className=" relative overflow-hidden rounded-xl 2xl:h-96 lg:h-60 w-full max-sm:h-40  p-3 mb-2 bg-gray-900 bg-opacity-40 ">

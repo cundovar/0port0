@@ -130,7 +130,7 @@
   color: #fc0505 !important;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   #menuContent {
     transition: transform 0.5s ease; /* Utilisation de la propriété transform pour la transition */
     flex-direction: column;

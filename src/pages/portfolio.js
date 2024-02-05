@@ -30,8 +30,8 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex  border-lime-400 w-full ">
-      <div className=" lg:w-2/3 xl:1/2  justify-center flex sm:w-full">
+    <div className="flex border  border-lime-400 w-full ">
+      <div className=" lg:w-2/3 xl:1/ border max-lg:hidden  justify-center flex sm:w-full">
         <CSSTransition
           in={selectedProject}
           timeout={5000}
@@ -50,10 +50,10 @@ const Portfolio = () => {
       </div>
 
           <ModalDetailpage project={selectedProject} onClose={closeDetailPage}/>
-      <div className=" max-md:mt-40  border-red-600 x lg:w-1/3 xl:1/2 max-md:w-full   2xl:pt-10  lg:pt-10  ">
-        <div className="flex space-x-10 items-end p-2 border-b max-md:flex-col  ">
+      <div className=" max-md:mt-20 border  border-red-600 x lg:w-1/3 xl:1/2 max-md:w-full   2xl:pt-10  lg:pt-10  ">
+        <div className="flex space-x-10 items-end p-2 border-b max-md:w-full max-md:flex-col  ">
           <h1>portfolio</h1>
-          <div className="flex xl:flex-col xl:justify-center 2xl:flex-row">
+          <div className="flex xl:flex-col  max-md:justify-end max-md:w-full xl:justify-center 2xl:flex-row">
             {/* <ul className="flex space-x-11 justify-arround items-center"> */}
 
             <OutlinedButtons
@@ -82,7 +82,7 @@ const Portfolio = () => {
             />
           </div>
         </div>
-        <div className="h-full w-full pb-32 border-amber-400  overflow-y-scroll">
+        <div className="h-full w-full pb-32 border border-amber-400  overflow-y-scroll">
           <CSSTransition
             in={activeMenuItem === "projet"}
             timeout={5000}
@@ -103,14 +103,14 @@ const Portfolio = () => {
                     className=" flex  border-green-600   justify-end   2xl:m-10 lg:m-5  "
                   >
                     <div
-                      className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative sm:absolute cursor-pointer hover:opacity-100 opacity-50  "
+                      className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-50 max-md:opacity-100 max-md:space-y-5  "
                       onClick={() => openDetailPage(item)}
                     >
                       <div className="w-2/3 ">
                     
                         {item ? (
                           <>
-                            <h2 className="xl:text-4xl lg:text-2xl">
+                            <h2 className="xl:text-4xl lg:text-2xl sm:text-lg">
                               {item.titre}
                             </h2>
                             <p>{item.type}</p>

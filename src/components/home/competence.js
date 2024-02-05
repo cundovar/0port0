@@ -40,10 +40,10 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full  flex-col p-20     items-center justify-center">
+      <div className="flex w-full  flex-col xl:p-20 2xl:w-3/4 border m-auto max-md:ml-1   items-center justify-center">
         
-        <div className=" w-full  mb-5 ">
-          <ul className="flex space-x-5 border-b w-2/4">
+        <div className=" w-full max-md:ml-1   mb-5 ">
+          <ul className="flex space-x-5 xl:border-b w-2/4 max-md:w-full">
             <li>
               <ButtonNavBar
                 text="technologies"
@@ -75,7 +75,7 @@ const Competence = () => {
             }}
             unmountOnExit
           >
-            <div className="">
+            <div className="border w-full">
             {activeMenuItem === "technologies" && (
               <div className="relative">
                 <div className=" bg-slate-400 absolute right-0 z-50 top-0">
@@ -87,7 +87,7 @@ const Competence = () => {
                     tekno.map((items) => (
                       <div
                         key={items.id}
-                        className=" w-full  min-h-full backdrop-blur-xl  space-y-5   "
+                        className=" w-full  min-h-full  border border-emerald-500 space-y-5   "
                       >
                         <p className="text-xl">   {items.titre}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l1}</p>

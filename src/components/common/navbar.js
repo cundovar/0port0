@@ -66,7 +66,7 @@ const Navbar = () => {
           <NavLink to="/" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="text-4xl max-md:text-xl lg:text-2xl mb-10"
+                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10"
                 text="Accueil"
               />
             </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <NavLink to="/portfolio" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="text-4xl max-md:text-xl lg:text-2xl mb-10 "
+                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10 "
                 text="Portfolio"
               />
             </li>
@@ -82,7 +82,7 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="text-4xl max-md:text-xl lg:text-2xl mb-10 "
+                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10 "
                 text="Contact"
               />
             </li>

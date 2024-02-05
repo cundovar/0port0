@@ -28,7 +28,7 @@ const ModalDetailpage=({onClose, project})=>{
         if (project.imageSrc.length > 1) {
           modalContent = (
             <>
-             <div className="max-md:visible bg-black z-20 w-full mt-40 h-96 absolute">
+             <div className="max-md:visible xl:hidden bg-black z-20 w-full mt-40 h-96 absolute">
               <span onClick={onClose}>close</span>
               <Slider {...settings} ref={sliderRef}>
                 {project.imageSrc.map((image, index) => (
