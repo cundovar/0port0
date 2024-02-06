@@ -9,6 +9,7 @@ import DetailPage from "./detaiPage";
 import Blackwhite from "../components/common/blackwhite";
 import Competence from "../components/home/competence";
 import CardCrea1 from "../components/cardCrea/cardCrea";
+import LoadingPage from "../components/animation/loadingpage";
 
 
 const Page = () => {
@@ -19,7 +20,7 @@ const Page = () => {
         
         className="h-full border w-full   relative flex border-stone-600 overflow-hidden ">
          
-
+<LoadingPage/>
       
     
              <AnimationSVG/>

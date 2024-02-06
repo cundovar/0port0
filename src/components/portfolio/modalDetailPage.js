@@ -1,63 +1,220 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import { OutlinedButtons } from "../common/button/button";
+import { FiberManualRecord } from "@mui/icons-material";
 
+const ModalDetailpage = ({ onClose, project }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
+  const sliderRef = useRef();
 
-const ModalDetailpage=({onClose, project})=>{
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+  const nextSlide = () => {
+    sliderRef.current.slickNext();
+  };
 
-      const sliderRef = useRef();
+  const prevSlide = () => {
+    sliderRef.current.slickPrev();
+  };
 
-      const nextSlide = () => {
-        sliderRef.current.slickNext();
-      };
-    
-      const prevSlide = () => {
-        sliderRef.current.slickPrev();
-      };
+  let modalContent = null;
 
-      let modalContent = null;
-
-      if (project) {
-        if (project.imageSrc.length > 1) {
-          modalContent = (
-            <>
-             <div className="max-md:visible xl:hidden bg-black z-20 w-full mt-40 h-96 absolute">
+  if (project) {
+    if (project.imageSrc.length > 1) {
+      modalContent = (
+        <>
+          <div className="absolute max-md:visible flex justify-center lg:invisible h-full w-full backdrop-blur-xl z-50  ">
+            <div className=" bg-black z-20 lg:w-1/2 w-full border mt-40 h-96 ">
               <span onClick={onClose}>close</span>
               <Slider {...settings} ref={sliderRef}>
                 {project.imageSrc.map((image, index) => (
                   <div key={index}>
-                    <img src={image} alt={project.titre} />
+                    <img className="w-full" src={image} alt={project.titre} />
+                    <div className="">
+                      <div className=" flex flex-col mt-5 w-full imageListe space-y-5 border bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
+                        <div className="w-full flex max-sm:flex-col ">
+                          <div className=" w-full  flex flex-col ">
+                            <h2 className=" lg:text-2xl">{project.titre}</h2>
+                          </div>
+                          <div className="w-2/3 2xl:pl10 lg:pl-4 ">
+                            {/* <p>{project.tekno}</p> */}
+                            <div className="flex w-full items-start ">
+                              <div className="  ">
+                                <FiberManualRecord fontSize="small  " />
+                              </div>
+                              <p className="flex items-start">
+                                {project.text1}
+                              </p>
+                            </div>
+                            <div className="flex w-full items-start ">
+                              <div className="  ">
+                                <FiberManualRecord fontSize="small " />
+                              </div>
+                              <p className="flex items-start">
+                                {project.text2}
+                              </p>
+                            </div>
+                            {project.text3 ? (
+                              <div className="flex w-full items-start ">
+                                <div className="  ">
+                                  <FiberManualRecord fontSize="small  " />
+                                </div>
+                                <p className="flex items-start">
+                                  {project.text3}
+                                </p>
+                              </div>
+                            ) : (
+                              ""
+                            )}
+                            {project.text4 ? (
+                              <div className="flex w-full items-start ">
+                                <div className="  ">
+                                  <FiberManualRecord fontSize="small  " />
+                                </div>
+                                <p className="flex items-start">
+                                  {project.text4}
+                                </p>
+                              </div>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex space-x-4 w-full justify-end">
+                          {project.lienCode ? (
+                            <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                              <OutlinedButtons
+                                text="voir le code"
+                                sx={{ color: "wheat" }}
+                                href={project.lienCode}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              ></OutlinedButtons>
+                            </div>
+                          ) : (
+                            ""
+                          )}
+                          <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                            <OutlinedButtons
+                              text="voir le site"
+                              sx={{ color: "wheat" }}
+                              href={project.lien}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            ></OutlinedButtons>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </Slider>
               <button onClick={prevSlide}>back</button>
               <button onClick={nextSlide}>next</button>
-              </div>
-            </>
-          );
-        } else {
-          modalContent = (
-            <> <div className="max-md:visible bg-black z-20 w-full mt-40 h-96 absolute">
-              <span onClick={onClose}>close</span>
-              <img src={project.imageSrc[0]} alt={project.titre} />
-              <p>{project.titre}</p>
-              </div>
-            </>
-          );
-        }
-      }
-    
-      return ( 
-        <>
-        {modalContent}
+            </div>
+          </div>
         </>
-        ) 
-    };
-export default ModalDetailpage
+      );
+    } else {
+      modalContent = (
+        <div className="absolute h-full w-full max-md:visible lg:invisible backdrop-blur-xl z-50  ">
+          <div className="  bg-black z-20 w-full mt-40 h-96 absolute">
+            <span onClick={onClose}>close</span>
+            <img src={project.imageSrc[0]} alt={project.titre} />
+
+
+            <div className=" flex flex-col mt-5 w-full imageListe space-y-5 border bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
+                        <div className="w-full flex max-sm:flex-col ">
+                          <div className=" w-full  flex flex-col ">
+                            <h2 className=" lg:text-2xl">{project.titre}</h2>
+                          </div>
+                          <div className="w-2/3 2xl:pl10 lg:pl-4 ">
+                            {/* <p>{project.tekno}</p> */}
+                            <div className="flex w-full items-start ">
+                              <div className="  ">
+                                <FiberManualRecord fontSize="small  " />
+                              </div>
+                              <p className="flex items-start">
+                                {project.text1}
+                              </p>
+                            </div>
+                            <div className="flex w-full items-start ">
+                              <div className="  ">
+                                <FiberManualRecord fontSize="small " />
+                              </div>
+                              <p className="flex items-start">
+                                {project.text2}
+                              </p>
+                            </div>
+                            {project.text3 ? (
+                              <div className="flex w-full items-start ">
+                                <div className="  ">
+                                  <FiberManualRecord fontSize="small  " />
+                                </div>
+                                <p className="flex items-start">
+                                  {project.text3}
+                                </p>
+                              </div>
+                            ) : (
+                              ""
+                            )}
+                            {project.text4 ? (
+                              <div className="flex w-full items-start ">
+                                <div className="  ">
+                                  <FiberManualRecord fontSize="small  " />
+                                </div>
+                                <p className="flex items-start">
+                                  {project.text4}
+                                </p>
+                              </div>
+                            ) : (
+                              ""
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex space-x-4 w-full justify-end">
+                          {project.lienCode ? (
+                            <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                              <OutlinedButtons
+                                text="voir le code"
+                                sx={{ color: "wheat" }}
+                                href={project.lienCode}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              ></OutlinedButtons>
+                            </div>
+                          ) : (
+                            ""
+                          )}
+                          <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                            <OutlinedButtons
+                              text="voir le site"
+                              sx={{ color: "wheat" }}
+                              href={project.lien}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            ></OutlinedButtons>
+                          </div>
+                        </div>
+                      </div>
+            
+
+            
+           
+
+
+
+          </div>
+        </div>
+      );
+    }
+  }
+
+  return <>{modalContent}</>;
+};
+export default ModalDetailpage;

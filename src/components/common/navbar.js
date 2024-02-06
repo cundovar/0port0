@@ -57,7 +57,7 @@ const Navbar = () => {
           <h3> dev front</h3>
         </div>
       </div>
-      <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
+      <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start  mt-4 xl:mt-40 border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
                        ref={menuContentRef}
                        onTouchStart={handleTouchStart}
                        onTouchMove={handleTouchMove}
@@ -66,7 +66,7 @@ const Navbar = () => {
           <NavLink to="/" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10"
+                className="2xl:text-4xl  text-xl  xl:text-2xl mb-10"
                 text="Accueil"
               />
             </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <NavLink to="/portfolio" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10 "
+                className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
                 text="Portfolio"
               />
             </li>
@@ -82,7 +82,7 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={toggleMenu}>
             <li>
               <ButtonNavBar
-                className="2xl:text-4xl sm:text-xl  xl:text-2xl mb-10 "
+                className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
                 text="Contact"
               />
             </li>

@@ -40,8 +40,8 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full  flex-col xl:p-20 2xl:w-3/4 border m-auto max-md:ml-1   items-center justify-center">
-        
+      <div className="flex w-full border border-orange-700 flex-col xl:p-20 2xl:w-3/4  m-auto max-md:ml-1   items-center justify-center">
+     fertret
         <div className=" w-full max-md:ml-1   mb-5 ">
           <ul className="flex space-x-5 xl:border-b w-2/4 max-md:w-full">
             <li>
@@ -51,11 +51,12 @@ const Competence = () => {
                 isActive={activeMenuItem === "technologies"}
               />{" "}
             </li>
-            <li>
+            <li className="max-md:invisible">
               <ButtonNavBar
                 text="graphique"
                 onClick={() => setActiveMenuItem("graphique")}
                 isActive={activeMenuItem === "graphique"}
+             
               />{" "}
             </li>
           </ul>
@@ -87,7 +88,7 @@ const Competence = () => {
                     tekno.map((items) => (
                       <div
                         key={items.id}
-                        className=" w-full  min-h-full  border border-emerald-500 space-y-5   "
+                        className=" w-full  min-h-full   border-emerald-500 space-y-5   "
                       >
                         <p className="text-xl">   {items.titre}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l1}</p>
@@ -119,9 +120,9 @@ const Competence = () => {
             }}
             unmountOnExit
           >
-<div>
+<div className="max-md:invisible">
       {activeMenuItem === "graphique" && (
-        <div>
+        <div className="">
           <ProgressBar />
         </div>
       )}
