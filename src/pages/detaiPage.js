@@ -41,9 +41,9 @@ const DetailPage = ({ project, onClose }) => {
     <div className="lg:w-3/4 max-lg:hidden z-20  xl:flex ">
       {project ? (
         <div className="w-full h-full relative  flex flex-col items-center justify-center">
-          <div className=" relative overflow-hidden rounded-xl 2xl:h-96 lg:h-60 w-full max-sm:h-40  p-3 mb-2 bg-gray-900 bg-opacity-40 ">
+          <div className=" relative overflow-hidden rounded-xl 2xl:h-96 lg:h-60 w-full max-sm:h-40  p-6 mb-2 ">
              <button
-              className="close-btn absolute top-0 z-100 right-1 rounded-lg bg-red-900"
+              className="close-btn absolute top-0 z-100 right-1 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
               onClick={onClose}
             >
               <CloseIcon fontSize="medium" color="disabled"/>

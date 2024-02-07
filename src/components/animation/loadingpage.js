@@ -9,7 +9,7 @@ const LoadingPage=()=>{
     useEffect(() => {
         const timeout = setTimeout(() => {
           setIsVisible(false);
-        }, 1000);
+        }, 5000);
     
         return () => clearTimeout(timeout);
       }, []);

@@ -2,11 +2,18 @@
 @import './navbar/responsiveNavNar.scss';
 
 
+*{
+  font-family: 'Gabarito', sans-serif !important;
 
+}
+
+h1,h2,h3,h4,h5,h6,p,a,button{
+  opacity: 0.7;
+}
 body{
   box-sizing: border-box;
 
-    background-color: black;
+    background-color: rgb(4, 0, 16);
     color: wheat;
     transition: background-color 0.5s ease; /* Ajoutez une transition pour la couleur de fond */
     transition: color 0.9s ease; /* Ajoutez une transition pour la couleur de fond */
@@ -174,4 +181,8 @@ background-color:rgba(255, 255, 255, 0.1) !important;
 
 .overlay-exit-active {
   opacity: 0;
+}
+
+.type{
+height: 5rem;
 }

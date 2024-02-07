@@ -57,7 +57,7 @@ const Navbar = () => {
           <h3> dev front</h3>
         </div>
       </div>
-      <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start  mt-4 xl:mt-40 border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
+      <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start  mt-4  border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
                        ref={menuContentRef}
                        onTouchStart={handleTouchStart}
                        onTouchMove={handleTouchMove}

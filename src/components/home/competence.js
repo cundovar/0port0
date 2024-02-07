@@ -40,18 +40,19 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full border border-orange-700 flex-col xl:p-20 2xl:w-3/4  m-auto max-md:ml-1   items-center justify-center">
-     fertret
+      <div className="flex w-full   border-orange-700  flex-col xl:p-20 2xl:w-3/4  m-auto max-md:ml-1   items-center justify-center">
+
         <div className=" w-full max-md:ml-1   mb-5 ">
-          <ul className="flex space-x-5 xl:border-b w-2/4 max-md:w-full">
-            <li>
+          <ul className="flex space-x-5  max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
+            <li className="md:invisible text-3xl md:absolute w-full" >technologie</li>
+            <li className="max-md:invisible border">
               <ButtonNavBar
-                text="technologies"
+                text="technologies "
                 onClick={() => setActiveMenuItem("technologies")}
                 isActive={activeMenuItem === "technologies"}
               />{" "}
             </li>
-            <li className="max-md:invisible">
+            <li className="max-md:invisible border">
               <ButtonNavBar
                 text="graphique"
                 onClick={() => setActiveMenuItem("graphique")}
@@ -62,9 +63,10 @@ const Competence = () => {
           </ul>
         </div>
         <div className=" w-full xl:p-10 h-96 ">
-        <div className=" w-full flex justify-center  ">
+        <div className=" w-full flex justify-center   ">
       
-          <div className="w-full h-full      ">
+          <div className="w-full h-full    ">
+            
           <CSSTransition
             in={activeMenuItem === "technologies"}
             timeout={5000}
@@ -73,10 +75,11 @@ const Competence = () => {
               enterActive: "fade-enter-active",
               exit: "fade-exit",
               exitActive: "fade-exit-active",
+              text:"text-4xl"
             }}
             unmountOnExit
           >
-            <div className="border w-full">
+            <div className=" w-full">
             {activeMenuItem === "technologies" && (
               <div className="relative">
                 <div className=" bg-slate-400 absolute right-0 z-50 top-0">

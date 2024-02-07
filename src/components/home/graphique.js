@@ -54,6 +54,12 @@ export const options = {
       grid: {
         display: false, // pour cacher la grille
       },
+      ticks: {
+        color: "wheat",  // Changer la couleur des labels de l'axe des x en blanc
+        font: {
+          size: 15,
+        },
+      },
     },
   },
 };

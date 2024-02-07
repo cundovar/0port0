@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import { OutlinedButtons } from "../common/button/button";
 import { FiberManualRecord } from "@mui/icons-material";
+import CloseIcon from "@mui/icons-material/Close";
 
 const ModalDetailpage = ({ onClose, project }) => {
   const settings = {
@@ -29,8 +30,13 @@ const ModalDetailpage = ({ onClose, project }) => {
       modalContent = (
         <>
           <div className="absolute max-md:visible flex justify-center lg:invisible h-full w-full backdrop-blur-xl z-50  ">
-            <div className=" bg-black z-20 lg:w-1/2 w-full border mt-40 h-96 ">
-              <span onClick={onClose}>close</span>
+            <div className="  relative  lg:w-1/2 w-full  mt-40 h-96 ">
+            <button
+              className="close-btn  m-2 z-100  p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
+              onClick={onClose}
+            >
+              <CloseIcon fontSize="medium" color="disabled"/>
+            </button> 
               <Slider {...settings} ref={sliderRef}>
                 {project.imageSrc.map((image, index) => (
                   <div key={index}>
