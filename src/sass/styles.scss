@@ -7,14 +7,14 @@
 
 }
 
-h1,h2,h3,h4,h5,h6,p,a,button{
+h1,h2,h3,h4,h5,h6,p,a,button,border{
   opacity: 0.7;
 }
 body{
   box-sizing: border-box;
 
     background-color: rgb(4, 0, 16);
-    color: wheat;
+ 
     transition: background-color 0.5s ease; /* Ajoutez une transition pour la couleur de fond */
     transition: color 0.9s ease; /* Ajoutez une transition pour la couleur de fond */
 }
@@ -185,4 +185,9 @@ background-color:rgba(255, 255, 255, 0.1) !important;
 
 .type{
 height: 5rem;
+}
+
+.loadingpage{
+
+  background-color: rgb(18, 18, 18);
 }

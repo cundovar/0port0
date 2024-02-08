@@ -96,7 +96,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                             <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                               <OutlinedButtons
                                 text="voir le code"
-                                sx={{ color: "wheat" }}
+                                sx={{ color: "" }}
                                 href={project.lienCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                           <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                             <OutlinedButtons
                               text="voir le site"
-                              sx={{ color: "wheat" }}
+                              sx={{ color: "" }}
                               href={project.lien}
                               target="_blank"
                               rel="noopener noreferrer"
@@ -188,7 +188,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                             <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                               <OutlinedButtons
                                 text="voir le code"
-                                sx={{ color: "wheat" }}
+                                sx={{ color: "" }}
                                 href={project.lienCode}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -200,7 +200,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                           <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                             <OutlinedButtons
                               text="voir le site"
-                              sx={{ color: "wheat" }}
+                              sx={{ color: "" }}
                               href={project.lien}
                               target="_blank"
                               rel="noopener noreferrer"

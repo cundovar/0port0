@@ -30,7 +30,7 @@ export const options = {
     legend: {
       position: "top",
       labels: {
-        color: " wheat",
+        color: " ",
 
         font: {
           size: 15,
@@ -40,7 +40,7 @@ export const options = {
     title: {
       display: true,
       text: "Ma progression en graphique",
-      color:"wheat",
+      color:"",
       font: {
         size: 20,
       },
@@ -55,7 +55,7 @@ export const options = {
         display: false, // pour cacher la grille
       },
       ticks: {
-        color: "wheat",  // Changer la couleur des labels de l'axe des x en blanc
+        color: "",  // Changer la couleur des labels de l'axe des x en blanc
         font: {
           size: 15,
         },
@@ -174,7 +174,7 @@ export function ProgressBar() {
     setCurrentData(diversData);
   };
   return (
-    <>
+    < div className="opacity-70">
 
       <Line options={options} data={currentData} />
 
@@ -187,6 +187,6 @@ export function ProgressBar() {
         <ButtonNavBar text="Divers" onClick={handleButtonDivers}/>
       </div>
 
-    </>
+    </div>
   );
 }

@@ -40,11 +40,11 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full   border-orange-700  flex-col xl:p-20 2xl:w-3/4  m-auto max-md:ml-1   items-center justify-center">
+      <div className="flex w-full   border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
 
-        <div className=" w-full max-md:ml-1   mb-5 ">
-          <ul className="flex space-x-5  max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
-            <li className="md:invisible text-3xl md:absolute w-full" >technologie</li>
+        <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
+          <ul className="flex space-x-5   max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
+            
             <li className="max-md:invisible border">
               <ButtonNavBar
                 text="technologies "

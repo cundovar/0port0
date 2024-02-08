@@ -122,3 +122,16 @@
       display: block !important; /* !important pour forcer la priorité sur les autres styles */
     }
   }
+
+  .invisiblePerso{
+
+      opacity: 0;
+      height: 0;
+  }
+
+  .loadingpage {
+    transition: opacity 1s ease, height 1s ease;
+    z-index: 0;
+    visibility: hidden;
+  }
+  

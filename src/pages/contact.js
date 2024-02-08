@@ -53,7 +53,7 @@ const Contact = () => {
                   className="text-xl text-pink-300"
                 /> */}
               </div>
-              <div className="text-xl ">
+              <div className="text-xl opacity-50">
                 <PhoneIcon /> 06 23 84 84 45
               </div>
             </div>
@@ -65,10 +65,10 @@ const Contact = () => {
                 />
             */}
               </div>
-              <div>
+              <div className="opacity-50">
                 {" "}
                 <a
-                  className="hover:text-slate-400"
+                  className="hover:text-slate-900"
                   href="mailto: varas.cundo@gmail.com"
                 >
                   <EmailIcon /> varas.cundo@gmail.com
@@ -81,7 +81,7 @@ const Contact = () => {
                   <i className="fa-brands pink  fa-linkedin fa-xl text-pink-300"></i>
                 </a> */}
               </div>
-              <div>
+              <div className=" opacity-50 ">
                 {" "}
                 <LinkedInIcon /> Mon profil LinkedIn
               </div>

@@ -62,7 +62,7 @@ const Portfolio = () => {
                   activeMenuItem === "projet"
                     ? "rgba(255, 255, 255, 0.1)"
                     : "transparent",
-                color: "wheat",
+                color: "",
               }}
               text="projet"
               onClick={() => setActiveMenuItem("projet")}
@@ -76,7 +76,7 @@ const Portfolio = () => {
                   activeMenuItem === "integration"
                     ? " rgba(255, 255, 255, 0.1)"
                     : "transparent",
-                color: "wheat",
+                color: "",
               }}
               isActive={activeMenuItem === "integration"}
             />
@@ -103,14 +103,14 @@ const Portfolio = () => {
                     className=" flex  border-green-600   justify-end   2xl:m-10 lg:m-5  "
                   >
                     <div
-                      className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-50 max-md:opacity-100 max-md:space-y-5  "
+                      className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5  "
                       onClick={() => openDetailPage(item)}
                     >
-                      <div className="w-2/3 ">
+                      <div className="w-2/3 opacity-70 hover:opacity-100 ">
                     
                         {item ? (
                           <>
-                            <h2 className="xl:text-4xl lg:text-2xl max-md:text-xl">
+                            <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
                               {item.titre}
                             </h2>
                             <p>{item.type}</p>
@@ -126,7 +126,7 @@ const Portfolio = () => {
                       <div className="w-1/3 ">
                         {item ? (
                           <img
-                            className=""
+                            className=" "
                             src={item.imageSrc[0]}
                             alt={item.titre}
                           />

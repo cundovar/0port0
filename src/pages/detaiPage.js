@@ -41,12 +41,12 @@ const DetailPage = ({ project, onClose }) => {
     <div className="lg:w-3/4 max-lg:hidden z-20  xl:flex ">
       {project ? (
         <div className="w-full h-full relative  flex flex-col items-center justify-center">
-          <div className=" relative overflow-hidden rounded-xl 2xl:h-96 lg:h-60 w-full max-sm:h-40  p-6 mb-2 ">
+          <div className=" relative overflow-hidden rounded-xl 2xl:h-96 lg:h-96 w-full max-sm:h-40  p-6 mb-2 ">
              <button
               className="close-btn absolute top-0 z-100 right-1 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
               onClick={onClose}
             >
-              <CloseIcon fontSize="medium" color="disabled"/>
+              <CloseIcon fontSize="medium" color="black"/>
             </button> 
             {project.imageSrc.length > 1 ? (
               <img
@@ -142,7 +142,7 @@ const DetailPage = ({ project, onClose }) => {
               <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                       <OutlinedButtons
                         text="voir le code"
-                        sx={{ color: "wheat" }}
+                        sx={{ color: "" }}
                         href={project.lienCode}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -154,7 +154,7 @@ const DetailPage = ({ project, onClose }) => {
                   <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                     <OutlinedButtons
                       text="voir le site"
-                      sx={{ color: "wheat" }}
+                      sx={{ color:"" }}
                       href={project.lien}
                       target="_blank"
                       rel="noopener noreferrer"

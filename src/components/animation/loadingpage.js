@@ -3,21 +3,21 @@ import TipeWriter from "../../utils/typeWriter";
 
 
 const LoadingPage=()=>{
-    const text="Artisant du web. je suis curieux et passionné."
+    const text="Artisant du web... "
     const [isVisible,setIsVisible]=useState(true)
 
     useEffect(() => {
         const timeout = setTimeout(() => {
           setIsVisible(false);
-        }, 5000);
+        }, 3000);
     
         return () => clearTimeout(timeout);
       }, []);
     
     return(
         <>
-         <div className={`w-full h-full absolute bg-black z-50 flex justify-center items-center border
-                         ${isVisible ? 'visible fade-in' :'hidden fade-out' }`}>
+         <div className={`w-full loadingpage h-full absolute z-50 flex justify-center items-center 
+                         ${isVisible ? 'visible ' :'invisiblePerso ' }`}>
             <div className="w-1/4">
 <h1>
             <TipeWriter text={text} delay={100}/>

@@ -52,7 +52,7 @@ const Home = () => {
           unmountOnExit
         >
           <div
-            className={`  invisible w-11/12 p-10 lg:visible lg:relative absolute lg:w-full  m-auto   ${
+            className={` invisible w-11/12  lg:visible lg:relative absolute lg:w-full  m-auto   ${
               isVisible ? "visible" : "invisible"
             }`}
           >
@@ -62,7 +62,10 @@ const Home = () => {
 
              
         <div className="visible lg:hidden relative   border-red-700 z-50">
+        <div className="w-full md:hidden border-b mb-5 ">
+        <h1 className="text-3xl  ">technologies</h1>
 
+        </div>
           <Competence />
         </div>
         
@@ -70,8 +73,8 @@ const Home = () => {
 
 
 
-      <div className=" max-md:ml-2 xl:w-1/3 mt-40 md:mt-0 max-md:pt-96 border-orange-900  relative  w-full  ">
-        <div className="xl:w-full   2xl:mr-0 h-full max-md:w-full   border-emerald-500   ">
+      <div className=" max-md:ml-2 xl:w-1/3 mt-40 md:mt-0 max-md:pt-96   border-orange-900  relative  w-full  ">
+        <div className="xl:w-full   2xl:mr-0 h-full max-md:w-full xl:mr-4   border-emerald-500   ">
           <div className="  pb-2 mt-10 border-b  z-50">
             <div className="flex xl:justify-start items-end  space-x-5">
               <h1 className="max-md:text-3xl max-md:pt-40 max-md:ml-2">Présentation</h1>
@@ -79,7 +82,7 @@ const Home = () => {
                 <div className="max-md:invisible md:mr-4 ">
                   <OutlinedButtons
                     onClick={t}
-                    sx={{ color: "wheat" }}
+                    sx={{ color: "" }}
                     text={"voir mes compétences"}
                   />
                 </div>
