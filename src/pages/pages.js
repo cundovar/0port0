@@ -22,7 +22,7 @@ const Page = () => {
 
        
          </div>
-         <div className="invisible lg:visible">
+         <div className="lg:visible max-lg:invisible ">
 
 
 <LoadingPage/>

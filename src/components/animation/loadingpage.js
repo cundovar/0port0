@@ -17,7 +17,7 @@ const LoadingPage=()=>{
     return(
         <>
          <div className={`w-full loadingpage h-full absolute z-50 flex justify-center items-center 
-                         ${isVisible ? 'visible ' :'invisiblePerso ' }`}>
+                         ${isVisible ? 'visible max-lg:invisible ' :'invisiblePerso ' }`}>
             <div className="w-1/4">
 <h1>
             <TipeWriter text={text} delay={100}/>

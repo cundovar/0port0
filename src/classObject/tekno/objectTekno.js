@@ -55,7 +55,7 @@ const tekno=[
         l3:"Gestion de base de données",
         l4:"Utilisation d'ACF (Advanced Custom Fields)",
         l5:" Intégration de WooCommerce",
-        l6:"PHPs"
+        l6:"PHP"
 
     }),
 

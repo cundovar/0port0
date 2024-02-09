@@ -10,6 +10,7 @@ import {
 } from "../components/common/button/button.js";
 import { CSSTransition } from "react-transition-group";
 import ModalDetailpage from "../components/portfolio/modalDetailPage.js";
+import integration from "../classObject/portfolio/objectIntegrateur.js";
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -113,7 +114,10 @@ const Portfolio = () => {
                             <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
                               {item.titre}
                             </h2>
+                            <div className=" mt-1 bg-gradient-to-r from-cyan-600 p-1">
+
                             <p>{item.type}</p>
+                            </div>
                           </>
                         ) : (
                           <Skeleton
@@ -140,35 +144,7 @@ const Portfolio = () => {
                         )}
                       </div>
                     </div>
-                    {/* <Link
-                      to={`/portfolio/detail/${item.id}`}
-                      className="flex sm:relative sm:visible  lg:invisible lg:absolute justify-end w-6/6 space-x-3 cursor-pointer hover:opacity-100 border opacity-50  "
-                    >
-                      <div className="w-2/3 max-md:hidden ">
-                        {item ? (
-                          <>
-                            <h2 className="xl:text-4xl lg:text-xl">
-                              {item.titre}
-                            </h2>
-                            <p>{item.tekno}</p>
-                          </>
-                        ) : (
-                          <Skeleton
-                            animation="wave"
-                            variant="text"
-                            width={200}
-                          />
-                        )}
-                        <p>{item.tekno}</p>
-                      </div>
-                      <div className="w-1/3 ">
-                        <img
-                          className=" "
-                          src={item.imageSrc}
-                          alt={item.titre}
-                        />
-                      </div>
-                    </Link> */}
+                  
                   </div>
                 ))}
             </div>
@@ -186,11 +162,58 @@ const Portfolio = () => {
             unmountOnExit
           >
             <div>
-              {activeMenuItem === "integration" && (
-                <div className="flex    flex-col justify-center items-center">
-                  <CardCrea1 />
+              {activeMenuItem === "integration" && 
+               integration && integration.map((item)=>(
+
+
+    
+                <div
+                key={item.id}
+                className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5 xl:space-y-3  "
+                
+              >
+                <div className="w-2/3 opacity-70 hover:opacity-100 ">
+              
+                  {item ? (
+                    <>
+                      <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
+                        {item.titre}
+                      </h2>
+                      <div className=" mt-1 bg-gradient-to-r from-cyan-600 p-1">
+
+                      <p>{item.type}</p>
+
+                      </div>
+                    </>
+                  ) : (
+                    <Skeleton
+                      animation="wave"
+                      variant="text"
+                      width={200}
+                    />
+                  )}
                 </div>
-              )}
+                <div className="w-1/3 ">
+                  {item ? (
+                    <img
+                      className=" "
+                      src={item.imageSrc}
+                      alt={item.titre}
+                    />
+                  ) : (
+                    <Skeleton
+                      animation="wave"
+                      variant="rect"
+                      width={200}
+                      height={100}
+                    />
+                  )}
+                </div>
+              </div>
+               ))
+              
+             
+              }
             </div>
           </CSSTransition>
         </div>

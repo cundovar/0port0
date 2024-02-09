@@ -8,6 +8,9 @@ import { ProgressBar } from "./graphique";
 import { CSSTransition } from "react-transition-group";
 import { Icon } from "@mui/material";
 import { FiberManualRecord } from "@mui/icons-material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
 const Competence = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("technologies");
@@ -81,26 +84,48 @@ const Competence = () => {
           >
             <div className=" w-full">
             {activeMenuItem === "technologies" && (
-              <div className="relative">
-                <div className=" bg-slate-400 absolute right-0 z-50 top-0">
-                  <ButtonNavBar onClick={nextSlide} text="suivant" />
-                </div>
+              <div className="relative w-5/6 lg:w-full m-auto">
+              
+                <button className="absolute h-10 text-xl w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300 max-lg:hidden   "
+                onClick={prevSlide}>
+                <FontAwesomeIcon className="text-3xl" icon={faAngleLeft} />
 
+                </button>
+                <button className="absolute h-10 w-10 hover:border text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -right-0  translate-x-2/4 -translate-y-2/4 top-1/2 z-50 "
+                  onClick={nextSlide} >
+               
+
+                <FontAwesomeIcon className="text-3xl" icon={faAngleRight} />
+                </button>
                 <Slider {...settings} ref={sliderRef} className=" m-auto w-full ">
                   {tekno &&
                     tekno.map((items) => (
                       <div
                         key={items.id}
-                        className=" w-full  min-h-full   border-emerald-500 space-y-5   "
+                        className=" w-full  min-h-full    border-emerald-500 space-y-5   "
                       >
-                        <p className="text-xl">   {items.titre}</p>
+                        <div className=" bg-gradient-to-r from-cyan-600 p-1 rounded-lg ">
+                        <p className="text-xl ml-1">   {items.titre}</p>
+
+                        </div>
+                        <div className=" lg:ml-16">
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l1}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l2}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l3}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l4}</p>
                         <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l5}</p>
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l6}</p>
+                        <div className="flex w-full  items-start ">
+                          <div className="opacity-75" >
+                          <FiberManualRecord fontSize="small"/>
+                          </div>
+                        <p className="text-xl flex items-start ml-1">  {items.l6}</p>
+                        </div>
+                       
+
+                   
                       </div>
+
+                        </div>
                     ))}
                 </Slider>
               </div>

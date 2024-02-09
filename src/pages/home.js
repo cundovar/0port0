@@ -24,14 +24,14 @@ const Home = () => {
       <div className=" lg:invisible lg:absolute ml-2  flex items-center h-28">
 <div className="  type w-full">
 <h3>
-            <TipeWriter text="Artisant du web. je suis curieux et passionné." delay={100}/>
+            <TipeWriter text="Artisant du web..." delay={100}/>
 
 </h3>
 </div>
 
       </div>
 
-      <div className="w-full   max-lg:pt-20 h-1/3  lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
+      <div className="w-full   max-lg:pt-5 h-1/3  lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
       <div className="h-96 ml-2 w-full  max-md:visible md:hidden md:invisible">
         <div className="w-full border-b ">
         <h1 className="text-3xl">Créations</h1>
@@ -73,7 +73,7 @@ const Home = () => {
 
 
 
-      <div className=" max-md:ml-2 xl:w-1/3 mt-40 md:mt-0 max-md:pt-96   border-orange-900  relative  w-full  ">
+      <div className=" max-md:ml-2 xl:w-1/3  md:mt-0 max-md:pt-96   border-orange-900  relative  w-full  ">
         <div className="xl:w-full   2xl:mr-0 h-full max-md:w-full xl:mr-4   border-emerald-500   ">
           <div className="  pb-2 mt-10 border-b  z-50">
             <div className="flex xl:justify-start items-end  space-x-5">
