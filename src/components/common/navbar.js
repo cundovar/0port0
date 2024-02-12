@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ButtonNavBar, OutlinedButtons } from "./button/button";
 import { CSSTransition } from "react-transition-group";
-
+import { useLocation } from "react-router-dom";
 const Navbar = () => {
   //     const [clicked, setClicked]=useState(false)
   // const handleChanges=()=>{
@@ -10,9 +10,29 @@ const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
   const [barre,setBarre]=useState(false)
-
+  const location = useLocation();
   const [startX, setStartX] = useState(null);
   const menuContentRef = useRef(null);
+
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        setActiveIndex(0);
+        break;
+      case "/portfolio":
+        setActiveIndex(1);
+        break;
+      case "/contact":
+        setActiveIndex(2);
+        break;
+  
+      default:
+        setActiveIndex(0);
+    }
+  }, [location.pathname]);
+
+
+
 
 //fermer avec le doigt
   const handleTouchStart = (e) => {
@@ -63,24 +83,24 @@ const Navbar = () => {
                        onTouchMove={handleTouchMove}
                        onTouchEnd={handleTouchEnd}  >
         <ul className="space-y-10 max-md:space-y-0 max-md:flex   flex-col max-lg:flex ">
-          <NavLink to="/" onClick={toggleMenu}>
-            <li>
+          <NavLink to="/"  onClick={() => { toggleMenu(); setActiveIndex(0); }}>
+            <li className={activeIndex === 0? "border" : ""}>
               <ButtonNavBar
                 className="2xl:text-4xl  text-xl  xl:text-2xl mb-10"
                 text="Accueil"
               />
             </li>
           </NavLink>
-          <NavLink to="/portfolio" onClick={toggleMenu}>
-            <li>
+          <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
+            <li   className={activeIndex === 1? "border" : ""}>
               <ButtonNavBar
                 className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
                 text="Portfolio"
               />
             </li>
           </NavLink>
-          <NavLink to="/contact" onClick={toggleMenu}>
-            <li>
+          <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(2); }}>
+            <li className={activeIndex === 2? "border" : ""}>
               <ButtonNavBar
                 className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
                 text="Contact"
