@@ -82,27 +82,30 @@ const Navbar = () => {
                        onTouchStart={handleTouchStart}
                        onTouchMove={handleTouchMove}
                        onTouchEnd={handleTouchEnd}  >
-        <ul className="space-y-10 max-md:space-y-0 max-md:flex   flex-col max-lg:flex ">
+        <ul className=" lg:space-x-28 max-md:space-y-0 max-md:flex   flex-col max-lg:flex ">
           <NavLink to="/"  onClick={() => { toggleMenu(); setActiveIndex(0); }}>
-            <li className={activeIndex === 0? "border" : ""}>
+            <li className={activeIndex === 0? "border-l" : ""}>
               <ButtonNavBar
-                className="2xl:text-4xl  text-xl  xl:text-2xl mb-10"
+                className="2xl:text-4xl  text-xl  xl:text-2xl "
                 text="Accueil"
               />
             </li>
           </NavLink>
           <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
-            <li   className={activeIndex === 1? "border" : ""}>
-              <ButtonNavBar
-                className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
+            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
+            
+              <ButtonNavBar 
+                className="2xl:text-4xl text-xl  xl:text-2xl "
                 text="Portfolio"
               />
+
+              
             </li>
           </NavLink>
           <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(2); }}>
-            <li className={activeIndex === 2? "border" : ""}>
+            <li className={activeIndex === 2? "border-l" : ""}>
               <ButtonNavBar
-                className="2xl:text-4xl text-xl  xl:text-2xl mb-10 "
+                className="2xl:text-4xl text-xl  xl:text-2xl  "
                 text="Contact"
               />
             </li>

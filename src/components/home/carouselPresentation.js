@@ -5,7 +5,7 @@ const carouselcontent1 = [
   new modelImageCarousel({
     id: 1,
     titre: "test1",
-    text: "serieux",
+    text: "Autodidacte ",
     image: "/images/taxi.PNG",
   }),
 ];
@@ -14,7 +14,7 @@ const carouselcontent2 = [
   new modelImageCarousel({
     id: 2,
     titre: "test2",
-    text: "organiser",
+    text: "Veille Technologique",
     image: "/images/design-crea/Crea1.PNG",
   }),
 ];
@@ -22,7 +22,7 @@ const carouselcontent3 = [
   new modelImageCarousel({
     id: 3,
     titre: "test23",
-    text: "passionné",
+    text: "Passionné",
     image: "/images/design-crea/Crea2.PNG",
   }),
 ];
@@ -37,7 +37,7 @@ const ImageCarousel = ({ carouselcontent }) => {
               <div className="m-auto " key={items.id}>
                 <div className="w-96 h-96 m-auto">
                 <img
-                  className=" object-cover z-20 rounded-full w-full h-full m-auto "
+                  className=" shadow-lg shadow-cyan-500/50 object-cover z-20 rounded-full w-full h-full m-auto "
                   src={items.image}
                   alt={items.titre}
                 />

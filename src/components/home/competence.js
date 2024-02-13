@@ -65,7 +65,7 @@ const Competence = () => {
             </li>
           </ul>
         </div>
-        <div className=" w-full xl:p-10 h-96 ">
+        <div className=" w-full xl:p-10  ">
         <div className=" w-full flex justify-center   ">
       
           <div className="w-full h-full    ">

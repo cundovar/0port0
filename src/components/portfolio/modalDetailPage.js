@@ -37,11 +37,19 @@ const ModalDetailpage = ({ onClose, project }) => {
             >
               <CloseIcon fontSize="medium" color="disabled"/>
             </button> 
+<div className="w-2/3 m-auto">
               <Slider {...settings} ref={sliderRef}>
                 {project.imageSrc.map((image, index) => (
-                  <div key={index}>
-                    <img className="w-full" src={image} alt={project.titre} />
-                    <div className="">
+                  <div key={index} className="md:h-96 h-32 overflow-hidden">
+                    <img className="" src={image} alt={project.titre} />
+                  </div>
+                    
+                ))}
+              </Slider>
+
+</div>
+            
+                    <div  className="">
                       <div className=" flex flex-col mt-5 w-full imageListe space-y-5 border bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
                         <div className="w-full flex max-sm:flex-col ">
                           <div className=" w-full  flex flex-col ">
@@ -117,9 +125,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </Slider>
+            
               <button onClick={prevSlide}>back</button>
               <button onClick={nextSlide}>next</button>
             </div>

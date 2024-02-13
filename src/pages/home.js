@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   return (
-    <div className=" w-full flex border-orange-600  max-md:flex-col  max-lg:items-center relative max-md:mt-36 z-20 max-lg:overflow-y-scroll     ">
+    <div className=" w-full flex  border-orange-600  max-md:flex-col  max-lg:items-center relative max-md:mt-36 z-20 max-lg:overflow-y-scroll     ">
       <div className=" md:hidden lg:absolute ml-2  flex items-center h-28">
         <div className="  type w-full">
           <h3>
@@ -29,7 +29,7 @@ const Home = () => {
       </div>
 
       <div className="w-full   max-lg:pt-5 h-1/3  lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
-        <div className="h-96 ml-2 w-full  max-md:visible md:hidden md:invisible">
+        <div className=" ml-2 w-full  max-md:visible md:hidden md:invisible">
           <div className="w-full border-b ">
             <h1 className="text-3xl">Créations</h1>
           </div>

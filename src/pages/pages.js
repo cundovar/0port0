@@ -18,10 +18,7 @@ const Page = () => {
     
     <Router>
         <div className="h-full border w-full  max-2xl:border-0   relative flex border-stone-600 overflow-hidden ">
-        <div className='border absolute top-0 z-50 cursor-pointer'>
-
-       
-         </div>
+      
          <div className="lg:visible max-lg:invisible ">
 
 

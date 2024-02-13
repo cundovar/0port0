@@ -11,12 +11,13 @@ import {
 import { CSSTransition } from "react-transition-group";
 import ModalDetailpage from "../components/portfolio/modalDetailPage.js";
 import integration from "../classObject/portfolio/objectIntegrateur.js";
+import Crea2 from "../components/portfolio/crea2/crea2.js";
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("projet");
-
+  const [activeProjectId, setActiveProjectId] = useState(null);
   const openDetailPage = (project) => {
     // console.log("Ouverture de la page de détails avec le projet :", project);
     setSelectedProject(project);
@@ -50,7 +51,7 @@ const Portfolio = () => {
         </CSSTransition>
       </div>
 
-          <ModalDetailpage project={selectedProject} onClose={closeDetailPage}/>
+      <ModalDetailpage project={selectedProject} onClose={closeDetailPage} />
       <div className=" max-md:mt-20  border-red-600  lg:w-1/3 xl:1/2 max-md:w-full   2xl:pt-10  lg:pt-10  ">
         <div className="flex  lg:space-x-3 xl:space-x-10 items-end p-2 border-b max-md:w-full max-lg:flex-col  ">
           <h1>portfolio</h1>
@@ -101,22 +102,27 @@ const Portfolio = () => {
                 projects.map((item) => (
                   <div
                     key={item.id}
-                    className=" flex  border-green-600   justify-end   2xl:m-10 lg:m-5  "
+                    className={`flex   justify-end 2xl:m-10 lg:m- ${
+                      activeProjectId === item.id
+                        ? " border-b border-l shadow-2xl opacity-100"
+                        : ""
+                    } `}
                   >
                     <div
-                      className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5  "
-                      onClick={() => openDetailPage(item)}
+                      className="flex  justify-end w-full  space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5  "
+                      onClick={() => {
+                        setActiveProjectId(item.id);
+                        openDetailPage(item);
+                      }}
                     >
-                      <div className="w-2/3 opacity-70 hover:opacity-100 ">
-                    
+                      <div className="w-2/3  hover:opacity-100">
                         {item ? (
                           <>
                             <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
                               {item.titre}
                             </h2>
                             <div className=" mt-1 bg-gradient-to-r from-cyan-600 p-1">
-
-                            <p>{item.type}</p>
+                              <p>{item.type}</p>
                             </div>
                           </>
                         ) : (
@@ -127,10 +133,10 @@ const Portfolio = () => {
                           />
                         )}
                       </div>
-                      <div className="w-1/3 ">
+                      <div className="w-1/3  flex justify-center items-center ">
                         {item ? (
                           <img
-                            className=" "
+                            className=" h-20 w-20 rounded-full shadow-3xl"
                             src={item.imageSrc[0]}
                             alt={item.titre}
                           />
@@ -144,7 +150,6 @@ const Portfolio = () => {
                         )}
                       </div>
                     </div>
-                  
                   </div>
                 ))}
             </div>
@@ -162,58 +167,45 @@ const Portfolio = () => {
             unmountOnExit
           >
             <div>
-              {activeMenuItem === "integration" && 
-               integration && integration.map((item)=>(
-
-
-    
-                <div
-                key={item.id}
-                className="flex  justify-end w-6/6 space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5 xl:space-y-3  "
-                
-              >
-                <div className="w-2/3 opacity-70 hover:opacity-100 ">
-              
-                  {item ? (
-                    <>
-                      <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
-                        {item.titre}
-                      </h2>
-                      <div className=" mt-1 bg-gradient-to-r from-cyan-600 p-1">
-
-                      <p>{item.type}</p>
-
-                      </div>
-                    </>
-                  ) : (
-                    <Skeleton
-                      animation="wave"
-                      variant="text"
-                      width={200}
-                    />
-                  )}
-                </div>
-                <div className="w-1/3 ">
-                  {item ? (
-                    <img
-                      className=" "
-                      src={item.imageSrc}
-                      alt={item.titre}
-                    />
-                  ) : (
-                    <Skeleton
-                      animation="wave"
-                      variant="rect"
-                      width={200}
-                      height={100}
-                    />
-                  )}
-                </div>
-              </div>
-               ))
-              
-             
-              }
+              {activeMenuItem === "integration" &&
+                integration &&
+                integration.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex mb-10  space-y-4 justify-end w-3/4 m-auto space-x-3 mt-5 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5 xl:space-y-3  "
+                  >
+                    <div className="w-2/3 m-auto opacity-70  hover:opacity-100  ">
+                      {item ? (
+                        <>
+                          <h2 className=" hover:opacity-100 xl:text-4xl lg:text-2xl max-md:text-xl">
+                            {item.titre}
+                          </h2>
+                          <div className=" mt-1 bg-gradient-to-r from-cyan-600 p-1">
+                            <p>{item.type}</p>
+                          </div>
+                        </>
+                      ) : (
+                        <Skeleton animation="wave" variant="text" width={200} />
+                      )}
+                    </div>
+                    <div className="w-1/3 ">
+                      {item ? (
+                        <img
+                          className="  h-20 w-20 "
+                          src={item.imageSrc}
+                          alt={item.titre}
+                        />
+                      ) : (
+                        <Skeleton
+                          animation="wave"
+                          variant="rect"
+                          width={200}
+                          height={100}
+                        />
+                      )}
+                    </div>
+                  </div>
+                ))}
             </div>
           </CSSTransition>
         </div>
