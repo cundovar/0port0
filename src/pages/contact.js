@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
   const item = {
@@ -29,9 +30,9 @@ const Contact = () => {
         <div className="mb-10 xl:ml-3  border-b xl:w-2/3 2xl:w-full p-2">
           <h1 className="  ">contact</h1>
         </div>
-        <div className="flex  max-md:w-full   max-md:flex-col max-md:space-y-5 max-md:mt-5  max-md:items-center max-md:m-auto   justify-between item-center ">
-          <div className="w-1/2  max-md:w-3/4 xl:ml-3  space-y-5 max-md:items-start   max-md:flex max-md:flex-col max:md:justify-center max-md:p-1 ">
-            <div className=" p-3 pl-0">
+        <div className="flex  max-md:w-full   max-md:flex-col max-md:space-y-5 max-md:mt-5  max-md:items-center max-md:m-auto   justify-center item-center ">
+          <div className="w-1/2  flex justify-center items-center ">
+            {/* <div className=" p-3 pl-0">
               <p className="text-2xl">JAVIER VARAS</p>
               <p className="text-xl">
                 intégrateur-Devéloppeur front-end-Freelance
@@ -41,7 +42,7 @@ const Contact = () => {
               <NavLink to="/">
                 <p>https://pix.varascundo.com/</p>
               </NavLink>
-            </div>
+            </div> */}
             <p className="text-xl">Paris 20</p>
           </div>
 
@@ -76,16 +77,28 @@ const Contact = () => {
               </div>
             </div>
             <div className="border hover:bg-cyan-100 hover:text-slate-700  p-3 sm:w-full xl:w-2/3   ">
+                 <a href="https://www.linkedin.com/in/facundo-varas/" target="_blank">
               <div className="w-1/12 max-sm:mr-2">
-                {/* <a href="https://www.linkedin.com/in/facundo-varas/">
-                  <i className="fa-brands pink  fa-linkedin fa-xl text-pink-300"></i>
-                </a> */}
+                 
               </div>
               <div className=" opacity-50 ">
                 {" "}
                 <LinkedInIcon /> Mon profil LinkedIn
               </div>
+                </a> 
             </div>
+            <div className="border hover:bg-cyan-100 hover:text-slate-700  p-3 sm:w-full xl:w-2/3   ">
+                <a href="https://github.com/cundovar" target="_blank" className="mt-2">
+              <div className="w-1/12 max-sm:mr-2">
+              
+              </div>
+              <div className=" opacity-50 ">
+                {" "}
+                <GitHubIcon /> Mon profil github
+              </div>
+                </a>
+            </div>
+
           </div>
         </div>
       </div>

@@ -86,12 +86,12 @@ const Competence = () => {
             {activeMenuItem === "technologies" && (
               <div className="relative w-5/6 lg:w-full m-auto">
               
-                <button className="absolute h-10 text-xl w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300 max-lg:hidden   "
+                <button className="absolute h-10 text-xl w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 max-lg:-left-4 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300   "
                 onClick={prevSlide}>
                 <FontAwesomeIcon className="text-3xl" icon={faAngleLeft} />
 
                 </button>
-                <button className="absolute h-10 w-10 hover:border text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -right-0  translate-x-2/4 -translate-y-2/4 top-1/2 z-50 "
+                <button className="absolute h-10 w-10 hover:border text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -right-0  translate-x-2/4 -translate-y-2/4 top-1/2 z-50 max-lg:-right-4  "
                   onClick={nextSlide} >
                
 

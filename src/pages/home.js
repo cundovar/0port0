@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full   max-lg:pt-5 h-1/3  lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
+      <div className="w-full   max-lg:pt-5   lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
         <div className=" ml-2 w-full  max-md:visible md:hidden md:invisible">
           <div className="w-full border-b ">
             <h1 className="text-3xl">Créations</h1>
@@ -65,20 +65,20 @@ const Home = () => {
             </div>
         )}
 
-        <div className="visible lg:hidden relative   border-red-700 z-50">
-          <div className="w-full md:hidden border-b mb-5 ">
-            <h1 className="text-3xl  ">technologies</h1>
+        <div className="visible lg:hidden relative  mt-10 border-red-700 z-50">
+          <div className="w-full md:hidden border-b mb-10 ">
+            <h1 className="text-3xl  ">Technologies</h1>
           </div>
           <Competence />
         </div> 
     
         </div>
 
-      <div className=" max-md:ml-2 xl:w-1/3  md:mt-0 max-md:pt-96   border-orange-900  relative  w-full  ">
+      <div className=" max-md:ml-2 xl:w-1/3  md:mt-0   border-orange-900  relative  w-full  ">
         <div className="xl:w-full   2xl:mr-0 h-full max-md:w-full xl:mr-4   border-emerald-500   ">
           <div className="  pb-2 mt-10 border-b  z-50">
             <div className="flex xl:justify-start items-end  space-x-5">
-              <h1 className="max-md:text-3xl max-md:pt-40 max-md:ml-2">
+              <h1 className="max-md:text-3xl  max-md:ml-2">
                 Présentation
               </h1>
               <ul className="flex space-x-5 items-end justify-end w-2/3 ">

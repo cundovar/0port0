@@ -62,7 +62,7 @@ const settings = {
   dots: false,
   fade: true,
   infinite: true,
-  speed: 2000,
+  speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
   waitForAnimate: false,
@@ -75,9 +75,9 @@ const CarouselPresentation = () => {
       <div className="h-1/2 w-full p-3  flex justify-center items-center">
         <div className="w-full min-h-full">
           <Slider {...settings}>
-            <ImageCarousel carouselcontent={carouselcontent1} />
-            <ImageCarousel carouselcontent={carouselcontent2} />
             <ImageCarousel carouselcontent={carouselcontent3} />
+            <ImageCarousel carouselcontent={carouselcontent2} />
+            <ImageCarousel carouselcontent={carouselcontent1} />
           </Slider>
         </div>
       </div>

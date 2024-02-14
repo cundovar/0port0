@@ -15,7 +15,7 @@ function AppContent() {
     <div className="2xl:p-20 p-2  h-screen">
       <Page />
       {/* Bouton de basculement */}
-      <div className=' absolute p-0 bottom-0  xl:bottom-20  z-30 cursor-pointer'>
+      <div className=' absolute p-0 bottom-0   xl:bottom-20  z-30 cursor-pointer'>
 
       <Button onClick={toggleColorMode} >
         {mode === 'dark' ? <LightModeRoundedIcon fontSize='medium'/> : <NightlightRoundRoundedIcon fontSize='medium'/>}

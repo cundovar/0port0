@@ -32,7 +32,7 @@ const Page = () => {
             <Navbar/>
 
              
-<div className="  w-11/12  max-md:w-full absolute h-full right-0 ">
+<div className="  w-11/12 max-sm:mt-10  max-md:w-full absolute h-full right-0 ">
         <div className="w-full h-full flex justify-center   relative ">
       <Routes>
         <Route path="/" element={<Home />}  />

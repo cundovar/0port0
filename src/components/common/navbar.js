@@ -64,15 +64,15 @@ const Navbar = () => {
   return (
     <>
     
- <a id="link" className="" href="#">
+ <a id="link" className=" max-lg:bg-black p-1 flex items-center justify-center" href="#">
         <span id="burger1" className={`${barre ? "opene" : ""}`} onClick={toggleMenu}></span>
       </a>
     
-    <div className="fixed  max-md:w-full max-md:z-30   h-full max-md:h-auto z-10 ">
+    <div className="fixed  max-md:w-full max-md:z-30  h-auto max-md:h-auto z-10 ">
 
-      <div className="lg:flex 2xl:p-5 2xl:flex-col lg:space-x-5 2xl:space-x-1 lg:items-end  2xl:items-start  ">
+      <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col lg:space-x-5 2xl:space-x-1 lg:items-end  2xl:items-start  ">
         <h1>Javier Varas</h1>
-        <div className="flex 2xl:flex-col   max-md:flex-col max-md:space-x-0 2xl:space-x-0  lg:space-x-5">
+        <div className="flex 2xl:flex-col space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
           <h3>integrateur </h3>
           <h3> dev front</h3>
         </div>
