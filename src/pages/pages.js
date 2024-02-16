@@ -12,6 +12,7 @@ import CardCrea1 from "../components/cardCrea/cardCrea";
 import LoadingPage from "../components/animation/loadingpage";
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
+import Accueil from "./accueil";
 
 const Page = () => {
   return (
@@ -35,7 +36,8 @@ const Page = () => {
 <div className="  w-11/12 max-sm:mt-10  max-md:w-full absolute h-full right-0 ">
         <div className="w-full h-full flex justify-center   relative ">
       <Routes>
-        <Route path="/" element={<Home />}  />
+        <Route path="/" element={<Accueil />}  />
+        <Route path="/a propos" element={<Home />}  />
         <Route path="/portfolio" element={<Portfolio />}  />
         <Route path="/contact" element={<Contact />}  />
    

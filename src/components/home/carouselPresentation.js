@@ -6,7 +6,7 @@ const carouselcontent1 = [
     id: 1,
     titre: "test1",
     text: "Autodidacte ",
-    image: "/images/taxi.PNG",
+    image: "/images/design-crea/Crea3.PNG",
   }),
 ];
 
@@ -29,21 +29,21 @@ const carouselcontent3 = [
 
 const ImageCarousel = ({ carouselcontent }) => {
   return (
-    <div className="w-full h-full items-center   ">
+    <div className="w-full  h-full items-center   ">
       {carouselcontent &&
         carouselcontent.map((items) => (
-          <div className=" p-10">
-            <div className="w-full  m-auto">
-              <div className="m-auto " key={items.id}>
-                <div className="w-96 h-96 m-auto">
+          <div className=" ">
+            <div className="w-full h-full  m-auto">
+              <div className="m-auto h-full w-full " key={items.id}>
+                <div className=" m-auto">
                 <img
-                  className=" shadow-lg shadow-cyan-500/50 object-cover z-20 rounded-full w-full h-full m-auto "
+                  className=" h-60 w-60  object-cover z-20 rounded-full  m-auto "
                   src={items.image}
                   alt={items.titre}
                 />
 
                 </div>
-              <h1 className="text-center z-40">{items.text}</h1>
+              {/* <h1 className="text-center z-40">{items.text}</h1> */}
              
      
             </div>

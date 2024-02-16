@@ -9,6 +9,7 @@ import ResponsiveSlider from "../components/home/responsiveSlider";
 import LoadingPage from "../components/animation/loadingpage";
 import TipeWriter from "../utils/typeWriter";
 import CarouselPresentation from "../components/home/carouselPresentation";
+import Grid from "../components/home/grid";
 
 const Home = () => {
   const [isVisible, setIsvisible] = useState(false);
@@ -59,7 +60,13 @@ const Home = () => {
             <div className="w-5/6  max-xl:hidden xl:h-1/2 h-full flex justify-center items-center p-10">
          
                 
-              <CarouselPresentation />
+              {/* <CarouselPresentation /> */}
+
+   
+
+              {/* <Grid/> */}
+
+          
              
 
             </div>

@@ -32,7 +32,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex relative h-full   border-lime-400 w-full ">
+    <div className="flex relative h-full sm:mt-10  border-lime-400 w-full ">
       <div className=" lg:w-2/3 xl:1/  max-lg:hidden  justify-center flex sm:w-full">
         <CSSTransition
           in={selectedProject}

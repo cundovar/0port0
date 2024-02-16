@@ -81,10 +81,10 @@ const DetailPage = ({ project, onClose }) => {
                   onClick={() => handleThumbnailClick(index)}
                 >
                   {index === 3 && (
-                    <div className=" flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-cyan-700 h-10 w-10 ">
+                    
                      
-                     <NotStartedIcon fontSize="large"/>
-                    </div>
+                     <NotStartedIcon fontSize="large" className="  flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-600"/>
+                 
                   )}
 
                   <img
@@ -102,7 +102,7 @@ const DetailPage = ({ project, onClose }) => {
           ) : (
             ""
           )}
-          <div className=" flex flex-col mt-5 w-full imageListe space-y-5 items-start justify-start ">
+          <div className=" flex flex-col mt-5 w-full  imageListe space-y-5 items-start justify-start ">
             <div className="w-full flex max-sm:flex-col">
               <div className=" w-1/3  flex flex-col ">
                 <h2 className=" lg:text-2xl">{project.titre}</h2>

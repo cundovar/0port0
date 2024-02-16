@@ -25,6 +25,9 @@ const Navbar = () => {
       case "/contact":
         setActiveIndex(2);
         break;
+      case "/contact":
+        setActiveIndex(3);
+        break;
   
       default:
         setActiveIndex(0);
@@ -89,6 +92,17 @@ const Navbar = () => {
                 className="2xl:text-4xl  text-xl  xl:text-2xl "
                 text="Accueil"
               />
+            </li>
+          </NavLink>
+          <NavLink to="/a propos"  onClick={() => { toggleMenu(); setActiveIndex(3); }}  >
+            <li   className={`flex items-center ${activeIndex === 3 ? "border-l" : ""}`}>
+            
+              <ButtonNavBar 
+                className="2xl:text-4xl text-xl  xl:text-2xl "
+                text="A propos"
+              />
+
+              
             </li>
           </NavLink>
           <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >

@@ -11,6 +11,13 @@ class CardCrea extends Component {
       mouseY: 0,
       mouseLeaveDelay: null,
     };
+ 
+
+
+    
+ 
+
+
 
     this.cardRef = React.createRef();
   }
