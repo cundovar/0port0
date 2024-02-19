@@ -19,10 +19,10 @@ const Navbar = () => {
       case "/":
         setActiveIndex(0);
         break;
+        case "/apropos":
+          setActiveIndex(1);
+          break;
       case "/portfolio":
-        setActiveIndex(1);
-        break;
-      case "/contact":
         setActiveIndex(2);
         break;
       case "/contact":
@@ -73,12 +73,15 @@ const Navbar = () => {
     
     <div className="fixed  max-md:w-full max-md:z-30  h-auto max-md:h-auto z-10 ">
 
-      <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col lg:space-x-5 2xl:space-x-1 lg:items-end  2xl:items-start  ">
+      <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col  lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
+    
         <h1>Javier Varas</h1>
         <div className="flex 2xl:flex-col space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
           <h3>integrateur </h3>
           <h3> dev front</h3>
         </div>
+
+    
       </div>
       <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start  mt-4  border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
                        ref={menuContentRef}
@@ -87,39 +90,39 @@ const Navbar = () => {
                        onTouchEnd={handleTouchEnd}  >
         <ul className=" lg:space-x-28 max-md:space-y-0 max-md:flex   flex-col max-lg:flex ">
           <NavLink to="/"  onClick={() => { toggleMenu(); setActiveIndex(0); }}>
-            <li className={activeIndex === 0? "border-l" : ""}>
+            <li className={`flex items-center ${activeIndex === 0 ? "border-l" : ""}`}>
               <ButtonNavBar
-                className="2xl:text-4xl  text-xl  xl:text-2xl "
+                className="2xl:text-4xl  text-xl font-black  xl:text-2xl "
                 text="Accueil"
               />
             </li>
           </NavLink>
-          <NavLink to="/a propos"  onClick={() => { toggleMenu(); setActiveIndex(3); }}  >
-            <li   className={`flex items-center ${activeIndex === 3 ? "border-l" : ""}`}>
+          <NavLink to="/apropos"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
+            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
             
               <ButtonNavBar 
-                className="2xl:text-4xl text-xl  xl:text-2xl "
+                className="2xl:text-4xl text-xl font-black  xl:text-2xl "
                 text="A propos"
               />
 
               
             </li>
           </NavLink>
-          <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
-            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
+          <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(2); }}  >
+            <li   className={`flex items-center ${activeIndex === 2 ? "border-l" : ""}`}>
             
               <ButtonNavBar 
-                className="2xl:text-4xl text-xl  xl:text-2xl "
+                className="2xl:text-4xl text-xl font-black xl:text-2xl "
                 text="Portfolio"
               />
 
               
             </li>
           </NavLink>
-          <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(2); }}>
-            <li className={activeIndex === 2? "border-l" : ""}>
+          <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(3); }}>
+            <li className={activeIndex === 3? "border-l" : ""}>
               <ButtonNavBar
-                className="2xl:text-4xl text-xl  xl:text-2xl  "
+                className="2xl:text-4xl text-xl font-black  xl:text-2xl  "
                 text="Contact"
               />
             </li>

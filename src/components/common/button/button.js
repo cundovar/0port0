@@ -37,7 +37,7 @@ export  function OutlinedButtons({ text, onClick, isActive,sx,href,target,rel })
   }
 
 
-  export  function ButtonNavBar({className,text,isActive,onClick}){
+  export  function ButtonNavBar({className,text,onClick}){
 
     const { mode } = useContext(ColorModeContext);
 const theme = useTheme();
@@ -50,7 +50,7 @@ const theme = useTheme();
         <StyledEngineProvider injectFirst>
         <Button sx={{opacity:"100"}}
         variant="text"
-        isActive={isActive}
+      
         onClick={onClick}
         className={buttonClass}
         > {text}

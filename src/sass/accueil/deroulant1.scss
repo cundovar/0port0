@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
+@font-face {
+  font-family: 'test';
+  src: url('../font/outward-borders.ttf') format('truetype');
+  /* Autres propriétés de la police (optionnelles) */
+}
+@font-face {
+  font-family: 'test2';
+  src: url('../font/outward-block.ttf') format('truetype');
+  /* Autres propriétés de la police (optionnelles) */
+}
+.font_test{
+  font-family: "test",sans-serif !important;
+}
+.font_test2{
+  font-family: "test2",sans-serif !important;
+
+}
+
 .protest-strike-regular {
     font-family: "Protest Strike", sans-serif;
     font-weight: 400;
@@ -68,12 +86,12 @@ width: 30px;
     top: 0.3rem;
     height: 30px;
 width: 70px;
-    
+    font-family: "test",sans-serif;
     animation: moveCloud 46s linear infinite;
     -webkit-animation: moveCloud 46s linear infinite;
     -moz-animation: moveCloud 46s linear infinite;
     font-size: 5em;
-    background-color: #ff05c1;
+
     
     
   }
@@ -83,11 +101,11 @@ width: 70px;
     right: -25%;
     top: .2em;
 font-weight: 700;
-color: #e8411f;
+
     animation: moveCloud 15s linear infinite;
     -webkit-animation: moveCloud 15s linear infinite;
     -moz-animation: moveCloud 15s linear infinite;
-  
+  color: rgb(47, 142, 147);
     font-size: 9em;
   }
   #cloud5 {
@@ -110,26 +128,26 @@ width: 30px;
 
    @keyframes moveCloud {
     0% {
-      transform: translate(200%);
+      transform: translate(2500%);
     }
     100% {
-      transform: translate(-500px);
+      transform: translate(-1000px);
     }
   }
   @-webkit-keyframes moveCloud {
     0% {
-      transform: translate(200%);
+      transform: translate(2500%);
     }
     100% {
-      transform: translate(-500px);
+      transform: translate(-1000px);
     }
   }
   @-moz-keyframes moveCloud {
     0% {
-      transform: translate(200%);
+      transform: translate(2500%);
     }
     100% {
-      transform: translate(-500px);
+      transform: translate(-1000px);
     }
   }
 

@@ -51,8 +51,8 @@
 .card {
   position: relative;
   flex: 0 0 240px;
-  width: 240px;
-  height: 320px;
+  width: 12rem;
+  height: 14rem;
   background-color: #333;
   overflow: hidden;
   border-radius: 10px;
@@ -246,7 +246,7 @@ main {
 @media screen and (max-width: 768px) {
   main {
     width: 100%;
-    padding: 1rem;
+    padding: 0.3rem;
   }
 }
 
@@ -262,6 +262,8 @@ main {
   .main-grid {
     grid-gap: 50px;
     padding: 1rem;
+    paddong: 0;
+    grid-gap: 10px;
   }
 }
 
@@ -293,7 +295,7 @@ main {
 @media screen and (max-width: 768px) {
   .medium {
     grid-column: span 8;
-    grid-row: span 2;
+    grid-row: span 5;
   }
 }
 
@@ -325,9 +327,29 @@ main {
 }
 @media screen and (max-width: 768px) {
   .tall {
-    grid-column: span 8;
-    grid-row: span 6;
+    grid-column: span 5;
+    grid-row: span 5;
+    padding: 0;
+    text-align: center;
   }
+}
+
+@font-face {
+  font-family: "test";
+  src: url("../font/outward-borders.ttf") format("truetype");
+  /* Autres propriétés de la police (optionnelles) */
+}
+@font-face {
+  font-family: "test2";
+  src: url("../font/outward-block.ttf") format("truetype");
+  /* Autres propriétés de la police (optionnelles) */
+}
+.font_test {
+  font-family: "test", sans-serif !important;
+}
+
+.font_test2 {
+  font-family: "test2", sans-serif !important;
 }
 
 .protest-strike-regular {
@@ -387,11 +409,11 @@ main {
   top: 0.3rem;
   height: 30px;
   width: 70px;
+  font-family: "test", sans-serif;
   animation: moveCloud 46s linear infinite;
   -webkit-animation: moveCloud 46s linear infinite;
   -moz-animation: moveCloud 46s linear infinite;
   font-size: 5em;
-  background-color: #ff05c1;
 }
 
 #cloud4 {
@@ -400,10 +422,10 @@ main {
   right: -25%;
   top: 0.2em;
   font-weight: 700;
-  color: #e8411f;
   animation: moveCloud 15s linear infinite;
   -webkit-animation: moveCloud 15s linear infinite;
   -moz-animation: moveCloud 15s linear infinite;
+  color: rgb(47, 142, 147);
   font-size: 9em;
 }
 
@@ -423,26 +445,26 @@ main {
 
 @keyframes moveCloud {
   0% {
-    transform: translate(200%);
+    transform: translate(2500%);
   }
   100% {
-    transform: translate(-500px);
+    transform: translate(-1000px);
   }
 }
 @-webkit-keyframes moveCloud {
   0% {
-    transform: translate(200%);
+    transform: translate(2500%);
   }
   100% {
-    transform: translate(-500px);
+    transform: translate(-1000px);
   }
 }
 @-moz-keyframes moveCloud {
   0% {
-    transform: translate(200%);
+    transform: translate(2500%);
   }
   100% {
-    transform: translate(-500px);
+    transform: translate(-1000px);
   }
 }
 /* responsive */
@@ -524,9 +546,9 @@ main {
   z-index: 552;
   position: absolute;
   left: -25%;
-  top: 0.2em;
-  font-weight: 700;
-  color: #e8411f;
+  top: 0.4em;
+  font-weight: 900;
+  color: #48e7df;
   animation: moveCloudReverse 15s linear infinite;
   -webkit-animation: moveCloudReverse 15s linear infinite;
   -moz-animation: moveCloudReverse 15s linear infinite;
@@ -552,7 +574,7 @@ main {
     transform: translate(-200%);
   }
   100% {
-    transform: translate(500px);
+    transform: translate(1000px);
   }
 }
 @-webkit-keyframes moveCloudReverse {
@@ -560,7 +582,7 @@ main {
     transform: translate(200%);
   }
   100% {
-    transform: translate(-500px);
+    transform: translate(-1000px);
   }
 }
 @-moz-keyframes moveCloudReverse {
@@ -568,7 +590,7 @@ main {
     transform: translate(200%);
   }
   100% {
-    transform: translate(-500px);
+    transform: translate(-1000px);
   }
 }
 * {

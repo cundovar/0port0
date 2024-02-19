@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className=" w-full flex  border-orange-600  max-md:flex-col  max-lg:items-center relative max-md:mt-36 z-20 max-lg:overflow-y-scroll     ">
+    <div className=" w-full flex   border-orange-600  max-md:flex-col lg:flex-col-reverse xl:flex-row  max-lg:items-center relative max-md:mt-36 z-20 max-lg:overflow-y-scroll     ">
       <div className=" md:hidden lg:absolute ml-2  flex items-center h-28">
         <div className="  type w-full">
           <h3>

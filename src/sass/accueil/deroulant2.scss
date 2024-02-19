@@ -46,9 +46,9 @@
     z-index: 552;
     position: absolute;
     left: -25%;
-    top: .2em;
-    font-weight: 700;
-    color: #e8411f;
+    top: .4em;
+    font-weight: 900;
+    color: #48e7df;
     animation: moveCloudReverse 15s linear infinite;
     -webkit-animation: moveCloudReverse 15s linear infinite;
     -moz-animation: moveCloudReverse 15s linear infinite;
@@ -74,7 +74,7 @@
       transform: translate(-200%);
     }
     100% {
-      transform: translate(500px);
+      transform: translate(1000px);
     }
   }
   
@@ -83,7 +83,7 @@
       transform: translate(200%);
     }
     100% {
-      transform: translate(-500px);
+      transform: translate(-1000px);
     }
   }
   
@@ -92,7 +92,7 @@
       transform: translate(200%);
     }
     100% {
-      transform: translate(-500px);
+      transform: translate(-1000px);
     }
   }
   

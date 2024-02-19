@@ -6,6 +6,7 @@ import CardCrea from "../../classObject/cardCea/cardcea";
 import CardCreaContainer from "../accueil/cardCreacontainer";
 import PortfolioModel from "../../classObject/portfolio/modelPortfolio";
 import VideoBackground from "../video/videoBackground";
+import { NavLink } from "react-router-dom";
 
 const Grid=()=>{
 
@@ -36,9 +37,9 @@ const Grid=()=>{
 return(
     <>
 <main>
-  <section class="main-grid">
-    <div class="grid-item wide">
-    <div class="imgNav">
+  <section className="main-grid">
+    <div className="grid-item wide">
+    <div className="imgNav">
 
      
 <i id="cloud1"  className="cloud protest-strike-regular"><h1 className="">JAVASCRIPT</h1></i>
@@ -50,9 +51,9 @@ return(
 
 <i id="cloud8" className="cloud"><h1 className="">PIXEL</h1></i>
 
-<i id="cloud9" className="cloud"><h1 className="">FUNCION</h1></i>
+<i id="cloud9" className="cloud"><h1 className=" text-3xl ">CONST</h1></i>
 
-<i id="cloud4" className="cloud"><h1 className="">TAILWIND</h1></i>
+<i id="cloud4" className="cloud"><h1 className="">CLASSNAME</h1></i>
 <i id="cloud4" className="cloud"><h1 className="">TAILWIND</h1></i>
 
 <i id="cloud5" className="cloud"><h1 className="">HTML5</h1></i>
@@ -63,27 +64,49 @@ return(
 
 </div>
     </div>
-    <div class="grid-item tall">
-    <CardCrea dataImage={integrationData[0].imageSrc}/>
-    </div>
-    <div class="grid-item large ">
-        <CarouselPresentation/>
-    </div>
-    <div class="grid-item tall ">
-    <div class="grid-item medium rounded-md overflow-hidden  relative ">
+    <div className="grid-item tall">
+    {/* <CardCrea dataImage={integrationData[0].imageSrc}/> */}
+    <NavLink to="/apropos">
+    <h1 className="hover:opacity-100 ">A propos</h1>
 
-        <VideoBackground videoSrc={"./video/space.mp4"}/>
+    </NavLink>
     </div>
+    <div className="grid-item large relative flex  ">
+        <div >
+        {/* <CarouselPresentation/> */}
+
+        </div>
+        <NavLink to="/contact" >
+
+            <h1 className=" hover:opacity-100" > Contact</h1>
+        </NavLink>
+
     </div>
-    <div class="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2> </div>
-    <div class="grid-item medium overflow-hidden  relative flex justify-center items-center ">
+    <div className="grid-item tall cursor-pointer ">
+
+    <div className="grid-item medium  flex flex-col   relative ">
+
+        {/* <VideoBackground videoSrc={"./video/space.mp4"}/> */}
+               <NavLink to="/portfolio">
+            <h1 className="hover:opacity-100" >Portfolio</h1>
+
+               </NavLink>
+    
+    </div>
+
+
+    </div>
+    <div className="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2> </div>
+    <div className="grid-item medium overflow-hidden  relative flex justify-center items-center p- ">
 
         {/* <img className="rounded-xl"src="/images/portfolio/magi/magi0.PNG"/> */}
-      <h1>texte</h1>
+     <p className="text-xl text-justify">Enthousiaste et passionné par le monde du développement web, je suis Javier, un intégrateur web et développeur front-end.</p>
+
+   
     </div>
-    <div class="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2>  </div>
-    <div class="grid-item wide">
-    <div class="imgNav">
+    <div className="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2>  </div>
+    <div className="grid-item wide">
+    <div className="imgNav">
 
      
 <i id="cloud6"  className="cloud protest-strike-regular"><h1 className="">MATERIAL UI </h1></i>
@@ -92,9 +115,9 @@ return(
 
 <i id="cloud8" className="cloud"><h1 className="">PIXEL</h1></i>
 
-<i id="cloud9" className="cloud"><h1 className="">FUNCION</h1></i>
+<i id="cloud9" className="cloud"><h1 className="  ">FUNCTION</h1></i>
 
-<i id="cloud4" className="cloud"><h1 className="">TAILWIND</h1></i>
+<i id="cloud4" className="cloud"><h1 className="font_test">TAILWIND</h1></i>
 
 <i id="cloud5" className="cloud"><h1 className="">HTML5</h1></i>
 <i id="cloud10" className="cloud"><h1 className="">class</h1></i>
@@ -107,7 +130,7 @@ return(
 
 
     </div>
-    <div class="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2> </div>
+    <div className="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2> </div>
   </section>
 </main>
 <CardCrea1/>

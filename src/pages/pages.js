@@ -37,7 +37,7 @@ const Page = () => {
         <div className="w-full h-full flex justify-center   relative ">
       <Routes>
         <Route path="/" element={<Accueil />}  />
-        <Route path="/a propos" element={<Home />}  />
+        <Route path="/apropos" element={<Home />}  />
         <Route path="/portfolio" element={<Portfolio />}  />
         <Route path="/contact" element={<Contact />}  />
    

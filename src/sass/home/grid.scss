@@ -7,7 +7,7 @@ main {
     // Ajoutez une media query pour les écrans plus petits
     @media screen and (max-width: 768px) {
       width: 100%;
-      padding: 1rem;
+      padding: 0.3rem;
     }
   }
   
@@ -23,6 +23,8 @@ main {
     @media screen and (max-width: 768px) {
       grid-gap: 50px;
       padding: 1rem;
+      paddong:0;
+      grid-gap: 10px;
     }
   }
   
@@ -53,7 +55,7 @@ main {
     grid-row: span 2;
     @media screen and (max-width: 768px) {
         grid-column: span 8;
-        grid-row: span 2;
+        grid-row: span 5;
       }
   }
   
@@ -80,11 +82,12 @@ main {
   .tall {
     grid-column: span 2;
     grid-row: span 3;
-    
-  // Modifiez la disposition pour les écrans plus petits
-  @media screen and (max-width: 768px) {
-    grid-column: span 8;
-    grid-row: span 6;
+    // Modifiez la disposition pour les écrans plus petits
+    @media screen and (max-width: 768px) {
+        grid-column: span 5;
+        grid-row: span 5;
+        padding: 0;
+        text-align: center;
   }
   }
   
