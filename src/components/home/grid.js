@@ -7,6 +7,7 @@ import CardCreaContainer from "../accueil/cardCreacontainer";
 import PortfolioModel from "../../classObject/portfolio/modelPortfolio";
 import VideoBackground from "../video/videoBackground";
 import { NavLink } from "react-router-dom";
+import { ButtonAccueilApropos, ButtonAccueilCOntact, ButtonAccueilPorfolio } from "../common/button/button";
 
 const Grid=()=>{
 
@@ -67,8 +68,8 @@ return(
     <div className="grid-item tall">
     {/* <CardCrea dataImage={integrationData[0].imageSrc}/> */}
     <NavLink to="/apropos">
-    <h1 className="hover:opacity-100 ">A propos</h1>
-
+    {/* <h1 className="hover:opacity-100 ">A propos</h1> */}
+      <ButtonAccueilApropos/>
     </NavLink>
     </div>
     <div className="grid-item large relative flex  ">
@@ -78,7 +79,8 @@ return(
         </div>
         <NavLink to="/contact" >
 
-            <h1 className=" hover:opacity-100" > Contact</h1>
+            {/* <h1 className=" hover:opacity-100" > Contact</h1> */}
+            <ButtonAccueilCOntact/>
         </NavLink>
 
     </div>
@@ -88,7 +90,8 @@ return(
 
         {/* <VideoBackground videoSrc={"./video/space.mp4"}/> */}
                <NavLink to="/portfolio">
-            <h1 className="hover:opacity-100" >Portfolio</h1>
+            {/* <h1 className="hover:opacity-100" >Portfolio</h1> */}
+            <ButtonAccueilPorfolio/>
 
                </NavLink>
     
@@ -96,7 +99,7 @@ return(
 
 
     </div>
-    <div className="grid-item small"><h2 className="border p-2 cursor-pointer hover:font-bold invisible">Contact</h2> </div>
+    <div className="grid-item small max-sm:hidden"><h2 className="border p-2 cursor-pointer hover:font-bold invisible max-sm:hidden">Contact</h2> </div>
     <div className="grid-item medium overflow-hidden  relative flex justify-center items-center p- ">
 
         {/* <img className="rounded-xl"src="/images/portfolio/magi/magi0.PNG"/> */}

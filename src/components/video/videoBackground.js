@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoBackground = ({videoSrc}) => {
     return (
-      <div className="video-background w-full h-full ">
+      <div className="video-background rounded-full w-full h-full ">
         <video autoPlay muted loop  style={{ height: '100%' }} >
           <source src={videoSrc} type="video/mp4" />
         

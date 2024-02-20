@@ -30,7 +30,7 @@ const ModalDetailpage = ({ onClose, project }) => {
       modalContent = (
         <>
           <div className="absolute h-full flex items-center w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
-            <div className="  relative w-3/4 m-auto h-1/2 ">
+            <div className="  relative  m-auto overflow-scroll w-full h-2/3 ">
               <button
                 className="close-btn absolute right-0   m-2 z-100 z-50 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
                 onClick={onClose}
@@ -128,7 +128,7 @@ const ModalDetailpage = ({ onClose, project }) => {
     } else {
       modalContent = (
         <div className="absolute h-full flex items-center w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
-          <div className=" relative  w-3/4  m-auto h-1/2 ">
+          <div className=" relative  w-full overflow-scroll m-auto h-2/3 ">
             <button
               className="close-btn absolute right-0   m-2 z-100 z-50 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
               onClick={onClose}

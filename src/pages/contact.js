@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full z-20 flex max-lg:flex-col max-lg:items-center justify-center   max-md:pb-40  md:ml-28 overflow-hidden max-md:pt-40 max-lg:mb-10 max-lg:overflow-y-scroll   2xl:pr-10">
+    <div className="w-full z-20 flex max-lg:flex-col max-lg:items-center justify-center   max-md:pb-40  md:ml-28 overflow-hidden max-md:pt-40 max-lg:mb-10 max-lg:overflow-y-scroll max-sm:mt-9   2xl:pr-10">
       <div className="w-1/3 flex justify-center  max-md:w-full  max-md:mt-56   mt items-center h-full">
         <div className="w-96 h-96 shadow-2xl  flex justify-center  items-center">
           {item ? (
@@ -26,7 +26,7 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <div className="w-2/3 max-md:w-full max-md:items-center   flex flex-col justify-center">
+      <div className="w-2/3 max-md:w-full max-md:items-center  max-sm:mt-10 flex flex-col justify-center">
         <div className="mb-10 xl:ml-3  border-b xl:w-2/3 2xl:w-full p-2">
           <h1 className="  ">contact</h1>
         </div>

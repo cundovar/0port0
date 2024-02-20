@@ -45,8 +45,8 @@ const ResponsiveSlider=()=>{
 </div>
 <div className=" overflow-hidden   border-red-600 ">
 <Slider {...settings} ref={sliderRef}>
-<img className="  h-52 " src="./images/design-crea/crea1.PNG" alt=""/>
-<img className=" h-52  " src="./images/design-crea/crea2.PNG" alt=""/>
+<img className="  h-52 " src="./images/design-crea/Crea1.PNG" alt=""/>
+<img className=" h-52  " src="./images/design-crea/Crea2.PNG" alt=""/>
 <img className=" h-52  " src="./images/portfolio/space/space1.PNG" alt=""/>
 <img className=" h-52  " src="./images/portfolio/magi/magi0.PNG" alt=""/>
 </Slider>

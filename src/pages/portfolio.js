@@ -109,7 +109,7 @@ const Portfolio = () => {
                     } `}
                   >
                     <div
-                      className="flex  justify-end w-full  space-x-3 xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 max-md:space-y-5  "
+                      className="flex  justify-center w-full  xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 mt-3 2xl:mt-0  "
                       onClick={() => {
                         setActiveProjectId(item.id);
                         openDetailPage(item);
@@ -133,7 +133,7 @@ const Portfolio = () => {
                           />
                         )}
                       </div>
-                      <div className="w-1/3  flex justify-center items-center ">
+                      <div className="w-1/3 mt-0  h-full flex justify-center border-lime-500 items-center  ">
                         {item ? (
                           <img
                             className=" h-20 w-20 rounded-full shadow-3xl"

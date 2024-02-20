@@ -5,13 +5,11 @@ import Navbar from "../components/common/navbar";
 import Home from "./home";
 import Contact from "./contact";
 import AnimationSVG from "../components/animation/animationHome";
-import DetailPage from "./detaiPage";
-import Blackwhite from "../components/common/blackwhite";
-import Competence from "../components/home/competence";
+
 import CardCrea1 from "../components/cardCrea/cardCrea";
 import LoadingPage from "../components/animation/loadingpage";
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import Button from '@mui/material/Button';
+
+
 import Accueil from "./accueil";
 
 const Page = () => {

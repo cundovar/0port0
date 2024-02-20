@@ -127,17 +127,19 @@
       display: block !important; /* !important pour forcer la priorité sur les autres styles */
     }
   }
-
-  .invisiblePerso{
-
-      opacity: 0;
-      height: 0;
-    
-      visibility: hidden;
-  }
-
   .loadingpage {
+    
     transition: opacity 1s ease, height 1s ease;
   }
+  
+  .invisiblePerso {
+    opacity: 0;
+    height: 0 !important;
+
+    transition: opacity 1s ease, height 1s ease;
+
+  }
+
+
   
   

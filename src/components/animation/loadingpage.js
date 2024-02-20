@@ -16,9 +16,9 @@ const LoadingPage=()=>{
     
     return(
         <>
-         <div className={`w-full loadingpage h-full absolute z-50 flex justify-center items-center 
-                         ${isVisible ? 'visible max-lg:invisible ' :'invisiblePerso ' }`}>
-            <div className="w-1/4">
+         <div className={`w-full loadingpage h-full absolute  border-orange-600 z-50 flex justify-center items-center 
+                         ${isVisible ? ' ' :'invisiblePerso  ' }`}>
+            <div className={`xl:w-1/4 lg:2/4  ${isVisible ? 'transition-opacity transition-height' : ''}`}>
 <h1>
             <TipeWriter text={text} delay={100}/>
 
