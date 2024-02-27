@@ -131,22 +131,8 @@ const projects = [
         alt: "image portofolio2",
       }),
     
-      //  new PortfolioModel({
-      //   id:7,
-      //   type: "javascript, bootstrap",
-      //   titre: "carte",
-      //   tekno: "javascript, bootstrap",
-      //   lien: "https://portfolio.varascundo.com/noir/noir",
-      //   lienCode: "https://github.com/cundovar/leaflet-chartjsEXOcarteGraph",
-      //   description: "Pour la carte et le graphique, utilisation de Chartjs et Leafletjs ",
-      //   imageSrc: ["/images/carte.PNG"],
-      //   titreHover: "",
-      //   text1: "Travail basé sur javascript",
-      //   text2: "Bootstrap",
-      //   text3: "Chartjs et Leafletjs",
-      //   text4: "JavaScript",
-      //   alt: "image ecommerce",
-      // }),
+     
+  
 ]
 
     export default projects
