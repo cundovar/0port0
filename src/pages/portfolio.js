@@ -22,8 +22,10 @@ const Portfolio = () => {
   const [activeMenuItem, setActiveMenuItem] = useState("projet");
   const [activeProjectId, setActiveProjectId] = useState(null);
 
+  // composant d'ordre supéririeur...
+
   // composant liste des traveaux projets onepage...
-  const ListModel = ({ project, model, detail }) => {
+  const ListModel = ({ project, model, detail}) => {
     return (
       <>
         <CSSTransition
@@ -71,6 +73,7 @@ const Portfolio = () => {
                       )}
                     </div>
                     <div className="w-1/3 mt-0  h-full flex justify-center border-lime-500 items-center  ">
+                      
                       {item ? (
                         <img
                           className=" h-20 w-20 rounded-full shadow-3xl"

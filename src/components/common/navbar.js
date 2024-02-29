@@ -75,7 +75,7 @@ const Navbar = () => {
 
       <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col  lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
     
-        <h1>Javier Varas</h1>
+        <h1>Facundo Varas</h1>
         <div className="flex 2xl:flex-col space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
           <h3>integrateur </h3>
           <h3> dev front</h3>
