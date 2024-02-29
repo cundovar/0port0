@@ -58,8 +58,8 @@ export function ButtonNavBar({ className, text, onClick }) {
 export function ButtonAccueilCOntact() {
   return (
     <button className="group relative hover:opacity-100 overflow-hidden rounded-[8px] borderbg-transparent px-4">
-      <span className="relative inline-flex">
-        <span className="text-4xl duration-700 [transition-delay:0.02s] group-hover:[transform:rotateY(360deg)]">
+      <span className="relative inline-flex border p-5 bg-cyan-400 rounded-lg">
+        <span className="text-4xl duration-700  [transition-delay:0.02s] group-hover:[transform:rotateY(360deg)]">
           C
         </span>
         <span className="text-4xl duration-700 [transition-delay:0.04s] group-hover:[transform:rotateY(360deg)]">
@@ -88,17 +88,17 @@ export function ButtonAccueilCOntact() {
 export function ButtonAccueilPorfolio() {
   return (
     <button className="group relative hover:opacity-100 overflow-hidden rounded-[8px] borderbg-transparent px-4">
-      <span className="relative inline-flex">
-        <span className="text-4xl duration-700 [transition-delay:0.02s] group-hover:[transform:rotateY(360deg)]">
+      <span className="relative inline-flex border p-5 bg-cyan-400 rounded-lg">
+        <span className="text-4xl duration-700  rounded-lg [transition-delay:0.02s] group-hover:[transform:rotateY(360deg)]">
           P
         </span>
-        <span className="text-4xl duration-700 [transition-delay:0.04s] group-hover:[transform:rotateY(360deg)]">
+        <span className="text-4xl first-line:rounded-lg duration-700 [transition-delay:0.04s] group-hover:[transform:rotateY(360deg)]">
           O
         </span>
-        <span className="text-4xl duration-700 [transition-delay:0.06s] group-hover:[transform:rotateY(360deg)]">
+        <span className="text-4xl   duration-700 [transition-delay:0.06s] group-hover:[transform:rotateY(360deg)]">
           R
         </span>
-        <span className="text-4xl duration-700 [transition-delay:0.08s] group-hover:[transform:rotateY(360deg)]">
+        <span className="text-4xl   duration-700 [transition-delay:0.08s] group-hover:[transform:rotateY(360deg)]">
           T
         </span>
         <span className="text-4xl duration-700 [transition-delay:0.10s] group-hover:[transform:rotateY(360deg)]">
@@ -122,8 +122,8 @@ export function ButtonAccueilPorfolio() {
 }
 export function ButtonAccueilApropos() {
   return (
-    <button className="group relative hover:opacity-100 overflow-hidden rounded-[8px] borderbg-transparent px-4">
-      <span className="relative inline-flex">
+    <button className=" group relative hover:opacity-100 overflow-hidden rounded-[8px] borderbg-transparent px-4">
+      <span className="relative inline-flex border p-5 bg-cyan-400 rounded-lg">
         <span className="text-4xl duration-700 [transition-delay:0.02s] group-hover:[transform:rotateY(360deg)]">
           A
         </span>

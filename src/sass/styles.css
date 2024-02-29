@@ -285,6 +285,24 @@ main {
 }
 @media screen and (max-width: 768px) {
   .small {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+.text1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+@media screen and (max-width: 1400px) {
+  .text1 {
+    grid-column: span 3;
+    grid-row: span 3;
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text1 {
     grid-column: span 8;
     grid-row: span 5;
   }

@@ -46,11 +46,27 @@ main {
     grid-row: span 1;
      // Modifiez la disposition pour les écrans plus petits
   @media screen and (max-width: 768px) {
-    grid-column: span 8;
-    grid-row: span 5;
+    grid-column: span 2;
+    grid-row: span 1;
     
     
   }
+  }
+  .text1{
+    
+    grid-column: span 2;
+    grid-row: span 2;
+    @media screen and (max-width: 1400px) {
+      grid-column: span 3;
+      grid-row: span 3;
+      margin-left: 1rem;
+
+      
+    }
+    @media screen and (max-width: 768px) {
+        grid-column: span 8;
+        grid-row: span 5;
+      }
   }
   
   .medium {

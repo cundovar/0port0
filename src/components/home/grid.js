@@ -100,7 +100,7 @@ return(
 
     </div>
     <div className="grid-item small max-sm:hidden"><h2 className="border p-2 cursor-pointer hover:font-bold invisible max-sm:hidden">Contact</h2> </div>
-    <div className="grid-item medium overflow-hidden  relative flex justify-center items-center p- ">
+    <div className="grid-item text1  overflow-hidden  relative flex justify-center items-center p- ">
 
         {/* <img className="rounded-xl"src="/images/portfolio/magi/magi0.PNG"/> */}
      <p className="text-xl text-justify">Enthousiaste et passionné par le monde du développement web, je suis Javier, un intégrateur web et développeur front-end.</p>
