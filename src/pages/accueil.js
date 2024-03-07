@@ -10,7 +10,7 @@ const Accueil=()=>{
 
     return(
         <>
-        <div className="w-full h-full flex items-center relative justify-center max-sm:overflow-scroll">
+        <div className="w-full  container-accueil h-full flex items-center relative justify-center max-sm:overflow-scroll">
             <div className=" w-full flex justify-center items-center h-full ">
 
 <div className="absolute opacity-35 -top-20 rounded-3xl max-sm:hidden -right-96">

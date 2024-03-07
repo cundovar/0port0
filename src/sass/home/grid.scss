@@ -12,6 +12,9 @@ main {
       margin-top: 10rem;
     }
   }
+  .container-accueil{
+    z-index: 39;
+  }
   
   .main-grid {
     display: grid;
@@ -79,9 +82,13 @@ main {
   }
   
   .large {
-    grid-column: span 3;
-    grid-row: span 3;
-      // Modifiez la disposition pour les écrans plus petits
+  
+    @media screen and (min-width: 1115px) {
+      
+      grid-column: span 3;
+      grid-row: span 3;
+  }
+
   @media screen and (max-width: 768px) {
     grid-column: span 8;
     grid-row: span 4;

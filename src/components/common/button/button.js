@@ -31,7 +31,9 @@ export function OutlinedButtons({
     </StyledEngineProvider>
   );
 }
-
+/**
+ * composant bouton
+ */
 export function ButtonNavBar({ className, text, onClick }) {
   const { mode } = useContext(ColorModeContext);
   const theme = useTheme();

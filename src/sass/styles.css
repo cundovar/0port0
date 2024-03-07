@@ -252,6 +252,10 @@ main {
   }
 }
 
+.container-accueil {
+  z-index: 39;
+}
+
 .main-grid {
   display: grid;
   grid-gap: 20px;
@@ -319,9 +323,11 @@ main {
   }
 }
 
-.large {
-  grid-column: span 3;
-  grid-row: span 3;
+@media screen and (min-width: 1115px) {
+  .large {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
 }
 @media screen and (max-width: 768px) {
   .large {

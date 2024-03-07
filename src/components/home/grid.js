@@ -65,7 +65,7 @@ return(
 
 </div>
     </div>
-    <div className="grid-item tall">
+    <div className="grid-item tall z-50">
     {/* <CardCrea dataImage={integrationData[0].imageSrc}/> */}
     <NavLink to="/apropos">
     {/* <h1 className="hover:opacity-100 ">A propos</h1> */}
