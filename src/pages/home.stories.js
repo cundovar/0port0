@@ -4,6 +4,10 @@ import Home from "./home";
 export default{
     title:'projet/home',
   component:Home,
+  parameters:{
+    layout:'centered',
+},
+tags:['autodocs']
 
 
 }

@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { StyledEngineProvider } from "@mui/material";
 import { ColorModeContext } from "../../../App";
 import { useTheme } from "@mui/material/styles";
-
+import PropTypes from 'prop-types';
 export function OutlinedButtons({
   text,
   onClick,
@@ -34,7 +34,7 @@ export function OutlinedButtons({
 /**
  * composant bouton
  */
-export function ButtonNavBar({ className, text, onClick }) {
+export function ButtonNavBar({ className, text, onClick,size }) {
   const { mode } = useContext(ColorModeContext);
   const theme = useTheme();
   const buttonClass = clsx(className, {
@@ -45,10 +45,10 @@ export function ButtonNavBar({ className, text, onClick }) {
   return (
     <StyledEngineProvider injectFirst>
       <Button
-        sx={{ opacity: "100" }}
+        sx={{ opacity: "100"  }}
         variant="text"
         onClick={onClick}
-        className={buttonClass}
+        className={buttonClass }
       >
         {" "}
         {text}
@@ -56,6 +56,9 @@ export function ButtonNavBar({ className, text, onClick }) {
     </StyledEngineProvider>
   );
 }
+
+
+
 
 export function ButtonAccueilCOntact() {
   return (

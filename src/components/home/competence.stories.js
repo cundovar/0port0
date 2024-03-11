@@ -21,10 +21,20 @@ export default {
             ),
           ],
           argTypes: { onClick: { action: 'clicked' } },
-    }
+    },
+    tags:['autodocs'],
+    argTypes: {
+        backgroundColor: { control: 'color' },
+     
+      },
 }
 
 export const Default =()=><Competence/>
+export const Primary=(args)=><Competence {...args}/>
+Primary.args={
+    primary:true,
+    children:'click'
+}
 
 
 

@@ -1,3 +1,4 @@
+@import url('./sass/styles.css'); 
 * {
   box-sizing: border-box !important;
 
@@ -39,7 +40,6 @@
 
 
 
-@import url('./sass/styles.css');
 
 
 *{

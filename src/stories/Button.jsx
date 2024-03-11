@@ -32,7 +32,7 @@ Button.propTypes = {
    * How large should the button be?
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
+  /**y
    * Button contents
    */
   label: PropTypes.string.isRequired,
