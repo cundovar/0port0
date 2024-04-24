@@ -17,8 +17,8 @@ const projects = [
       titreHover: "",
       text1: "filtrage des oeuvres par catégories",
       text2: "api/crud des articles",
-      text3: "front tailwind, back bootstrap twig",
-      text4: "typescript",
+      text3: "front tailwind, backOffice bootstrap twig",
+      text4: "possibilité de changer texte/images de la page d'acceuil via backOffice",
       alt: "Image projet peinture react",
       video:"/video/art.mp4"
     }),
@@ -37,7 +37,7 @@ const projects = [
       titreHover: "",
       text1: "Travail basé sur React",
       text2: "Gestion des différentes pages",
-      text3: "",
+      text3: "contenus dynamiques appelés via Json  ",
       text4: "",
       alt: "Image projet space react",
       video:"/video/space.mp4"

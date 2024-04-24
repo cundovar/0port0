@@ -75,11 +75,11 @@ const Navbar = () => {
 
       <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col  lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
     
-        <h1>Facundo Varas</h1>
+        <h1>Facundo Javier Varas</h1>
         <div className="flex 2xl:flex-col space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
           <h3>integrateur </h3>
           <h3> dev front</h3>
-        </div>
+        </div> 
 
     
       </div>
@@ -97,23 +97,23 @@ const Navbar = () => {
               />
             </li>
           </NavLink>
-          <NavLink to="/apropos"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
-            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
-            
-              <ButtonNavBar 
-                className="2xl:text-4xl text-xl font-black  xl:text-2xl "
-                text="A propos"
-              />
-
-              
-            </li>
-          </NavLink>
           <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(2); }}  >
             <li   className={`flex items-center ${activeIndex === 2 ? "border-l" : ""}`}>
             
               <ButtonNavBar 
                 className="2xl:text-4xl text-xl font-black xl:text-2xl "
                 text="Portfolio"
+              />
+
+              
+            </li>
+          </NavLink>
+          <NavLink to="/apropos"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
+            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
+            
+              <ButtonNavBar 
+                className="2xl:text-4xl text-xl font-black  xl:text-2xl "
+                text="A propos"
               />
 
               

@@ -45,7 +45,7 @@ const Competence = () => {
     <>
       <div className="flex w-full   border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
 
-        <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
+        {/* <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
           <ul className="flex space-x-5   max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
             
             <li className="max-md:invisible border">
@@ -64,13 +64,13 @@ const Competence = () => {
               />{" "}
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className=" w-full xl:p-10  ">
         <div className=" w-full flex justify-center   ">
       
           <div className="w-full h-full    ">
             
-          <CSSTransition
+          {/* <CSSTransition
             in={activeMenuItem === "technologies"}
             timeout={5000}
             classNames={{
@@ -81,9 +81,10 @@ const Competence = () => {
               text:"text-4xl"
             }}
             unmountOnExit
-          >
+          > */}
             <div className=" w-full">
-            {activeMenuItem === "technologies" && (
+            {/* {activeMenuItem === "technologies" && (
+            */}
               <div className="relative w-5/6 lg:w-full m-auto">
               
                 <button className="absolute h-10 text-xl w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 max-lg:-left-4 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300   "
@@ -96,7 +97,7 @@ const Competence = () => {
                
 
                 <FontAwesomeIcon className="text-3xl" icon={faAngleRight} />
-                </button>
+                </button> 
                 <Slider {...settings} ref={sliderRef} className=" m-auto w-full ">
                   {tekno &&
                     tekno.map((items) => (
@@ -129,15 +130,15 @@ const Competence = () => {
                     ))}
                 </Slider>
               </div>
-            )}
+      
 
             </div>
-          </CSSTransition>
+          {/* </CSSTransition> */}
 
           </div>
         </div>
 
-        <CSSTransition
+        {/* <CSSTransition
             in={activeMenuItem === "graphique"}
             timeout={5000}
             classNames={{
@@ -155,8 +156,8 @@ const Competence = () => {
         </div>
       )}
 
-</div>
-</CSSTransition>
+</div> */}
+{/* </CSSTransition> */}
       </div>
 
 
