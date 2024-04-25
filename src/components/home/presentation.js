@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -19,6 +20,11 @@ const Presentation=()=>{
        
 
         <p  ><a className="border p-3 max-2xl: hover:font-black"  href="./images/cv/CV.pdf" target="_blank">curriculum vitae</a> </p>
+        <Link to="/cv">
+            <p className="border p-3 max-2xl: hover:font-black" >
+                cv
+            </p>
+        </Link>
         
 
         {/* <p className="text-xl text-justify">

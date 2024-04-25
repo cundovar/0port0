@@ -11,6 +11,8 @@ import LoadingPage from "../components/animation/loadingpage";
 
 
 import Accueil from "./accueil";
+import Cv from "./cv";
+import Pdf from "../components/cv/pdf/pdf";
 
 const Page = () => {
   return (
@@ -38,6 +40,7 @@ const Page = () => {
         <Route path="/apropos" element={<Home />}  />
         <Route path="/portfolio" element={<Portfolio />}  />
         <Route path="/contact" element={<Contact />}  />
+        <Route path="/cv" element={<Cv/>}  />
    
        
         <Route path="/portfolio/crea" element={<CardCrea1 />}  />

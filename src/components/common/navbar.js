@@ -28,6 +28,9 @@ const Navbar = () => {
       case "/contact":
         setActiveIndex(3);
         break;
+      case "/cv":
+        setActiveIndex(4);
+        break;
   
       default:
         setActiveIndex(0);
@@ -119,6 +122,17 @@ const Navbar = () => {
               
             </li>
           </NavLink>
+
+          <NavLink to="/cv"  onClick={() => { toggleMenu(); setActiveIndex(3); }}>
+            <li className={activeIndex === 4? "border-l" : ""}>
+              <ButtonNavBar
+                className="2xl:text-4xl text-xl font-black  xl:text-2xl  "
+                text="CV"
+              />
+            </li>
+          </NavLink>
+
+
           <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(3); }}>
             <li className={activeIndex === 3? "border-l" : ""}>
               <ButtonNavBar
@@ -127,6 +141,7 @@ const Navbar = () => {
               />
             </li>
           </NavLink>
+        
         </ul>
       </div>
     </div>
