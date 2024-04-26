@@ -6,12 +6,14 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import NightlightRoundRoundedIcon from '@mui/icons-material/NightlightRoundRounded';
+import { BrowserRouter as Router } from 'react-router-dom'; // Correction ici
  export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function AppContent() {
   const { toggleColorMode, mode } = useContext(ColorModeContext);
 
   return (
+    
     <div className="2xl:p-20 p-2  h-screen">
       <Page />
       {/* Bouton de basculement */}
@@ -46,7 +48,9 @@ function App() {
     <ColorModeContext.Provider value={{ toggleColorMode, mode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppContent />
+        <Router>
+          <AppContent />
+        </Router>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

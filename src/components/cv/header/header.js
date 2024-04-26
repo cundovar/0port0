@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import LanguageIcon from '@mui/icons-material/Language';
 import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 const Header=()=>{
+
+ 
 
 
     return(
-<header className="flex w-full p-3 z-50 max-sm:flex-col">
-    <div className="w-5/12 max-sm:w-full flex items-center justify-center  ">
+<header className="flex w-full p-3 max-sm:flex-col">
+    <div className=" imgscroll w-5/12 max-sm:w-full flex items-center justify-center  "  >
         <img className="rounded-full h-60" src="./images/moi.jpg" alt="photo perso"/>
     </div>
 <div className="7/12 max-sm:w-full max-sm:mt-5 ">

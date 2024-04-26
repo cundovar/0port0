@@ -9,7 +9,7 @@ const ParcoursScolair=()=>{
 
 
     return(
-        <div className="flex w-full max-sm:flex-col">
+        <div className="flex w-full max-sm:flex-col bg-neutral-100 pt-20 pb-20 rounded-xl">
         <div className="w-5/12 max-sm:w-full h-full">
           <h3>Parcours scolaire</h3>
         </div>

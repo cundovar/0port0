@@ -1,4 +1,6 @@
 import React from "react";
+import ComponenentTekno from "../componenetTekno";
+import tek from "../milieu/teknoModel/objectTekno";
 
  const DebutRight=()=>{
 
@@ -67,29 +69,9 @@ import React from "react";
             />
           </div>
         </div>
-        <div className="flex flex-wrap space-x-3 space-y-2 items-center justify-center">
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> Tailwind</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> Javascript</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> React</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> Wordpress</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> Git</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> Bootstrap</p>
-          </div>
-          <div className="p-3 bg-amber-400 flex items-center justify-center rounded-2xl">
-            <p className=""> StoryBook</p>
-          </div>
-        </div>
+     
+         <ComponenentTekno object={tek}/>
+        
       </div>
 
     )
