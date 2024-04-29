@@ -1,60 +1,37 @@
 import React from "react";
 
 const DebutLeft = () => {
+  const competences = [
+    "reponsive design",
+    "Model Vue Controller",
+    "StoryBook",
+    "composants réutilisables",
+  ];
+
   return (
-    <div className="w-5/12 border max-sm:w-full  ">
-      <div className="h-1/4max-sm:w-full border">
+    <article className="w-5/12  max-lg:mt-3 max-lg:w-full  ">
+      <div className="h-1/4max-lg:w-full ">
         <h3>compétences en développement web</h3>
       </div>
-      <div className="flex items-center justify-center border max-sm:h-auto h-3/4">
-        <div className="space-y-3 w-3/4 max-sm:w-full   flex border flex-col justify-center m-auto">
-          <div className="flex ">
-            <div className="w-1/12 h-8 flex border items-center justify-center">
-              <img
-                className="h-full w-full object-contain"
-                src="./images/cv/svg/svg.svg"
-              />
+      <div className="flex items-center justify-center  max-lg:h-auto h-3/4">
+        <div className="space-y-3 w-3/4 max-lg:w-full  flex  flex-col justify-center m-auto">
+          {competences.map((compe, index) => (
+            <div key={index} className="flex  items-center">
+              <div className="w-1/12 h-5 mr-2  flex items-center justify-center">
+                <img
+                  className="h-full w-full object-contain"
+                  src="./images/cv/svg/svg.svg"
+                  alt={`svg-${index}`}
+                />
+              </div>
+              <div className="w-11/12 h-8  flex items-center">
+                <p className="text-2xl">{compe}</p>
+              </div>
             </div>
-            <div className="w-11/12 h-8 border flex items-center ">
-              <p className="text-2xl">reponsive design</p>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-1/12 h-8 flex border items-center justify-center">
-              <img
-                className="h-full w-full object-contain"
-                src="./images/cv/svg/svg.svg"
-              />
-            </div>
-            <div className="w-11/12 h-8 border flex items-center ">
-              <p className="text-2xl">Model Vue Controller</p>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-1/12 h-8 flex border items-center justify-center">
-              <img
-                className="h-full w-full object-contain"
-                src="./images/cv/svg/svg.svg"
-              />
-            </div>
-            <div className="w-11/12 h-8 border flex items-center ">
-              <p className="text-2xl">StoryBook</p>
-            </div>
-          </div>
-          <div className="flex ">
-            <div className="w-1/12 h-8 flex border items-center justify-center">
-              <img
-                className="h-full w-full object-contain"
-                src="./images/cv/svg/svg.svg"
-              />
-            </div>
-            <div className="w-11/12 h-8 border flex items-center ">
-              <p className="text-2xl">composants réutilisables</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

@@ -11,43 +11,43 @@ const Header=()=>{
 
 
     return(
-<header className="flex w-full p-3 max-sm:flex-col">
-    <div className=" imgscroll w-5/12 max-sm:w-full flex items-center justify-center  "  >
+<header className="flex w-full p-3 max-lg:flex-col bg-neutral-100  m-auto ">
+    <div className=" imgscroll w-5/12 max-lg:w-full flex items-center justify-center  "  >
         <img className="rounded-full h-60" src="./images/moi.jpg" alt="photo perso"/>
     </div>
-<div className="7/12 max-sm:w-full max-sm:mt-5 ">
-    <div className="h-2/5 max-sm:h-auto">
+<div className="7/12 max-lg:w-full max-lg:mt-5 ">
+    <div className="h-2/5 max-lg:h-auto">
        <h1>Facundo Varas</h1>
         <h2 className="max-sm:text-xl">Développeur front-end/intégrateur </h2>
 
     </div>
-    <div className="border max-sm:h-auto max-sm:mt-5   h-3/5 flex flex-col items-center justify-center ">
+    <div className=" max-md:h-auto max-lg:mt-5   h-3/5 flex flex-col items-center justify-center ">
       <div className="space-y-5 ">
-      <div className="flex flex-wrap border space-x-10">
+      <div className="flex flex-wrap  space-x-10">
 <LanguageIcon/>
-        <a href="https://pixell.varascundo.com/" >
+        <a href="https://pixell.varascundo.com/" className="text-xl"  >
         pixell.varascundo.com
 
         </a>
-        <a href="https://github.com/cundovar" >
+        <a href="https://github.com/cundovar" className="text-xl" >
          github
 
         </a>
 
         
       </div>
-      <div className="flex flex-wrap border space-x-10">
+      <div className="flex flex-wrap  space-x-10">
         <AttachEmailIcon/>
-        <a href="varas.cundo@gmail.com" >
+        <a href="varas.cundo@gmail.com"className="text-xl" >
         varas.cundo@gmail.com
         </a>
 
         
       </div>
-      <div className="flex flex-wrap border space-x-10">
+      <div className="flex flex-wrap  space-x-10">
 
 <LocalPhoneIcon/>
-       <p>06 23 84 84 45</p>
+       <p className="text-xl">06 23 84 84 45</p>
       </div>
 
       </div>

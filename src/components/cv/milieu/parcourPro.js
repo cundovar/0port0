@@ -14,7 +14,7 @@ const ParcoursPro=()=>{
 
 
     return(
-<div className="flex relative max-sm:flex-col border bg-neutral-100 pt-20 pb-20 rounded-xl  w-full">
+<div className="flex relative max-sm:flex-col  bg-neutral-100 pt-20 pb-20 rounded-xl  w-full">
             <div className="w-5/12 max-sm:w-full  h-full">
               <h3 className="a">Parcours professionnel</h3>
             </div>

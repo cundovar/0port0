@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { ButtonNavBar, OutlinedButtons } from "./button/button";
 import { CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   //     const [clicked, setClicked]=useState(false)
   // const handleChanges=()=>{
@@ -67,6 +69,10 @@ const Navbar = () => {
    setBarre(!barre)
   };
 
+  const handleSetActive = (to) => {
+    console.log(to);
+  };
+
   return (
     <>
     
@@ -123,7 +129,7 @@ const Navbar = () => {
             </li>
           </NavLink>
 
-          <NavLink to="/cv"  onClick={() => { toggleMenu(); setActiveIndex(3); }}>
+          <NavLink to="/cv"  onClick={() => { toggleMenu(); setActiveIndex(4); }}>
             <li className={activeIndex === 4? "border-l" : ""}>
               <ButtonNavBar
                 className="2xl:text-4xl text-xl font-black  xl:text-2xl  "

@@ -174,7 +174,7 @@ export function ProgressBar() {
     setCurrentData(diversData);
   };
   return (
-    < div className="opacity-70">
+    < div className="opacity-70 max-sm:hidden">
 
       <Line options={options} data={currentData} />
 

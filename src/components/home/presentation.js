@@ -19,12 +19,6 @@ const Presentation=()=>{
         </p>
        
 
-        <p  ><a className="border p-3 max-2xl: hover:font-black"  href="./images/cv/CV.pdf" target="_blank">curriculum vitae</a> </p>
-        <Link to="/cv">
-            <p className="border p-3 max-2xl: hover:font-black" >
-                cv
-            </p>
-        </Link>
         
 
         {/* <p className="text-xl text-justify">

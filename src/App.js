@@ -14,7 +14,8 @@ function AppContent() {
 
   return (
     
-    <div className="2xl:p-20 p-2  h-screen">
+    <div className="2xl:p-20 p-2 border h-screen">
+     
       <Page />
       {/* Bouton de basculement */}
       <div className=' absolute p-0 bottom-0   2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-700  z-30 cursor-pointer'>
