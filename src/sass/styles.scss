@@ -7,6 +7,19 @@
 html {
   scroll-behavior: smooth;
 }
+html,body,#root{
+  
+}
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+#root{
+ 
+ 
+}
 
 *{
   font-family: 'Gabarito', sans-serif !important;
@@ -309,5 +322,9 @@ height: 5rem;
 
 .larger-symfo{
   width: 8rem !important;
+}
+
+.contactt{
+  padding-bottom: 20rem !important;
 }
 

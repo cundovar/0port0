@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import NightlightRoundRoundedIcon from '@mui/icons-material/NightlightRoundRounded';
-import { BrowserRouter as Router } from 'react-router-dom'; // Correction ici
+import { Link, BrowserRouter as Router } from 'react-router-dom'; // Correction ici
  export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function AppContent() {
@@ -14,16 +14,34 @@ function AppContent() {
 
   return (
     
-    <div className="2xl:p-20 p-2 border h-screen">
+    <div className="2xl:p-20 p-2 border max-sm:h-full border sm:h-screen">
      
       <Page />
       {/* Bouton de basculement */}
-      <div className=' absolute p-0 bottom-0   2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-700  z-30 cursor-pointer'>
+      <div className=' absolute p-0 bottom-0 max-sm:hidden  2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-700  z-30 cursor-pointer'>
 
       <Button onClick={toggleColorMode} >
         {mode === 'dark' ? <LightModeRoundedIcon fontSize='medium'/> : <NightlightRoundRoundedIcon fontSize='medium'/>}
       </Button>
       </div>
+
+      <div className=' sm:hidden fixed p-0 -bottom-2 items-center justify-around w-full flex max-sm:left-0 rounded-2xl  2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-400  z-30 cursor-pointer'>
+    <div className='flex justify-center items-center space-x-2'>
+    <Link to="apropos">a propos</Link>
+    <Link to="/portfolio"><p> portfolio</p></Link>
+    <Link to="/cv">CV</Link>
+    <Link to="/contact"><p>Comtact</p></Link>
+ 
+
+    </div>
+  
+  
+  
+  <Button onClick={toggleColorMode} >
+    {mode === 'dark' ? <LightModeRoundedIcon fontSize='medium'/> : <NightlightRoundRoundedIcon fontSize='medium'/>}
+  </Button>
+  </div>
+      
     </div>
   );
 }

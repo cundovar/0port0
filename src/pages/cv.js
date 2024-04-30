@@ -17,12 +17,12 @@ const Cv = () => {
 
   return (
     <div
-      className="w-8/12 rounded-xl mt-22xl:mr-2 h-full max-lg:mt-48 max-2xl:mt-20 max-2xl:w-11/12 pb-96 max-sm:w-full flex flex-col items-center bg-neutral-50 text-slate-800   absolute right-0 border overflow-y-scroll"
+      className="w-8/12 rounded-xl mt-2xl:mr-2 sm:h-full max-lg: max-2xl:mt-20 max-2xl:w-11/12 bg-neutral-50 pb-96 max-sm:w-full flex flex-col items-center text-slate-800 sm:overflow-y-scroll   absolute right-0 border"
       id="cv"
     >
       <Header />
 
-      <section className="w-full p-3  space-y-10">
+      <section className="w-full p-3 h-full space-y-10">
         <div className=" w-full  space-y-3">
           <div className="flex p-3 max-lg:flex-col">
             <DebutLeft />

@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div className=" w-full flex    border-orange-600  max-md:flex-col md:flex-col-reverse xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-36 z-20 max-lg:overflow-y-scroll     ">
+    <div className=" w-full flex    border-orange-600 max:lg:m-auto max-md:flex-col md:flex-col-reverse xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-20 z-20    ">
       <div className=" md:hidden lg:absolute ml-2  flex items-center h-28">
         <div className="  type w-full">
           <h3>
@@ -38,7 +38,7 @@ const Home = () => {
         </div>
   
           <div
-            className=  "w-full  max-sm:mt-5 max-sm:w-full   m-auto" >
+            className=  "w-full   max-sm:mt-5 max-sm:w-full border   m-auto" >
             <Competence />
           </div>
        
@@ -48,7 +48,7 @@ const Home = () => {
         </div>
 
       <div className=" max-md:ml-2 xl:w-2/5 md:w-2/3  md:mt-0 border-orange-900  max-xl:m-auto  relative  w-full  ">
-        <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4   border-emerald-500   ">
+        <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4 mr-0  border-emerald-500   ">
           <div className="  pb-2 mt-10 border-b   z-50">
             <div className="flex xl:justify-start items-end  space-x-5">
               <h1 className="max-md:text-3xl   max-md:ml-2">

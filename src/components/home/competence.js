@@ -43,7 +43,7 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full   border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
+      <div className="flex w-full  xl:z-50   border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
 
         {/* <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
           <ul className="flex space-x-5   max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
@@ -87,12 +87,12 @@ const Competence = () => {
             */}
               <div className="relative w-5/6 lg:w-full m-auto">
               
-                <button className="absolute h-10 text-xl w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 max-lg:-left-4 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300   "
+                <button className="absolute h-10 text-xl xl:z-50 w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 max-lg:-left-4 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300   "
                 onClick={prevSlide}>
                 <FontAwesomeIcon className="text-3xl" icon={faAngleLeft} />
 
                 </button>
-                <button className="absolute h-10 w-10 hover:border text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -right-0  translate-x-2/4 -translate-y-2/4 top-1/2 z-50 max-lg:-right-4  "
+                <button className="absolute h-10 w-10 xl:z-50 button_slide hover:border text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -right-0  translate-x-2/4 -translate-y-2/4 top-1/2 z-50 max-lg:-right-4  "
                   onClick={nextSlide} >
                
 

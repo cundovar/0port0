@@ -11,7 +11,7 @@ const Navbar = () => {
   // setClicked(!clicked)
   const [activeIndex, setActiveIndex] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
-  const [barre,setBarre]=useState(false)
+  const [barre, setBarre] = useState(false);
   const location = useLocation();
   const [startX, setStartX] = useState(null);
   const menuContentRef = useRef(null);
@@ -21,9 +21,9 @@ const Navbar = () => {
       case "/":
         setActiveIndex(0);
         break;
-        case "/apropos":
-          setActiveIndex(1);
-          break;
+      case "/apropos":
+        setActiveIndex(1);
+        break;
       case "/portfolio":
         setActiveIndex(2);
         break;
@@ -33,16 +33,21 @@ const Navbar = () => {
       case "/cv":
         setActiveIndex(4);
         break;
-  
+
       default:
         setActiveIndex(0);
     }
   }, [location.pathname]);
 
+  const liContent = [
+    ["0", "Accueil", "/"],
+    ["1", "A propos", "/apropos"],
+    ["2", "Portfolio", "/portfolio"],
+    ["3", "Contact", "/contact"],
+    ["4", "CV", "/cv"],
+  ];
 
-
-
-//fermer avec le doigt
+  //fermer avec le doigt
   const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);
   };
@@ -61,12 +66,10 @@ const Navbar = () => {
     setStartX(null);
   };
 
-
-
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
 
-   setBarre(!barre)
+    setBarre(!barre);
   };
 
   const handleSetActive = (to) => {
@@ -74,84 +77,61 @@ const Navbar = () => {
   };
 
   return (
-    <>
-    
- <a id="link" className=" max-lg:bg-black p-1 flex items-center justify-center" href="#">
-        <span id="burger1" className={`${barre ? "opene" : ""}`} onClick={toggleMenu}></span>
+    <div className="h-full border max-lg:w-full lg:mt-20 ">
+      <a
+        id="link"
+        className=" max-lg:bg-black  p-1 flex items-center justify-center"
+        href="#"
+      >
+        <span
+          id="burger1"
+          className={`${barre ? "opene" : ""}`}
+          onClick={toggleMenu}
+        ></span>
       </a>
-    
-    <div className="fixed  max-md:w-full max-md:z-30  h-auto max-md:h-auto z-10 ">
 
-      <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col  lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
-    
-        <h1>Facundo Javier Varas</h1>
-        <div className="flex 2xl:flex-col space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
-          <h3>integrateur </h3>
-          <h3> dev front</h3>
-        </div> 
-
-    
-      </div>
-      <div className={`flex flex-col h-full lg:mt-16   max-md:items-start max-md:justify-start  mt-4  border-red-600 ${menuVisible ? 'showMenu' : ''}`} id="menuContent"
-                       ref={menuContentRef}
-                       onTouchStart={handleTouchStart}
-                       onTouchMove={handleTouchMove}
-                       onTouchEnd={handleTouchEnd}  >
-        <ul className=" lg:space-x-28 max-md:space-y-0 max-md:flex   flex-col max-lg:flex ">
-          <NavLink to="/"  onClick={() => { toggleMenu(); setActiveIndex(0); }}>
-            <li className={`flex items-center ${activeIndex === 0 ? "border-l" : ""}`}>
-              <ButtonNavBar
-                className="2xl:text-4xl  text-xl font-black  xl:text-2xl "
-                text="Accueil"
-              />
-            </li>
-          </NavLink>
-          <NavLink to="/portfolio"  onClick={() => { toggleMenu(); setActiveIndex(2); }}  >
-            <li   className={`flex items-center ${activeIndex === 2 ? "border-l" : ""}`}>
-            
-              <ButtonNavBar 
-                className="2xl:text-4xl text-xl font-black xl:text-2xl "
-                text="Portfolio"
-              />
-
-              
-            </li>
-          </NavLink>
-          <NavLink to="/apropos"  onClick={() => { toggleMenu(); setActiveIndex(1); }}  >
-            <li   className={`flex items-center ${activeIndex === 1 ? "border-l" : ""}`}>
-            
-              <ButtonNavBar 
-                className="2xl:text-4xl text-xl font-black  xl:text-2xl "
-                text="A propos"
-              />
-
-              
-            </li>
-          </NavLink>
-
-          <NavLink to="/cv"  onClick={() => { toggleMenu(); setActiveIndex(4); }}>
-            <li className={activeIndex === 4? "border-l" : ""}>
-              <ButtonNavBar
-                className="2xl:text-4xl text-xl font-black  xl:text-2xl  "
-                text="CV"
-              />
-            </li>
-          </NavLink>
-
-
-          <NavLink to="/contact"  onClick={() => { toggleMenu(); setActiveIndex(3); }}>
-            <li className={activeIndex === 3? "border-l" : ""}>
-              <ButtonNavBar
-                className="2xl:text-4xl text-xl font-black  xl:text-2xl  "
-                text="Contact"
-              />
-            </li>
-          </NavLink>
+      <div className="fixed  max-md:w-full z-40 border   ">
         
-        </ul>
+        <div
+          className={`flex flex-col  lg:mt-16 border max-lg:w-full  max-md:items-start max-md:justify-start  mt-4  border-red-600 ${
+            menuVisible ? "showMenu" : ""
+          }`}
+          id="menuContent"
+          ref={menuContentRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className=" p-2 sm:hidden ">
+            <h2 className="text-xl">Facundo Javier Varas</h2>
+            <h2 className="text-lg">dev front/integrateur</h2>
+          </div>
+          <ul className=" lg:space-x-28 w-full max-md:space-y-0 max-md:flex border flex-col max-lg:flex max-sm:flex-row max-sm:flex-wrap max-sm:justify-around ">
+            {liContent.map((content) => (
+              <NavLink
+                key={content[0]}
+                to={content[2]}
+                onClick={() => {
+                  toggleMenu();
+                  setActiveIndex(content[0]);
+                }}
+              >
+                <li
+                  className={`flex items-center max-sm:m-1 max-sm:border max-sm:rounded-xl ${
+                    activeIndex === content[0] ? "border-l" : ""
+                  }`}
+                >
+                  <ButtonNavBar
+                    className="2xl:text-4xl text-xl font-black xl:text-2xl"
+                    text={content[1]}
+                  />
+                </li>
+              </NavLink>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
-    </>
   );
 };
 

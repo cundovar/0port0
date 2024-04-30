@@ -29,15 +29,15 @@ const ModalDetailpage = ({ onClose, project }) => {
     if (project.imageSrc.length > 1) {
       modalContent = (
         <>
-          <div className="absolute h-full flex items-center w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
-            <div className="  relative  m-auto overflow-scroll w-full h-2/3 ">
+          <div className="absolute h-8/12 flex items-center     w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
+            <div className="  relative border h-full m-auto w-full   ">
               <button
                 className="close-btn absolute right-0   m-2 z-100 z-50 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
                 onClick={onClose}
               >
                 <CloseIcon fontSize="medium" color="disabled" />
               </button>
-              <div className=" w-full m-auto">
+              <div className=" w-full  h-full border m-auto ">
                 <Slider {...settings} ref={sliderRef}>
                   {project.imageSrc.map((image, index) => (
                     <div key={index} className=" bg-stone-900 overflow-hidden">
@@ -51,7 +51,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                 </Slider>
               </div>
 
-              <div className="sm:w-5/6 m-auto">
+              <div className="w-full h-full  border m-auto">
                 <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
                   <div className="w-full flex max-lg:flex-col  ">
                     <div className=" w-full  flex flex-col ">
@@ -121,6 +121,8 @@ const ModalDetailpage = ({ onClose, project }) => {
                   </div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </>

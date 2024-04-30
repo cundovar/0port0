@@ -28,7 +28,7 @@ const Modal=({closeModal} )=>{
 
     return(
       
-        <div className="modal w-1/3 relative  max-sm:w-full  mt-10 max-sm:mt-50  max-sm:-left:5">
+        <div className="modal w-1/3 relative  max-sm:w-full   max-sm:mt-50  max-sm:-left:5">
                 <span className="close absolute -top-20 -right-7 p-5  "
                 onClick={closeModal}
                 >

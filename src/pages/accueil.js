@@ -10,8 +10,8 @@ const Accueil=()=>{
 
     return(
         <>
-        <div className="w-full  container-accueil h-full flex items-center relative justify-center max-sm:overflow-scroll">
-            <div className=" w-full flex justify-center items-center h-full ">
+        <div className="w-full sm:h-full  flex items-center relative justify-center">
+            <div className=" w-full flex justify-center items-center sm:h-full  ">
 
 <div className="absolute opacity-35 -top-20 rounded-3xl max-sm:hidden -right-96">
 <VideoBackground videoSrc={"./video/space.mp4"}/> 

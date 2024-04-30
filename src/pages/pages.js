@@ -54,12 +54,12 @@ const Page = () => {
   };
 
   return (
-    <div className="h-full border w-full max-2xl:border-0 relative flex border-stone-600 overflow-hidden">
+    <div className="h-full border  w-full max-2xl:border-0 relative flex border-stone-600 sm:overflow-hidden">
 
       <button className=" max-lg:hidden absolute h-10  flex items-center justify-center z-50 mt-1 cursor-pointer pt-0 right-0  ">
 
         <a className= "transition ease-in-out delay-150  hover:opacity-100   duration-300 bg-cyan-600   p-2 rounded-xl m-1" href={getLinkPage()[0]} target="_blank">
-          <p className=" ">voire le code de : {getLinkPage()[1]} </p>
+          <p className=" ">voir le code de : {getLinkPage()[1]} </p>
         </a>
       </button>
 
@@ -69,11 +69,21 @@ const Page = () => {
       </div>
 
       <AnimationSVG />
+      <div className="absolute max-sm:hidden  top-0 left-0">
+      <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col   lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
+          <h1>Facundo Javier Varas</h1>
+          <div className="flex 2xl:flex-col mx:md:hidden space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">
+            <h3>integrateur </h3>
+            <h3> dev front</h3>
+          </div>
+        </div>
+        
+      </div>
       <Navbar />
       <TransitionGroup>
         <CSSTransition key={location.key} classNames="page" timeout={800}>
           <div className="w-11/12 max-sm:mt-10 max-md:w-full absolute h-full right-0">
-            <div className="w-full h-full flex justify-center relative">
+            <div className="w-full h-full sm:flex justify-center relative">
               <Routes location={location}>
                 <Route path="/" element={<Accueil />} />
                 <Route path="/apropos" element={<Home />} />
@@ -84,7 +94,7 @@ const Page = () => {
               </Routes>
             </div>
             {location.pathname === "/cv" && (
-              <div className="absolute w-10 flex justify-center logo h-20 z-50 bottom-0 right-3">
+              <div className="absolute w-10 flex justify-center max-lg:hidden logo h-20 z-50 bottom-0 right-3">
                 <div className="chevron"></div>
                 <div className="chevron"></div>
                 <div className="chevron"></div>

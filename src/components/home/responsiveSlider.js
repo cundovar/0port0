@@ -28,7 +28,7 @@ const ResponsiveSlider=()=>{
     
 
     return(
-        <div className=" relative  mt-10 border w-11/12 m-auto  ">
+        <div className=" relative  mt-10 border w-11/12 max-sm:w-full m-auto  ">
 <div className="w-full flex justify-between">
 
 <button className="absolute hover:border text-slate-950 -translate-y-2/4 top-1/2 hover:border-stone-500 transition  ease-in-out delay-100 h-10 w-10   rounded-full bg-stone-100 flex items-center justify-center z-40"
