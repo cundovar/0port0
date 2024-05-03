@@ -54,7 +54,7 @@ const Page = () => {
   };
 
   return (
-    <div className="h-full border  w-full max-2xl:border-0 relative flex border-stone-600 sm:overflow-hidden">
+    <div className="h-full border  w-full max-2xl:border-0 relative flex border-stone-600 xl:overflow-hidden">
 
       <button className=" max-lg:hidden absolute h-10  flex items-center justify-center z-50 mt-1 cursor-pointer pt-0 right-0  ">
 
@@ -82,7 +82,7 @@ const Page = () => {
       <Navbar />
       <TransitionGroup>
         <CSSTransition key={location.key} classNames="page" timeout={800}>
-          <div className="w-11/12 max-sm:mt-10 max-md:w-full absolute h-full right-0">
+          <div className="w-11/12 max-sm:mt-10 max-xl:w-full absolute h-full right-0">
             <div className="w-full h-full sm:flex justify-center relative">
               <Routes location={location}>
                 <Route path="/" element={<Accueil />} />
@@ -94,7 +94,7 @@ const Page = () => {
               </Routes>
             </div>
             {location.pathname === "/cv" && (
-              <div className="absolute w-10 flex justify-center max-lg:hidden logo h-20 z-50 bottom-0 right-3">
+              <div className="absolute w-10 flex justify-center max-xl:hidden logo h-20 z-50 bottom-0 right-3">
                 <div className="chevron"></div>
                 <div className="chevron"></div>
                 <div className="chevron"></div>

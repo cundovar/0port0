@@ -20,23 +20,23 @@ function AppContent() {
 const location=useLocation()
   return (
     
-    <div className="2xl:p-20 p-2 max-sm:p-0 max-sm:pl-2 max-sm:pr-2 max-sm:h-full  sm:h-screen">
+    <div className="2xl:p-20 p-2 max-sm:p-0 max-sm:pl-2 max-sm:pr-2 max-xl:h-full  xl:h-screen">
      
       <Page />
       {/* Bouton de basculement */}
-      <div className=' absolute p-0 bottom-0 max-sm:hidden  2xl:bottom-20 max-sm:border max-sm:p-1  z-30 cursor-pointer'>
+      <div className=' absolute fixed p-0 bottom-0 max-lg:hidden  2xl:bottom-20 max-sm:border max-sm:p-1  z-30 cursor-pointer'>
 
       <Button onClick={toggleColorMode} >
         {mode === 'dark' ? <LightModeRoundedIcon fontSize='medium'/> : <NightlightRoundRoundedIcon fontSize='medium'/>}
       </Button>
       </div>
 
-      <div className=' sm:hidden fixed p-0 bottom-0 items-center justify-around w-full flex max-sm:left-0 rounded-tr-2xl rounded-tl-2xl 2xl:bottom-20  max-sm:p-1 max-sm:backdrop-blur-xl z-30 cursor-pointer'>
-      <div className={`flex justify-center items-center w-5/6  space-x-2 ${location.pathname === '/cv' ? 'max-sm:text-gray-950' : ''}`}>
+      <div className=' xl:hidden fixed p-0 bottom-0 items-center justify-around w-full flex max-sm:left-0 rounded-tr-2xl rounded-tl-2xl 2xl:bottom-20  max-sm:p-1 backdrop-blur-xl z-30 cursor-pointer'>
+      <div className={`flex justify-center items-center w-5/6  space-x-2 ${location.pathname === '/cv' ? 'text-gray-950' : ''}`}>
   
 
 
-    <Link k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/apropos' && "border-b" } `}  to="/apropos">
+    <Link k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/apropos' && "border" } `}  to="/apropos">
       
 <HomeIcon/>
 <p className="">
@@ -46,13 +46,13 @@ const location=useLocation()
       </Link>
 
   
-    <Link className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/portfolio' && "border-b " } `} to="/portfolio"  >
+    <Link className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/portfolio' && "border " } `} to="/portfolio"  >
 
       <PhotoSizeSelectActualIcon/>
       <p> portfolio</p></Link>
     
  
-    <Link to="/cv"  className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/cv' && "border-b border-slate-950" } `} >
+    <Link to="/cv"  className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/cv' && "border border-slate-950" } `} >
       
 <ArticleIcon className='  '/>
       CV
@@ -60,7 +60,7 @@ const location=useLocation()
       </Link>
 
     
-    <Link to="/contact" k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/contact' && "border-b" } `} >
+    <Link to="/contact" k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/contact' && "border" } `} >
 
       <ContactMailIcon/>
       <p>Contact</p>

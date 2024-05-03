@@ -45,14 +45,14 @@ const Portfolio = () => {
               model.map((item) => (
                 <div
                   key={item.id}
-                  className={`flex   justify-end 2xl:m-10 lg:m- ${
+                  className={`flex max:lg:items-center mt-10   justify-end 2xl:m-10 lg:m- ${
                     activeProjectId === item.id
                       ? " border-b border-l shadow-2xl opacity-100"
                       : ""
                   } `}
                 >
                   <div
-                    className="flex  justify-center w-full  xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 mt-3 2xl:mt-0  "
+                    className="flex  justify-center w-full max-sm:w-full max-lg:w-10/12 max-lg:m-auto  xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 mt-3 2xl:mt-0  "
                     onClick={() => {
                       setActiveProjectId(item.id);
                       detail(item);
@@ -119,8 +119,8 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex relative sm:h-full sm:mt-10  w-full ">
-      <div className="lg:w-2/3 max-lg:hidden flex justify-center">
+    <div className="flex  relative h-full sm:mt-10  w-full ">
+      <div className="xl:w-2/3 max-xl:hidden flex justify-center">
         <div
           className={`${
             selectedIntegra
@@ -172,10 +172,10 @@ const Portfolio = () => {
         </div>
       </div>
 
-      <div className="   lg:w-1/3 xl:1/2 max-lg:w-full 2xl:pt-10 lg:pt-10 ">
-        <div className="flex lg:space-x-3 xl:space-x-10 items-end p-2 border-b max-sm:mb-5 max-md:w-full max-lg:flex-col ">
+      <div className=" lg:mt-10 xl:mt-0   xl:w-1/3 xl:1/2 max-xl:w-full 2xl:pt-10 lg:pt-10 ">
+        <div className="flex lg:space-x-3 xl:space-x-10 items-end p-2 border-b max-sm:mb-5 max-xl:w-full max-xl:flex-col ">
           <h1>portfolio</h1>
-          <div className="flex xl:flex lg:flex-col max-md:justify-end max-md:w-full xl:justify-center 2xl:flex-row">
+          <div className="flex xl:flex xl:flex-col max-xl:justify-end max-xl:w-full xl:justify-center 2xl:flex-row">
             <OutlinedButtons
               sx={{
                 backgroundColor:
@@ -202,7 +202,7 @@ const Portfolio = () => {
             />
           </div>
         </div>
-        <div className="h-full w-full pb-32 max-sm:pb-0  border-amber-900 sm:overflow-y-scroll">
+        <div className="h-12/12 w-full pb-32 max-sm:pb-0    border-amber-900 xl:overflow-y-scroll">
           <ListModel
             project="projet"
             model={projects}

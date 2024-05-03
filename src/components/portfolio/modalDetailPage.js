@@ -29,17 +29,17 @@ const ModalDetailpage = ({ onClose, project }) => {
     
       modalContent = (
         <>
-          <div className="fixed  flex items-center  h-full r     w-[95%]  max-md:visible lg:invisible backdrop-blur-xl modal   ">
-            <div className="  relative   m-auto w-11/12   ">
+          <div className="absolute  flex items-center   max-sm:pt-10 sm:pt-20 sm:pb-20 max-sm:h-full max-xl:h-auto   border-pink-500   w-full  max-xl:visible xl:invisible backdrop-blur-xl modal   ">
+            <div className="  relative h-auto  m-auto w-11/12   ">
               <button
                 className="close-btn absolute right-0 -top-10 z-50 right-0 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
                 onClick={onClose}
               >
                 <CloseIcon fontSize="medium" color="disabled" />
               </button>
-              {project.imageSrc.length >1 ?(
 
-              <div className=" w-11/12   m-auto ">
+              <div className=" w-full h-1/3  m-auto ">
+              {project.imageSrc.length >1 ?(
                 <Slider {...settings} ref={sliderRef}>
                   {project.imageSrc.map((image, index) => (
                     <div key={index} className=" bg-stone-900 overflow-hidden">
@@ -52,21 +52,21 @@ const ModalDetailpage = ({ onClose, project }) => {
                     </div>
                   ))}
                 </Slider>
-              </div>
-
               ):(
                 <img
                 className=" h-52 m-auto "
                 src={project.imageSrc[0]}
                 alt={project.titre}
               />
-
+  
               )}
+              </div>
+
            
 
 
 
-              <div className="w-full    m-auto">
+              <div className="w-full h-2/3    m-auto">
                 <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 pb-3 m-4 items-start justify-start ">
                   <div className="w-full flex max-lg:flex-col  ">
                     <div className=" w-full  flex flex-col ">

@@ -20,7 +20,10 @@ const Home = () => {
   };
 
   return (
-    <div className=" w-full flex    border-orange-600 max:lg:m-auto max-md:flex-col md:flex-col-reverse xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-20 z-20    ">
+    <div className=" w-full flex lg:mt-32 xl:mt-20   border-orange-600 max:lg:m-auto max-xl:flex-col  xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-10 z-20    ">
+       <div className="flex lg:space-x-3  xl:hidden xl:space-x-10 items-end p-2 border-b max-sm:mb-5 max-md:w-full max-lg:flex-col ">
+          <h1>A propos</h1>
+          </div>
       <div className=" md:hidden lg:absolute ml-2  flex items-center h-28">
         <div className="  type w-full">
           <h3>
@@ -29,8 +32,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full xl:w-3/5  max-lg:pt-5   lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
-        <div className=" sm:ml-2 w-full  max-md:visible md:hidden md:invisible">
+      <div className="w-full xl:w-3/5  max-lg:pt-5   lg:h-full xl:flex   items-center justify-center max-md:visible border-blue-700   ">
+        <div className=" sm:ml-2 w-full   max-xl:visible xl:hidden ">
           <div className="w-full border-b ">
             <h1 className="text-3xl">Créations</h1>
           </div>
@@ -38,7 +41,8 @@ const Home = () => {
         </div>
   
           <div
-            className=  "w-full   max-sm:mt-16 max-sm:w-full    m-auto" >
+            className=  "w-full   max-xl:mt-16    m-auto" >
+              
             <Competence />
           </div>
        
@@ -47,7 +51,8 @@ const Home = () => {
     
         </div>
 
-      <div className=" max-sm:pb-20  xl:w-2/5 md:w-2/3  md:mt-0 border-orange-900  max-xl:m-auto  relative  w-full  ">
+      <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3  border-orange-900  max-xl:m-auto  relative  w-full  ">
+     
         <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4 mr-0  border-emerald-500   ">
           <div className="  pb-2 mt-5 border-b   z-50">
             <div className="flex xl:justify-start items-end  space-x-5 ">

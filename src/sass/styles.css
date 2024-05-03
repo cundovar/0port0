@@ -136,7 +136,7 @@
   z-index: 20 !important;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   #menuContent {
     transition: transform 0.5s ease; /* Utilisation de la propriété transform pour la transition */
     flex-direction: column;
@@ -378,7 +378,6 @@ main {
 }
 
 #cloud1 {
-  z-index: 900;
   position: absolute;
   right: -10%;
   bottom: 0;
@@ -396,7 +395,6 @@ main {
 }
 
 #cloud2 {
-  z-index: 772;
   position: absolute;
   right: -5%;
   top: 0.2em;
@@ -415,7 +413,6 @@ main {
 }
 
 #cloud3 {
-  z-index: 551;
   position: absolute;
   right: -15%;
   top: 0.3rem;
@@ -429,7 +426,6 @@ main {
 }
 
 #cloud4 {
-  z-index: 552;
   position: absolute;
   right: -25%;
   top: 0.2em;
@@ -442,7 +438,6 @@ main {
 }
 
 #cloud5 {
-  z-index: 266;
   position: absolute;
   right: 10%;
   top: 0.1em;
@@ -479,6 +474,10 @@ main {
     transform: translate(-1000px);
   }
 }
+.onCommence {
+  z-index: 999;
+}
+
 /* responsive */
 @media screen and (max-width: 1024px) {
   .response {
@@ -515,7 +514,6 @@ main {
 }
 
 #cloud6 {
-  z-index: 900;
   position: absolute;
   left: -10%;
   bottom: 0;
@@ -527,7 +525,6 @@ main {
 }
 
 #cloud7 {
-  z-index: 772;
   position: absolute;
   left: -5%;
   top: 0.2em;
@@ -540,7 +537,6 @@ main {
 }
 
 #cloud8 {
-  z-index: 551;
   position: absolute;
   left: -15%;
   top: 0.3rem;
@@ -552,7 +548,6 @@ main {
 }
 
 #cloud9 {
-  z-index: 552;
   position: absolute;
   left: -25%;
   top: 0.4em;
@@ -565,7 +560,6 @@ main {
 }
 
 #cloud10 {
-  z-index: 266;
   position: absolute;
   left: 10%;
   top: 0.1em;

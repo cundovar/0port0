@@ -43,7 +43,7 @@ export function ButtonNavBar({ className, text, onClick,size }) {
     // Utilisez les classes de couleurs de Material-UI en fonction du mode
     "MuiButton-textPrimary": mode === "light",
     "MuiButton-textSecondary": mode === "dark",
-    "max-sm:text-black": location.pathname === '/cv'
+    "max-xl:text-black": location.pathname === '/cv'
   });
   return (
     <StyledEngineProvider injectFirst>

@@ -17,7 +17,7 @@ const Cv = () => {
 
   return (
     <div
-      className="w-8/12 rounded-xl mt-2xl:mr-2 sm:h-full max-lg: max-2xl:mt-20 max-2xl:w-11/12 bg-neutral-50 pb-96 max-sm:w-full flex flex-col max-sm:mt-2 items-center text-slate-800 sm:overflow-y-scroll   absolute right-0 border"
+      className="w-8/12 rounded-xl mt-2xl:mr-2 xl:h-full lg:mt-20 max-2xl:mt-20 max-2xl:w-11/12 bg-neutral-50 pb-96 max-xl:w-full  flex flex-col max-xl:mt-2 items-center text-slate-800 sm:overflow-y-scroll   absolute right-0 border"
       id="cv"
     >
       <Header />

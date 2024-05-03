@@ -43,7 +43,7 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full  xl:z-50   border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
+      <div className="flex w-full  xl:z-50  xl:mb-32 2xl:mb-0 border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
 
         {/* <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
           <ul className="flex space-x-5   max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">

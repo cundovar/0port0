@@ -77,10 +77,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full  max-lg:w-11/12 border lg:mt-20 ">
+    <div className="xl:h-full h-[1rem]  max-xl:w-11/12  lg:mt-20 ">
       <a
         id="link"
-        className=" max-lg:bg-black m-3   flex items-center justify-center"
+        className=" max-xl:bg-black m-3   flex items-center justify-center"
         href="#"
       >
         <span
@@ -90,10 +90,10 @@ const Navbar = () => {
         ></span>
       </a>
 
-      <div className="fixed  max-lg:w-full z-40    ">
+      <div className="fixed  max-xl:w-full z-40    ">
         
         <div
-          className={`flex flex-col max-sm:shadow-2xl  lg:mt-16 max-sm:backdrop-blur-xl pb-3  max-lg:w-full  max-md:items-start max-md:justify-start  mt-4 max-sm:mt-0 border-red-600 ${
+          className={`flex flex-col max-sm:shadow-2xl  xl:mt-16 max-xl:backdrop-blur-xl pb-3  max-xl:w-full    mt-4 max-xl:mt-0  ${
             menuVisible ? "showMenu" : ""
           }`}
           id="menuContent"
@@ -102,11 +102,11 @@ const Navbar = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div className=" p-2 lg:hidden ">
+          <div className={` p-2 lg:hidden  ${location.pathname==='/cv' && 'md:text-black'}   `}>
             <h2 className="text-xl">Facundo Javier Varas</h2>
             <h2 className="text-lg">dev front/integrateur</h2>
           </div>
-          <ul className=" lg:space-x-28 md:w-11/12 max-md:space-y-0 max-lg:flex flex-col max-lg:flex max-lg:flex-row max-lg:flex-wrap max-lg:justify-around max-lg:space-x-2">
+          <ul className="  xl:space-x-28 md:w-11/12  flex-col max-xl:flex max-xl:flex-row max-xl:flex-wrap max-xl:justify-around max-xl:space-x-2">
             {liContent.map((content) => (
               <NavLink
                 key={content[0]}
@@ -117,18 +117,19 @@ const Navbar = () => {
                 }}
               >
                 <li
-                  className={`flex items-center max-sm:m-1 max-sm:border max-sm:rounded-xl ${
-                    location.pathname === content[2] ? "lg:border-l-2  max-lg:bg-cyan-600  " : ""
+                  className={`flex items-center max-xl:m-1 max-xl:border max-xl:rounded-xl ${
+                    location.pathname === content[2] ? "lg:border-b-2  max-xl:bg-cyan-600  " : ""
                   }`}
                 >
                   <ButtonNavBar
-                    className="2xl:text-4xl text-xl font-black xl:text-2xl max-sm:text-xl"
+                    className="2xl:text-3xl text-xl font-black xl:text-2xl max-sm:text-xl"
                     text={content[1]}
                   />
                 </li>
               </NavLink>
             ))}
           </ul>
+      
         </div>
       </div>
     </div>
