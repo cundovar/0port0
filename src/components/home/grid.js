@@ -78,7 +78,7 @@ const Grid = () => {
              
             </div>
           </div>
-          <div className="grid-item un z-50">
+          <div className="grid-item un ">
            
             <NavLink to="/apropos">
             

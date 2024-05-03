@@ -9,8 +9,8 @@ const DebutLeft = () => {
   ];
 
   return (
-    <article className="w-5/12  max-lg:mt-3 max-lg:w-full  ">
-      <div className="h-1/4max-lg:w-full ">
+    <article className="w-5/12  max-lg:mt-3  max-lg:w-full  ">
+      <div className="h-1/4max-lg:w-full max-sm:mb-5 ">
         <h3>compétences en développement web</h3>
       </div>
       <div className="flex items-center justify-center  max-lg:h-auto h-3/4">

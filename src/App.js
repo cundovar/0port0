@@ -6,34 +6,69 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import LightModeRoundedIcon from '@mui/icons-material/LightModeRounded';
 import NightlightRoundRoundedIcon from '@mui/icons-material/NightlightRoundRounded';
-import { Link, BrowserRouter as Router } from 'react-router-dom'; // Correction ici
+import { Link, BrowserRouter as Router, useLocation } from 'react-router-dom'; // Correction ici
+import ArticleIcon from '@mui/icons-material/Article';
+import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual';
+import { PhotoSizeSelectLarge } from '@mui/icons-material';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import HomeIcon from '@mui/icons-material/Home';
  export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+
 
 function AppContent() {
   const { toggleColorMode, mode } = useContext(ColorModeContext);
-
+const location=useLocation()
   return (
     
-    <div className="2xl:p-20 p-2 border max-sm:h-full border sm:h-screen">
+    <div className="2xl:p-20 p-2 max-sm:p-0 max-sm:pl-2 max-sm:pr-2 max-sm:h-full  sm:h-screen">
      
       <Page />
       {/* Bouton de basculement */}
-      <div className=' absolute p-0 bottom-0 max-sm:hidden  2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-700  z-30 cursor-pointer'>
+      <div className=' absolute p-0 bottom-0 max-sm:hidden  2xl:bottom-20 max-sm:border max-sm:p-1  z-30 cursor-pointer'>
 
       <Button onClick={toggleColorMode} >
         {mode === 'dark' ? <LightModeRoundedIcon fontSize='medium'/> : <NightlightRoundRoundedIcon fontSize='medium'/>}
       </Button>
       </div>
 
-      <div className=' sm:hidden fixed p-0 -bottom-2 items-center justify-around w-full flex max-sm:left-0 rounded-2xl  2xl:bottom-20 max-sm:border max-sm:p-1 max-sm:bg-slate-400  z-30 cursor-pointer'>
-    <div className='flex justify-center items-center space-x-2'>
-    <Link to="apropos">a propos</Link>
-    <Link to="/portfolio"><p> portfolio</p></Link>
-    <Link to="/cv">CV</Link>
-    <Link to="/contact"><p>Comtact</p></Link>
+      <div className=' sm:hidden fixed p-0 bottom-0 items-center justify-around w-full flex max-sm:left-0 rounded-tr-2xl rounded-tl-2xl 2xl:bottom-20  max-sm:p-1 max-sm:backdrop-blur-xl z-30 cursor-pointer'>
+      <div className={`flex justify-center items-center w-5/6  space-x-2 ${location.pathname === '/cv' ? 'max-sm:text-gray-950' : ''}`}>
+  
+
+
+    <Link k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/apropos' && "border-b" } `}  to="/apropos">
+      
+<HomeIcon/>
+<p className="">
+      a propos
+
+</p>
+      </Link>
+
+  
+    <Link className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/portfolio' && "border-b " } `} to="/portfolio"  >
+
+      <PhotoSizeSelectActualIcon/>
+      <p> portfolio</p></Link>
+    
+ 
+    <Link to="/cv"  className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/cv' && "border-b border-slate-950" } `} >
+      
+<ArticleIcon className='  '/>
+      CV
+      
+      </Link>
+
+    
+    <Link to="/contact" k className={`w-1/4  flex flex-col justify-center  items-center ${location.pathname==='/contact' && "border-b" } `} >
+
+      <ContactMailIcon/>
+      <p>Contact</p>
+      </Link>
+</div>
  
 
-    </div>
+  
   
   
   

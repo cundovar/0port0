@@ -6,6 +6,7 @@ import { StyledEngineProvider } from "@mui/material";
 import { ColorModeContext } from "../../../App";
 import { useTheme } from "@mui/material/styles";
 import PropTypes from 'prop-types';
+import { useLocation } from "react-router-dom";
 export function OutlinedButtons({
   text,
   onClick,
@@ -36,11 +37,13 @@ export function OutlinedButtons({
  */
 export function ButtonNavBar({ className, text, onClick,size }) {
   const { mode } = useContext(ColorModeContext);
+  const location=useLocation()
   const theme = useTheme();
   const buttonClass = clsx(className, {
     // Utilisez les classes de couleurs de Material-UI en fonction du mode
     "MuiButton-textPrimary": mode === "light",
     "MuiButton-textSecondary": mode === "dark",
+    "max-sm:text-black": location.pathname === '/cv'
   });
   return (
     <StyledEngineProvider injectFirst>

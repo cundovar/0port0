@@ -12,9 +12,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full max-sm:pt-96 z-20 flex max-lg:flex-col max-lg:items-center justify-center max-sm:mt-20 border   max-md:pb-40  md:ml-28 sm:overflow-hidden max-sm:h-full max-md:pt-40 max-lg:mb-10  max-sm:mt-9   2xl:pr-10">
-      <div className="w-1/3 max-sm:h-96 xl:h-full  flex justify-center  max-md:w-full  max-md:mt-56   mt items-center   border  border-pink-300">
-        <div className="sm:w-96 h-96 shadow-2xl h-full border flex justify-center  items-center">
+    <div className="w-full max-sm:pt-96 z-20 flex max-lg:flex-col max-lg:items-center justify-center max-sm:mt-10   max-md:pb-40  md:ml-28 sm:overflow-hidden max-sm:h-full max-md:pt-40 max-lg:mb-10  max-sm:mt-9   2xl:pr-10">
+      <div className="w-1/3 max-sm:h-96  xl:h-full  flex justify-center  max-md:w-full  max-md:mt-56   mt items-center   border-pink-300">
+        <div className="w-96 h-96 shadow-2xl   flex justify-center  items-center">
           {item ? (
             <div className=" shadow-2xl  w-56 h-56">
               <img src={item.imageSrc} alt="photo présentation" />
@@ -26,7 +26,7 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <div className="w-2/3 max-md:w-full max-md:items-center  max-sm:mt-10 flex flex-col justify-center   border ">
+      <div className="w-2/3 max-md:w-full max-md:items-center  max-sm:mt-10 flex flex-col justify-center    ">
         <div className="mb-10 xl:ml-3  border-b xl:w-2/3 2xl:w-full p-2">
           <h1 className="  ">contact</h1>
         </div>

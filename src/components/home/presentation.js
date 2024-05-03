@@ -10,7 +10,7 @@ const Presentation=()=>{
 
     return(
         <div className="  w-full sm:overflow-hidden  xl:flex justify-end items-end xl:pb-1 max-md:pt-10  "> 
-        <div className=" xl:pt-10 2xl:mt-10 space-y-10 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-5 ">
+        <div className=" xl:pt-10 2xl:mt-10 max-sm:p-2 space-y-10 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-5 ">
         <p className="text-xl text-justify">
         Enthousiaste et passionné par le monde du développement web, je suis Facundo, un intégrateur web et développeur front-end. Mon parcours a débuté avec un bootcamp, une première étape qui a déclenché ma passion pour le code.
         </p>

@@ -57,7 +57,7 @@ const Portfolio = () => {
                       setActiveProjectId(item.id);
                       detail(item);
                     }}
-                  >
+                  > 
                     <div className="w-2/3  hover:opacity-100">
                       {item ? (
                         <>
@@ -72,7 +72,7 @@ const Portfolio = () => {
                         <Skeleton animation="wave" variant="text" width={200} />
                       )}
                     </div>
-                    <div className="w-1/3 mt-0  h-full flex justify-center border-lime-500 items-center  ">
+                    <div className="w-1/3 mt-0  h-full flex justify-center  items-center  ">
                       
                       {item ? (
                         <img
@@ -83,8 +83,8 @@ const Portfolio = () => {
                       ) : (
                         <Skeleton
                           animation="wave"
-                          variant="rect"
-                          width={200}
+                          variant="circular"
+                          width={100}
                           height={100}
                         />
                       )}
@@ -119,14 +119,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="flex relative h-full sm:mt-10   border-lime-400 w-full ">
-      <div className="lg:w-2/3  max-lg:hidden flex justify-center">
+    <div className="flex relative sm:h-full sm:mt-10  w-full ">
+      <div className="lg:w-2/3 max-lg:hidden flex justify-center">
         <div
           className={`${
             selectedIntegra
               ? "hidden "
-              : " overflow-scroll  pb-10 lg:w-full xl:1/  max-lg:hidden  justify-center flex sm:w-full "
-          }  `}
+              : " sm:overflow-scroll  pb-10 lg:w-full xl:1/ max-lg:hidden justify-center flex sm:w-full "
+          }`}
         >
           <CSSTransition
             in={selectedProject}
@@ -148,11 +148,11 @@ const Portfolio = () => {
           className={`${
             selectedProject
               ? "hidden"
-              : " lg:w-full  overflow-scroll pb-10  max-lg:hidden  justify-center flex sm:w-full"
-          }  `}
+              : " lg:w-full sm:overflow-scroll pb-10 max-lg:hidden justify-center flex sm:w-full"
+          }`}
         >
           <CSSTransition
-            in={selectedIntegra}
+            in={selectedProject}
             timeout={5000}
             classNames={{
               enter: "fade-enter",
@@ -164,21 +164,18 @@ const Portfolio = () => {
           >
             <>
               <DetailPageIntagration
-                integra={selectedIntegra}
-                onClose={closeDetailPageIntegra}
+                integra={selectedProject}
+                onClose={closeDetailPage}
               />
             </>
           </CSSTransition>
         </div>
       </div>
 
-      <ModalDetailpage project={selectedProject} onClose={closeDetailPage} />
-      <div className="  border-red-600  lg:w-1/3 xl:1/2 max-lg:w-full   2xl:pt-10  lg:pt-10  ">
-        <div className="flex  lg:space-x-3 xl:space-x-10 items-end p-2 border-b max-md:w-full max-lg:flex-col  ">
+      <div className="   lg:w-1/3 xl:1/2 max-lg:w-full 2xl:pt-10 lg:pt-10 ">
+        <div className="flex lg:space-x-3 xl:space-x-10 items-end p-2 border-b max-sm:mb-5 max-md:w-full max-lg:flex-col ">
           <h1>portfolio</h1>
-          <div className="flex xl:flex lg:flex-col  max-md:justify-end max-md:w-full xl:justify-center 2xl:flex-row">
-            {/* <ul className="flex space-x-11 just ify-arround items-center"> */}
-
+          <div className="flex xl:flex lg:flex-col max-md:justify-end max-md:w-full xl:justify-center 2xl:flex-row">
             <OutlinedButtons
               sx={{
                 backgroundColor:
@@ -205,7 +202,7 @@ const Portfolio = () => {
             />
           </div>
         </div>
-        <div className="h-full w-full pb-32  border border-amber-900  sm:overflow-y-scroll">
+        <div className="h-full w-full pb-32 max-sm:pb-0  border-amber-900 sm:overflow-y-scroll">
           <ListModel
             project="projet"
             model={projects}
@@ -215,12 +212,17 @@ const Portfolio = () => {
           <ListModel
             project="integration"
             model={integration}
-            detail={openDetailPageIntegra}
+            detail={openDetailPage}
           />
         </div>
       </div>
+
+      {/* ModalDetailpage placé à l'intérieur de la div de rendu conditionnel */}
+      {selectedProject && (
+        <ModalDetailpage project={selectedProject} onClose={closeDetailPage} />
+      )}
     </div>
   );
-};
+}; 
 
 export default Portfolio;

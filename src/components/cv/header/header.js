@@ -23,7 +23,7 @@ const Header=()=>{
     </div>
     <div className=" max-md:h-auto max-lg:mt-5   h-3/5 flex flex-col items-center justify-center ">
       <div className="space-y-5 ">
-      <div className="flex flex-wrap  space-x-10">
+      <div className="flex flex-wrap max-sm:space-x-2 max-lg:items-center  sm:space-x-10">
 <LanguageIcon/>
         <a href="https://pixell.varascundo.com/" className="text-xl"  >
         pixell.varascundo.com
@@ -36,7 +36,7 @@ const Header=()=>{
 
         
       </div>
-      <div className="flex flex-wrap  space-x-10">
+      <div className="flex flex-wrap  max-lg:items-center   space-x-10">
         <AttachEmailIcon/>
         <a href="varas.cundo@gmail.com"className="text-xl" >
         varas.cundo@gmail.com
@@ -44,7 +44,7 @@ const Header=()=>{
 
         
       </div>
-      <div className="flex flex-wrap  space-x-10">
+      <div className="flex flex-wrap  max-lg:items-center  space-x-10">
 
 <LocalPhoneIcon/>
        <p className="text-xl">06 23 84 84 45</p>

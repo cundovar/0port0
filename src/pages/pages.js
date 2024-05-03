@@ -69,7 +69,7 @@ const Page = () => {
       </div>
 
       <AnimationSVG />
-      <div className="absolute max-sm:hidden  top-0 left-0">
+      <div className="absolute max-lg:hidden  top-0 left-0">
       <div className="lg:flex 2xl:p-5 max-lg:mt-10 2xl:flex-col   lg:space-x-5  2xl:space-x-1 lg:items-end  2xl:items-start  ">
           <h1>Facundo Javier Varas</h1>
           <div className="flex 2xl:flex-col mx:md:hidden space-x-0  max-lg:flex-col  2xl:space-x-0  lg:space-x-5">

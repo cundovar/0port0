@@ -30,7 +30,7 @@ const Home = () => {
       </div>
 
       <div className="w-full xl:w-3/5  max-lg:pt-5   lg:h-full md:w-2/4 lg:w-2/3 lg:flex   items-center justify-center max-md:visible border-blue-700   ">
-        <div className=" ml-2 w-full  max-md:visible md:hidden md:invisible">
+        <div className=" sm:ml-2 w-full  max-md:visible md:hidden md:invisible">
           <div className="w-full border-b ">
             <h1 className="text-3xl">Créations</h1>
           </div>
@@ -38,7 +38,7 @@ const Home = () => {
         </div>
   
           <div
-            className=  "w-full   max-sm:mt-5 max-sm:w-full border   m-auto" >
+            className=  "w-full   max-sm:mt-16 max-sm:w-full    m-auto" >
             <Competence />
           </div>
        
@@ -47,22 +47,14 @@ const Home = () => {
     
         </div>
 
-      <div className=" max-md:ml-2 xl:w-2/5 md:w-2/3  md:mt-0 border-orange-900  max-xl:m-auto  relative  w-full  ">
+      <div className=" max-sm:pb-20  xl:w-2/5 md:w-2/3  md:mt-0 border-orange-900  max-xl:m-auto  relative  w-full  ">
         <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4 mr-0  border-emerald-500   ">
-          <div className="  pb-2 mt-10 border-b   z-50">
-            <div className="flex xl:justify-start items-end  space-x-5">
+          <div className="  pb-2 mt-5 border-b   z-50">
+            <div className="flex xl:justify-start items-end  space-x-5 ">
               <h1 className="max-md:text-3xl   max-md:ml-2">
                 Présentation
               </h1>
-              {/* <ul className="flex space-x-5 items-end justify-end w-2/3 ">
-                <div className="max-md:invisible md:mr-4 ">
-                  <OutlinedButtons
-                    onClick={t}
-                    sx={{ color: "" }}
-                    text={"voir mes compétences"}
-                  />
-                </div>
-              </ul> */}
+             
             </div>
           </div>
           <Presentation />

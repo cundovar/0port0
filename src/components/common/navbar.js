@@ -77,10 +77,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full border max-lg:w-full lg:mt-20 ">
+    <div className="h-full  max-lg:w-11/12 border lg:mt-20 ">
       <a
         id="link"
-        className=" max-lg:bg-black  p-1 flex items-center justify-center"
+        className=" max-lg:bg-black m-3   flex items-center justify-center"
         href="#"
       >
         <span
@@ -90,10 +90,10 @@ const Navbar = () => {
         ></span>
       </a>
 
-      <div className="fixed  max-md:w-full z-40 border   ">
+      <div className="fixed  max-lg:w-full z-40    ">
         
         <div
-          className={`flex flex-col  lg:mt-16 border max-lg:w-full  max-md:items-start max-md:justify-start  mt-4  border-red-600 ${
+          className={`flex flex-col max-sm:shadow-2xl  lg:mt-16 max-sm:backdrop-blur-xl pb-3  max-lg:w-full  max-md:items-start max-md:justify-start  mt-4 max-sm:mt-0 border-red-600 ${
             menuVisible ? "showMenu" : ""
           }`}
           id="menuContent"
@@ -102,11 +102,11 @@ const Navbar = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div className=" p-2 sm:hidden ">
+          <div className=" p-2 lg:hidden ">
             <h2 className="text-xl">Facundo Javier Varas</h2>
             <h2 className="text-lg">dev front/integrateur</h2>
           </div>
-          <ul className=" lg:space-x-28 w-full max-md:space-y-0 max-md:flex border flex-col max-lg:flex max-sm:flex-row max-sm:flex-wrap max-sm:justify-around ">
+          <ul className=" lg:space-x-28 md:w-11/12 max-md:space-y-0 max-lg:flex flex-col max-lg:flex max-lg:flex-row max-lg:flex-wrap max-lg:justify-around max-lg:space-x-2">
             {liContent.map((content) => (
               <NavLink
                 key={content[0]}
@@ -118,11 +118,11 @@ const Navbar = () => {
               >
                 <li
                   className={`flex items-center max-sm:m-1 max-sm:border max-sm:rounded-xl ${
-                    activeIndex === content[0] ? "border-l" : ""
+                    location.pathname === content[2] ? "lg:border-l-2  max-lg:bg-cyan-600  " : ""
                   }`}
                 >
                   <ButtonNavBar
-                    className="2xl:text-4xl text-xl font-black xl:text-2xl"
+                    className="2xl:text-4xl text-xl font-black xl:text-2xl max-sm:text-xl"
                     text={content[1]}
                   />
                 </li>

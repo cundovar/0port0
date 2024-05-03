@@ -26,23 +26,26 @@ const ModalDetailpage = ({ onClose, project }) => {
   let modalContent = null;
 
   if (project) {
-    if (project.imageSrc.length > 1) {
+    
       modalContent = (
         <>
-          <div className="absolute h-8/12 flex items-center     w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
-            <div className="  relative border h-full m-auto w-full   ">
+          <div className="fixed  flex items-center  h-full r     w-[95%]  max-md:visible lg:invisible backdrop-blur-xl modal   ">
+            <div className="  relative   m-auto w-11/12   ">
               <button
-                className="close-btn absolute right-0   m-2 z-100 z-50 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
+                className="close-btn absolute right-0 -top-10 z-50 right-0 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
                 onClick={onClose}
               >
                 <CloseIcon fontSize="medium" color="disabled" />
               </button>
-              <div className=" w-full  h-full border m-auto ">
+              {project.imageSrc.length >1 ?(
+
+              <div className=" w-11/12   m-auto ">
                 <Slider {...settings} ref={sliderRef}>
                   {project.imageSrc.map((image, index) => (
                     <div key={index} className=" bg-stone-900 overflow-hidden">
+                      
                       <img
-                        className=" h-52 m-auto"
+                        className=" h-52 object-contain m-auto"
                         src={image}
                         alt={project.titre}
                       />
@@ -51,8 +54,20 @@ const ModalDetailpage = ({ onClose, project }) => {
                 </Slider>
               </div>
 
-              <div className="w-full h-full  border m-auto">
-                <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
+              ):(
+                <img
+                className=" h-52 m-auto "
+                src={project.imageSrc[0]}
+                alt={project.titre}
+              />
+
+              )}
+           
+
+
+
+              <div className="w-full    m-auto">
+                <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 pb-3 m-4 items-start justify-start ">
                   <div className="w-full flex max-lg:flex-col  ">
                     <div className=" w-full  flex flex-col ">
                       <h2 className=" lg:text-xl text-lg mb-5">
@@ -95,7 +110,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                       )}
                     </div>
                   </div>
-                  <div className="flex space-x-4 w-full justify-end">
+                  <div className="flex space-x-4 w-full justify-end max-sm:justify-center">
                     {project.lienCode ? (
                       <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
                         <OutlinedButtons
@@ -126,95 +141,8 @@ const ModalDetailpage = ({ onClose, project }) => {
             </div>
           </div>
         </>
-      );
-    } else {
-      modalContent = (
-        <div className="absolute h-full flex items-center w-full max-md:visible lg:invisible backdrop-blur-xl modal   ">
-          <div className=" relative  w-full overflow-scroll m-auto h-2/3 ">
-            <button
-              className="close-btn absolute right-0   m-2 z-100 z-50 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
-              onClick={onClose}
-            >
-              <CloseIcon fontSize="medium" color="disabled" />
-            </button>
-            <img
-              className=" h-52 m-auto "
-              src={project.imageSrc[0]}
-              alt={project.titre}
-            />
-
-            <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 m-4 items-start justify-start ">
-              <div className="w-full flex max-sm:flex-col ">
-                <div className=" w-full  flex flex-col ">
-                  <h2 className=" lg:text-2xl">{project.titre}</h2>
-                </div>
-                <div className="w-2/3 2xl:pl10 lg:pl-4 ">
-                  {/* <p>{project.tekno}</p> */}
-                  <div className="flex w-full items-start ">
-                    <div className="  ">
-                      <FiberManualRecord fontSize="small  " />
-                    </div>
-                    <p className="flex items-start">{project.text1}</p>
-                  </div>
-                  <div className="flex w-full items-start ">
-                    <div className="  ">
-                      <FiberManualRecord fontSize="small " />
-                    </div>
-                    <p className="flex items-start">{project.text2}</p>
-                  </div>
-                  {project.text3 ? (
-                    <div className="flex w-full items-start ">
-                      <div className="  ">
-                        <FiberManualRecord fontSize="small  " />
-                      </div>
-                      <p className="flex items-start">{project.text3}</p>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                  {project.text4 ? (
-                    <div className="flex w-full items-start ">
-                      <div className="  ">
-                        <FiberManualRecord fontSize="small  " />
-                      </div>
-                      <p className="flex items-start">{project.text4}</p>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </div>
-              </div>
-              <div className="flex space-x-4 w-full justify-end">
-                {project.lienCode ? (
-                  <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
-                    <OutlinedButtons
-                      text="voir le code"
-                      sx={{ color: "" }}
-                      href={project.lienCode}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    ></OutlinedButtons>
-                  </div>
-                ) : (
-                  ""
-                )}
-                <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
-                  <OutlinedButtons
-                    text="voir le site"
-                    sx={{ color: "" }}
-                    href={project.lien}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  ></OutlinedButtons>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+      )
     }
-  }
-
   return <>{modalContent}</>;
 };
-export default ModalDetailpage;
+export default ModalDetailpage
