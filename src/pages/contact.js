@@ -5,6 +5,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import TitrePage from "../components/common/titrePage.js/TitrePage";
 
 const Contact = () => {
   const item = {
@@ -13,9 +14,7 @@ const Contact = () => {
 
   return (
     <div className="w-full  z-20 flex max-xl:flex-col max-xl:pb-96   xl:overflow-hidden max-xl:h-full  lg:h-screen xl:h-auto    2xl:pr-10">
-      <div className="flex  lg:space-x-3  lg:mt-32 mt-10 xl:hidden xl:space-x-10 items-end p-2 border-b max-sm:mb-5 max-md:w-full max-xl:flex-col ">
-          <h1>contact</h1>
-          </div>
+      
       <div className="w-1/3   flex justify-center  max-xl:w-full  items-center   border-pink-300">
         <div className="w-96 h-96 shadow-2xl  max-xl:hidden  flex justify-center  items-center">
           {item ? (
@@ -30,8 +29,9 @@ const Contact = () => {
         </div>
       </div>
       <div className="w-2/3 max-md:w-full    md:m-auto max-md:items-center  max-xl:mt-10 flex flex-col justify-center    ">
-        <div className="mb-10 xl:ml-3 max-xl:hidden  max-sm:mt-0  border-b xl:w-2/3 2xl:w-full p-2">
-          <h1 className="  ">contact</h1>
+        <TitrePage titre="Contact" />
+        <div className="mb-10 xl:ml-3 max-xl:hidden   max-sm:mt-0  border-b xl:w-2/3 2xl:w-full p-2">
+          <h1 className="  ">Contact</h1>
         </div>
         <div className="flex  max-md:w-full    max-md:flex-col max-md:space-y-5 max-md:mt-5 max-sm:mt-0  max-xl:items-center max-xl:flex  max-md:w-full    max-md:flex-col max-md:space-y-5 max-md:mt-5 max-sm:mt-0  max-xl:items-center max-md:m-auto   justify-center item-center   ">
           <div className="w-1/2  flex justify-center max-sm:hidden items-center ">

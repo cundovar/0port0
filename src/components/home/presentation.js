@@ -1,42 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-
-const Presentation=()=>{
-
-
-
-
-    return(
-        <div className="  w-full sm:overflow-hidden  xl:flex justify-end items-end xl:pb-1 max-md:pt-10  "> 
-        <div className=" xl:pt-10 2xl:mt-10 max-sm:p-2 space-y-10 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-5 ">
+const Presentation = () => {
+  return (
+    <div className="  w-full sm:overflow-hidden  xl:flex justify-end items-end xl:pb-1 max-md:pt-10  ">
+      <div className=" xl:pt-8 2xl:mt-6 max-sm:p-2 2xl:space-y-10 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-10   ">
         <p className="text-xl text-justify">
-        Enthousiaste et passionné par le monde du développement web, je suis Facundo, un intégrateur web et développeur front-end. Mon parcours a débuté avec un bootcamp, une première étape qui a déclenché ma passion pour le code.
+          Création d'api simple ave Symfony ou Nodejs, CRUD.
         </p>
         <p className="text-xl text-justify">
-        Je suis conscient que devenir un développeur accompli ne se fait pas en un claquement de doigts, mais cela fait déjà deux ans que je me plonge intensément dans le monde du développement, explorant divers langages de manière autodidacte.
-        </p>
-       
-
-        
-
-        {/* <p className="text-xl text-justify">
-        Au fil de mes journées, je me lance constamment des défis, découvrant de nouvelles technologies et perfectionnant mes compétences.
-        </p> */}
-        {/* <p className="text-xl text-justify">
-        Dans ce portfolio vous pourrez explorer mes travaux sur WORDPRESS REACT SYMFONY ou le LOWCODE .
+          Creation d'objets ou de tableaux pour rendre la code plus dynamique et
+          le jsx plus maintenable et rendre le code propre.
         </p>
         <p className="text-xl text-justify">
-        Et pour le CSS :TAILWIND et BOOTSTRAP,SCSS
+          Bonne expérience en Scss pour les details mais je préfère Tailwind à
+          Bootstrap pour la construction de la page.
         </p>
         <p className="text-xl text-justify">
-        Au-delà de mes compétences techniques, ma curiosité m'incite à rester constamment à jour sur les dernières avancées technologiques, effectuant une veille régulière pour rester à la pointe de mon domaine.
-        </p> */}
-        </div>
+          Utilisation réguliaire de bibliothèques Javascript
+        </p>
+        <p className="text-xl text-justify">
+          Je suis conscient que devenir un développeur accompli ne se fait pas
+          en un claquement de doigts, mais cela fait déjà deux ans que je me
+          plonge intensément dans le monde du développement, explorant divers
+          langages de manière autodidacte.
+        </p>
+      </div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-export default Presentation
+export default Presentation;

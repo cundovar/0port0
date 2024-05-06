@@ -3,6 +3,7 @@ import Parcour from "../parcourComponent";
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import H3Titre from "../h3titre";
 
 
 
@@ -14,10 +15,8 @@ const ParcoursPro=()=>{
 
 
     return(
-<div className="flex relative max-sm:flex-col  bg-neutral-100 pt-20 pb-20 rounded-xl  w-full">
-            <div className="w-5/12 max-sm:w-full  h-full">
-              <h3 className="a">Parcours professionnel</h3>
-            </div>
+<div className="flex relative max-sm:flex-col  bg-neutral-100 pt-20 pb-20 max-sm:pt-10 max-sm:pb-10 rounded-xl  w-full">
+<H3Titre titre="Parcour Professionnel" />
             <div className="w-7/12 max-sm:w-full" id="sec-ea">
               <Parcour date="2022-2024" text="Création sites web :" titre="  DÉVELOPPEUR WEB FREELANCE"
               

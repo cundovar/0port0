@@ -1,5 +1,6 @@
 import React from "react";
 import Parcour from "../parcourComponent";
+import H3Titre from "../h3titre";
 
 
 
@@ -9,10 +10,9 @@ const ParcoursScolair=()=>{
 
 
     return(
-        <div className="flex w-full max-sm:flex-col bg-neutral-100 pt-20 pb-20 rounded-xl">
-        <div className="w-5/12 max-sm:w-full h-full">
-          <h3>Parcours scolaire</h3>
-        </div>
+        <div className="flex w-full max-sm:flex-col bg-neutral-100 pt-20 pb-20 max-sm:pt-10 max-sm:pb-10  rounded-xl">
+          <H3Titre titre="Parcours scolaire"/>
+       
         <div className="w-7/12 max-sm:w-full ">
          <Parcour date="2022" titre="Certification developpeur front Bac+2" text="Ecole DORANCO"/>
          <Parcour date="2012" titre="CAP petite enfance" text="Cours du soir de la Mairie de Paris"/>

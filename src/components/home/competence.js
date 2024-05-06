@@ -41,50 +41,31 @@ const Competence = () => {
     sliderRef.current.slickPrev();
   };
 
+  const Text=({item})=>{
+    return(
+    <div className="flex w-full  items-start ">
+    <div className="opacity-75" >
+    <FiberManualRecord fontSize="small"/>
+    </div>
+  <p className="text-xl flex items-start ml-1">  {item}</p>
+  </div>
+
+    )
+  }
+
   return (
     <>
-      <div className="flex w-full  xl:z-50  xl:mb-32 2xl:mb-0 border-orange-700  flex-col xl:p-20  m-auto max-md:ml-1   items-center justify-center">
+      <div className="flex w-full  xl:z-50  xl:mb-32 2xl:mb-0 border-orange-700  flex-col xl:p-20 xl:pt-0  max-md:ml-1   items-center justify-center">
 
-        {/* <div className=" w-full max-md:ml-1 max-md:hidden   mb-5 ">
-          <ul className="flex space-x-5   max-md:mb-10 justify-center items-center  w-2/4 max-md:w-full">
-            
-            <li className="max-md:invisible border">
-              <ButtonNavBar
-                text="technologies "
-                onClick={() => setActiveMenuItem("technologies")}
-                isActive={activeMenuItem === "technologies"}
-              />{" "}
-            </li>
-            <li className="max-md:invisible border">
-              <ButtonNavBar
-                text="graphique"
-                onClick={() => setActiveMenuItem("graphique")}
-                isActive={activeMenuItem === "graphique"}
-             
-              />{" "}
-            </li>
-          </ul>
-        </div> */}
+      
         <div className=" w-full xl:p-10  ">
         <div className=" w-full flex justify-center   ">
       
           <div className="w-full h-full    ">
             
-          {/* <CSSTransition
-            in={activeMenuItem === "technologies"}
-            timeout={5000}
-            classNames={{
-              enter: "fade-enter",
-              enterActive: "fade-enter-active",
-              exit: "fade-exit",
-              exitActive: "fade-exit-active",
-              text:"text-4xl"
-            }}
-            unmountOnExit
-          > */}
+        
             <div className=" w-full">
-            {/* {activeMenuItem === "technologies" && (
-            */}
+         
               <div className="relative w-5/6 lg:w-full m-auto">
               
                 <button className="absolute h-10 max-sm:h-5 max-sm:w-5 text-xl xl:z-50 w-10 hover:border  text-slate-950 hover:border-stone-500 transition  ease-in-out delay-100   rounded-full bg-stone-100 flex items-center justify-center -left-0 max-lg:-left-4 -translate-x-2/4 -translate-y-2/4 top-1/2 hover:bg-stone-300   "
@@ -109,19 +90,19 @@ const Competence = () => {
                         <p className="text-xl ml-1">   {items.titre}</p>
 
                         </div>
-                        <div className=" lg:ml-16">
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l1}</p>
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l2}</p>
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l3}</p>
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l4}</p>
-                        <p className="text-xl"><FiberManualRecord fontSize="small"/>  {items.l5}</p>
-                        <div className="flex w-full  items-start ">
-                          <div className="opacity-75" >
-                          <FiberManualRecord fontSize="small"/>
-                          </div>
-                        <p className="text-xl flex items-start ml-1">  {items.l6}</p>
-                        </div>
+                        <div className=" lg:ml-16  flex flex-col items-center justify-center">
+                          <div>
+                         
+                        <Text item={items.l1}/>
+                        <Text item={items.l2}/>
+                        <Text item={items.l3}/>
+                        <Text item={items.l4}/>
+                        <Text item={items.l5}/>
+                        <Text item={items.l6}/>
+                      
                        
+
+                          </div>
 
                    
                       </div>
@@ -133,31 +114,12 @@ const Competence = () => {
       
 
             </div>
-          {/* </CSSTransition> */}
+         
 
           </div>
         </div>
 
-        {/* <CSSTransition
-            in={activeMenuItem === "graphique"}
-            timeout={5000}
-            classNames={{
-              enter: "fade-enter",
-              enterActive: "fade-enter-active",
-              exit: "fade-exit",
-              exitActive: "fade-exit-active",
-            }}
-            unmountOnExit
-          >
-<div className="max-md:invisible">
-      {activeMenuItem === "graphique" && (
-        <div className="">
-          <ProgressBar />
-        </div>
-      )}
-
-</div> */}
-{/* </CSSTransition> */}
+ 
       </div>
 
 

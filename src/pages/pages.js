@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   useLocation,
+  Link,
 } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Portfolio from "./portfolio";
@@ -100,6 +101,12 @@ const Page = () => {
                 <div className="chevron"></div>
               </div>
             )}
+
+            <div className="absolute w-16   z-20  lg:hidden m-2 rounded-full overflow-hidden top-0 max-sm:-top-10 left-0">
+              <Link to="/">
+              <img className="rounded-full h-full w-full object-cover " src="./images/logo/logo_accueil/logo-accueil.png" alt='logo-accueil' />
+              </Link>
+            </div>
           </div>
         </CSSTransition>
       </TransitionGroup>

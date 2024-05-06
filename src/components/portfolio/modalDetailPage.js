@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Slider from "react-slick";
 import { OutlinedButtons } from "../common/button/button";
 import { FiberManualRecord } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
+import { ColorModeContext } from "../../App";
 
 const ModalDetailpage = ({ onClose, project }) => {
+
+  const {mode}=useContext(ColorModeContext)
   const settings = {
     dots: true,
     infinite: true,
@@ -62,12 +65,10 @@ const ModalDetailpage = ({ onClose, project }) => {
               )}
               </div>
 
-           
-
-
-
               <div className="w-full h-2/3    m-auto">
-                <div className=" flex flex-col mt-5 w-full imageListe space-y-5  bg-opacity-50 bg-slate-700 p-1 pb-3 m-4 items-start justify-start ">
+              <div className={`flex flex-col mt-5 w-full imageListe space-y-5 p-1 pb-3 m-4 items-start justify-start ${
+      mode === "light" ? "bg-opacity-50 bg-slate-300" : "bg-opacity-50 bg-slate-700"
+    }`}>
                   <div className="w-full flex max-lg:flex-col  ">
                     <div className=" w-full  flex flex-col ">
                       <h2 className=" lg:text-xl text-lg mb-5">
@@ -112,7 +113,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                   </div>
                   <div className="flex space-x-4 w-full justify-end max-sm:justify-center">
                     {project.lienCode ? (
-                      <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                      <div className={` border hover:bg-slate-900 hover:rounded hover:bg-opacity-50 ${mode === "light" ? "border-stone-900" : ""  }`}>
                         <OutlinedButtons
                           text="voir le code"
                           sx={{ color: "" }}
@@ -124,7 +125,7 @@ const ModalDetailpage = ({ onClose, project }) => {
                     ) : (
                       ""
                     )}
-                    <div className=" border hover:bg-slate-900 hover:rounded hover:bg-opacity-50">
+                     <div className={` border hover:bg-slate-900 hover:rounded hover:bg-opacity-50 ${mode === "light" ? "border-stone-900" : ""  }`}>
                       <OutlinedButtons
                         text="voir le site"
                         sx={{ color: "" }}

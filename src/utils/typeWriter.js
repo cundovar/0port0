@@ -1,7 +1,7 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 
 const TipeWriter = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState("");
@@ -18,7 +18,7 @@ const TipeWriter = ({ text, delay }) => {
     }
   }, [currentIndex, text, delay]);
 
-  return <span className="">{currentText} </span>;
+  return <span  >{currentText} </span>;
 };
 
 export default TipeWriter;
