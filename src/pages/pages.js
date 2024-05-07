@@ -63,7 +63,11 @@ const Page = () => {
           <p className=" ">voir le code de : {getLinkPage()[1]} </p>
         </a>
       </button>
-
+      <div className="absolute w-16   z-20  lg:hidden m-2 rounded-full overflow-hidden top-0  left-0">
+              <Link to="/">
+              <img className="rounded-full h-full w-full object-cover " src="./images/logo/logo_accueil/logo-accueil.png" alt='logo-accueil' />
+              </Link>
+            </div>
 
       <div className="lg:visible max-lg:invisible">
         <LoadingPage />
@@ -102,11 +106,7 @@ const Page = () => {
               </div>
             )}
 
-            <div className="absolute w-16   z-20  lg:hidden m-2 rounded-full overflow-hidden top-0 max-sm:-top-10 left-0">
-              <Link to="/">
-              <img className="rounded-full h-full w-full object-cover " src="./images/logo/logo_accueil/logo-accueil.png" alt='logo-accueil' />
-              </Link>
-            </div>
+           
           </div>
         </CSSTransition>
       </TransitionGroup>

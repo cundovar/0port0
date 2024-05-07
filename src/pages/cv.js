@@ -5,9 +5,8 @@ import CompetenceDigital from "../components/cv/milieu/compétenceDigital";
 import ParcoursPro from "../components/cv/milieu/parcourPro";
 import ParcoursScolair from "../components/cv/milieu/parcourscolaire";
 import Header from "../components/cv/header/header";
-import Pdf from "../components/cv/pdf/pdf";
 import { ProgressBar } from "../components/home/graphique";
-import { Element, Link, animateScroll as scroll } from "react-scroll";
+
 const Cv = () => {
   const Lign = () => {
     return (

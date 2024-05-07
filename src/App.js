@@ -1,4 +1,10 @@
-import React, { useState, createContext, useContext, useMemo } from "react";
+import React, {
+  useState,
+  createContext,
+  useContext,
+  useMemo,
+  useEffect,
+} from "react";
 import Page from "./pages/pages";
 import "./App.css";
 import AnimationSVG from "./components/animation/animationHome";
@@ -18,8 +24,6 @@ function AppContent() {
   const { toggleColorMode, mode } = useContext(ColorModeContext);
   const location = useLocation();
 
-
-   
   return (
     <div className="2xl:p-20 p-2 max-sm:p-0 max-sm:pl-2 max-sm:pr-2 max-xl:h-full  xl:h-screen">
       <Page />
@@ -43,9 +47,13 @@ function AppContent() {
           <Link
             k
             className={`w-1/4  flex flex-col justify-center  items-center ${
-              location.pathname === "/apropos" && mode === "light" ? "bg-cyan-300 rounded-lg" : ""
+              location.pathname === "/apropos" && mode === "light"
+                ? "bg-cyan-300 rounded-lg"
+                : ""
             } ${
-              location.pathname === "/apropos" && mode === "dark" ? "bg-cyan-600 rounded-lg" : ""
+              location.pathname === "/apropos" && mode === "dark"
+                ? "bg-cyan-600 rounded-lg"
+                : ""
             }`}
             to="/apropos"
           >
@@ -55,9 +63,13 @@ function AppContent() {
 
           <Link
             className={`w-1/4  flex flex-col justify-center  items-center ${
-              location.pathname === "/portfolio" && mode === "light" ? "bg-cyan-300 rounded-lg" : ""
+              location.pathname === "/portfolio" && mode === "light"
+                ? "bg-cyan-300 rounded-lg"
+                : ""
             } ${
-              location.pathname === "/portfolio" && mode === "dark" ? "bg-cyan-600 rounded-lg" : ""
+              location.pathname === "/portfolio" && mode === "dark"
+                ? "bg-cyan-600 rounded-lg"
+                : ""
             }`}
             to="/portfolio"
           >
@@ -68,9 +80,13 @@ function AppContent() {
           <Link
             to="/cv"
             className={`w-1/4  flex flex-col justify-center  items-center ${
-              location.pathname === "/cv" && mode === "light" ? "bg-cyan-300 rounded-lg" : ""
+              location.pathname === "/cv" && mode === "light"
+                ? "bg-cyan-300 rounded-lg"
+                : ""
             } ${
-              location.pathname === "/cv" && mode === "dark" ? "bg-cyan-600 rounded-lg" : ""
+              location.pathname === "/cv" && mode === "dark"
+                ? "bg-cyan-600 rounded-lg"
+                : ""
             }`}
           >
             <ArticleIcon className="  " />
@@ -79,11 +95,14 @@ function AppContent() {
 
           <Link
             to="/contact"
-            
             className={`w-1/4  flex flex-col justify-center  items-center ${
-               location.pathname === "/contact" && mode === "light" ? "bg-cyan-300 rounded-lg" : ""
+              location.pathname === "/contact" && mode === "light"
+                ? "bg-cyan-300 rounded-lg"
+                : ""
             } ${
-              location.pathname === "/contact" && mode === "dark" ? "bg-cyan-600 rounded-lg" : ""
+              location.pathname === "/contact" && mode === "dark"
+                ? "bg-cyan-600 rounded-lg"
+                : ""
             }`}
           >
             <ContactMailIcon />
@@ -104,12 +123,27 @@ function AppContent() {
 }
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const prefersDarkMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [mode, setMode] = useState(prefersDarkMode ? "dark" : "light");
 
   const toggleColorMode = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
 
+  useEffect(() => {
+    const handleChange = (e) => {
+      setMode(e.matches ? "dark" : "light");
+    };
+
+    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    darkModeQuery.addEventListener("change", handleChange);
+
+    return () => {
+      darkModeQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
   const theme = useMemo(
     () =>
       createTheme({
@@ -119,7 +153,6 @@ function App() {
       }),
     [mode]
   );
-
   return (
     <ColorModeContext.Provider value={{ toggleColorMode, mode }}>
       <ThemeProvider theme={theme}>

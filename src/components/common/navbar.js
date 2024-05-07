@@ -42,9 +42,9 @@ const Navbar = () => {
   const liContent = [
     ["0", "Accueil", "/"],
     ["1", "A propos", "/apropos"],
+    ["4", "CV", "/cv"],
     ["2", "Portfolio", "/portfolio"],
     ["3", "Contact", "/contact"],
-    ["4", "CV", "/cv"],
   ];
 
   //fermer avec le doigt
@@ -93,7 +93,7 @@ const Navbar = () => {
       <div className="fixed  max-xl:w-full z-40    ">
         
         <div
-          className={`flex flex-col max-sm:shadow-2xl  xl:mt-16 max-xl:backdrop-blur-xl pb-3  max-xl:w-full    mt-4 max-xl:mt-0  ${
+          className={`flex flex-col max-sm:shadow-2xl  xl:mt-16 max-lg:backdrop-blur-xl pb-3  max-xl:w-full    mt-4 max-xl:mt-0  ${
             menuVisible ? "showMenu" : ""
           }`}
           id="menuContent"
@@ -106,7 +106,7 @@ const Navbar = () => {
             <h2 className="text-xl">Facundo Javier Varas</h2>
             <h2 className="text-lg">dev front/integrateur</h2>
           </div>
-          <ul className="  xl:space-x-28 md:w-11/12  flex-col max-xl:flex max-xl:flex-row max-xl:flex-wrap max-xl:justify-around max-xl:space-x-2">
+          <ul className="  xl:space-x-28 md:w-11/12  flex-col max-xl:flex max-xl:flex-row max-xl:flex-wrap max-xl:justify-around m-1">
             {liContent.map((content) => (
               <NavLink
                 key={content[0]}

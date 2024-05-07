@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import react, { useContext, useState } from "react";
 import projects from "../classObject/portfolio/objetPortfolio";
 import { Link } from "react-router-dom";
 import DetailPage from "./detaiPage.js";
@@ -14,6 +14,7 @@ import ModalDetailpage from "../components/portfolio/modalDetailPage.js";
 import integration from "../classObject/portfolio/objectIntegrateur.js";
 import Crea2 from "../components/portfolio/crea2/crea2.js";
 import DetailPageIntagration from "./datailPage_integration.js";
+import { ColorModeContext } from "../App.js";
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -21,6 +22,7 @@ const Portfolio = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeMenuItem, setActiveMenuItem] = useState("projet");
   const [activeProjectId, setActiveProjectId] = useState(null);
+  const{ mode}=useContext(ColorModeContext)
 
   // composant d'ordre supéririeur...
 
@@ -181,23 +183,23 @@ const Portfolio = () => {
               sx={{
                 backgroundColor:
                   activeMenuItem === "projet"
-                    ? "rgba(255, 255, 255, 0.1)"
-                    : "transparent",
-                color: "",
+                    ? "rgba(255, 255, 255, 0.1) "
+                    : " ",
+                color:mode==="light"  ? "black":"",
               }}
-              text="projets"
+              text="fullstack"
               onClick={() => setActiveMenuItem("projet")}
               isActive={activeMenuItem === "projet"}
             />
             <OutlinedButtons
-              text="OnePage"
+              text="Intégration"
               onClick={() => setActiveMenuItem("integration")}
               sx={{
                 backgroundColor:
                   activeMenuItem === "integration"
                     ? " rgba(255, 255, 255, 0.1)"
-                    : "transparent",
-                color: "",
+                    : "",
+                    color:mode==="light"  ? "black":"",
               }}
               isActive={activeMenuItem === "integration"}
             />

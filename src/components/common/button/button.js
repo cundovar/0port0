@@ -16,13 +16,16 @@ export function OutlinedButtons({
   target,
   rel,
 }) {
+
+  const {mode}=useContext(ColorModeContext)
   return (
     <StyledEngineProvider injectFirst>
       <Button
         sx={sx}
         variant="text"
         onClick={onClick}
-        className={` ${isActive ? "font-bold" : ""}`}
+        className={` ${isActive ? "font-black bg-cyan-300 " : ""}
+                   ${mode==="dark" && isActive ? "bg-cyan-900":""}`}
         href={href}
         target={target}
         rel={rel}

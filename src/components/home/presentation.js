@@ -1,29 +1,73 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ColorModeContext } from "../../App";
 
 const Presentation = () => {
+  const { mode } = useContext(ColorModeContext);
+
   return (
     <div className="  w-full sm:overflow-hidden  xl:flex justify-end items-end xl:pb-1 max-md:pt-10  ">
-      <div className=" xl:pt-8 2xl:mt-6 max-sm:p-2 2xl:space-y-10 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-10   ">
+      <div className="  2xl:mt-6 max-sm:p-2 2xl:space-y-8 space-y-5 max-md:p-2 xl:p-5 2xl:p-20 pb-10  2xl:mr-10 2xl:mb-10   ">
         <p className="text-xl text-justify">
-          Création d'api simple ave Symfony ou Nodejs, CRUD.
+          Création d'api simple ave Symfony ou Nodejs,{" "}
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            CRUD{" "}
+          </span>
+          .
         </p>
         <p className="text-xl text-justify">
-          Creation d'objets ou de tableaux pour rendre la code plus dynamique et
-          le jsx plus maintenable et rendre le code propre.
+          Creation d'objets ou de tableaux pour rendre le code plus dynamique et
+          le jsx plus maintenable.{" "}
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            Cleancode
+          </span>
         </p>
         <p className="text-xl text-justify">
-          Bonne expérience en Scss pour les details mais je préfère Tailwind à
-          Bootstrap pour la construction de la page.
+          Bonne expérience en
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          > Scss </span>
+          
+            pour les details mais je préfère
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            {" "}
+            Tailwind{" "}
+          </span>{" "}
+          à
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            {" "}
+            Bootstrap{" "}
+          </span>
+          pour la construction de la page.
         </p>
         <p className="text-xl text-justify">
-          Utilisation réguliaire de bibliothèques Javascript
+          Utilisation réguliaire de
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            {" "}
+            bibliothèques Javascript{" "}
+          </span>
         </p>
         <p className="text-xl text-justify">
           Je suis conscient que devenir un développeur accompli ne se fait pas
-          en un claquement de doigts, mais cela fait déjà deux ans que je me
-          plonge intensément dans le monde du développement, explorant divers
-          langages de manière autodidacte.
+          en un claquement de doigts, mais cela fait déjà
+          <span
+            className={mode === "light" ? "text-pink-500" : "text-purple-400"}
+          >
+            {" "}
+            trois ans{" "}
+          </span>
+          que je me plonge intensément dans le monde du développement, explorant
+          divers langages de manière autodidacte.
         </p>
       </div>
     </div>

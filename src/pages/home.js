@@ -47,7 +47,7 @@ const Home = () => {
           <ResponsiveSlider />
         </div>
   
-          <div className=  "w-full max-lg:mb-10   space-y-10 lg:w-2/3 xl:w-full  lg:mb-10   " >
+          <div className=  "w-full max-lg:mb-10   space-y-10 lg:w-2/3 lg:mt-10 xl:mt-0 lg:m-auto xl:w-full  lg:mb-10   " >
             <Titre titre="Compétences"/>
               
             <Competence />
@@ -58,7 +58,7 @@ const Home = () => {
     
         </div>
 
-      <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3  border-orange-900  max-xl:m-auto  xl:overflow-hidden relative  border w-full  ">
+      <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3  border-orange-900  max-xl:m-auto  xl:overflow-hidden relative  w-full  ">
      
         <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4 mr-0  border-emerald-500 xl:overflow-y-scroll   ">
 

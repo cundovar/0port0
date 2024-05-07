@@ -10,10 +10,10 @@ const DebutLeft = () => {
   ];
 
   return (
-    <article className="w-5/12  max-lg:mt-3  max-lg:w-full  ">
-      <H3Titre titre="compétences en développement web"/>
+    <article className="w-5/12 flex items-center justify-center  max-lg:mt-3  max-lg:w-full  ">
+   
      
-      <div className="flex items-center justify-center  max-lg:h-auto h-3/4">
+      <div className="flex items-center justify-center w-full max-lg:h-auto h-3/4">
         <div className="space-y-3 w-3/4 max-lg:w-full  flex  flex-col justify-center m-auto">
           {competences.map((compe, index) => (
             <div key={index} className="flex  items-center">
