@@ -52,10 +52,6 @@ const Home = () => {
               
             <Competence />
           </div>
-       
-        
-
-    
         </div>
 
       <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3  border-orange-900  max-xl:m-auto  xl:overflow-hidden relative  w-full  ">

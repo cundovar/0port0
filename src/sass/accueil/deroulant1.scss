@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
+
+
+
+
+
 @font-face {
   font-family: 'test';
   src: url('../font/outward-borders.ttf') format('truetype');
@@ -137,6 +142,7 @@
 width: 30px;
    
     animation: moveCloud 25s linear infinite;
+    transition: transform 7.5s linear;
     font-size: 15em;
     -webkit-animation: moveCloud 25s linear infinite;
     -moz-animation: moveCloud 25s linear infinite;
@@ -200,7 +206,7 @@ width: 30px;
       transform: translate(2500%);
     }
     100% {
-      transform: translate(-1000px);
+      transform: translate(-2000px);
     }
   }
   @-webkit-keyframes moveCloud {
@@ -208,7 +214,7 @@ width: 30px;
       transform: translate(2500%);
     }
     100% {
-      transform: translate(-1000px);
+      transform: translate(-2000px);
     }
   }
   @-moz-keyframes moveCloud {
@@ -216,7 +222,7 @@ width: 30px;
       transform: translate(2500%);
     }
     100% {
-      transform: translate(-1000px);
+      transform: translate(-2000px);
     }
   }
 
@@ -260,5 +266,9 @@ width: 30px;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+  }
+
+  .largeIcon{
+    font-size:2.5rem !important;
   }
   

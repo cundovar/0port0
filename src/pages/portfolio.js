@@ -12,7 +12,7 @@ import {
 import { CSSTransition } from "react-transition-group";
 import ModalDetailpage from "../components/portfolio/modalDetailPage.js";
 import integration from "../classObject/portfolio/objectIntegrateur.js";
-import Crea2 from "../components/portfolio/crea2/crea2.js";
+
 import DetailPageIntagration from "./datailPage_integration.js";
 import { ColorModeContext } from "../App.js";
 

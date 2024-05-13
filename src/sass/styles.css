@@ -468,6 +468,7 @@ main {
   height: 20rem;
   width: 30px;
   animation: moveCloud 25s linear infinite;
+  transition: transform 7.5s linear;
   font-size: 15em;
   -webkit-animation: moveCloud 25s linear infinite;
   -moz-animation: moveCloud 25s linear infinite;
@@ -522,7 +523,7 @@ main {
     transform: translate(2500%);
   }
   100% {
-    transform: translate(-1000px);
+    transform: translate(-2000px);
   }
 }
 @-webkit-keyframes moveCloud {
@@ -530,7 +531,7 @@ main {
     transform: translate(2500%);
   }
   100% {
-    transform: translate(-1000px);
+    transform: translate(-2000px);
   }
 }
 @-moz-keyframes moveCloud {
@@ -538,7 +539,7 @@ main {
     transform: translate(2500%);
   }
   100% {
-    transform: translate(-1000px);
+    transform: translate(-2000px);
   }
 }
 .onCommence {
@@ -571,6 +572,10 @@ main {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+}
+
+.largeIcon {
+  font-size: 2.5rem !important;
 }
 
 .imgNav {
@@ -644,7 +649,7 @@ main {
     transform: translate(-200%);
   }
   100% {
-    transform: translate(1000px);
+    transform: translate(2000px);
   }
 }
 @-webkit-keyframes moveCloudReverse {
@@ -652,7 +657,7 @@ main {
     transform: translate(200%);
   }
   100% {
-    transform: translate(-1000px);
+    transform: translate(-2000px);
   }
 }
 @-moz-keyframes moveCloudReverse {
@@ -660,7 +665,55 @@ main {
     transform: translate(200%);
   }
   100% {
-    transform: translate(-1000px);
+    transform: translate(-2000px);
+  }
+}
+.caveat-h2 {
+  font-family: "Caveat", cursive !important;
+  font-optical-sizing: auto;
+  font-weight: 700 !important;
+  font-style: normal;
+}
+
+.onCommence::before {
+  content: "";
+  border-radius: 100px;
+  min-width: 312px;
+  min-height: 72px;
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.onCommence::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
   }
 }
 html {

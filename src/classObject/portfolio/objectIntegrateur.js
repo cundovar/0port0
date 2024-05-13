@@ -8,7 +8,7 @@ const integration = [
       titre: "Page e-commerce",
       tekno: "react,tailwind",
    
-      lien: "https://crea.varascundo.com/crea2",
+      lien: "https://crea2.varascundo.com/crea2",
       description: "",
       imageSrc:["/images/integration/integra1.PNG"],
       titreHover: "",
