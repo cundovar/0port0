@@ -104,10 +104,7 @@ const Portfolio = () => {
     setSelectedProject(project);
     setSelectedIntegra(null);
   };
-  const openDetailPageIntegra = (integra) => {
-    setSelectedIntegra(integra);
-    setSelectedProject(null);
-  };
+
 
   const handleClick = () => {
     setIsActive(!isActive);

@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [barre, setBarre] = useState(false);
   const location = useLocation();
-  const {mode}=useContext(ColorModeContext)
+  const { mode } = useContext(ColorModeContext);
   const [startX, setStartX] = useState(null);
   const menuContentRef = useRef(null);
 
@@ -93,7 +93,6 @@ const Navbar = () => {
       </a>
 
       <div className="fixed  max-xl:w-full z-40    ">
-        
         <div
           className={`flex flex-col max-sm:shadow-2xl  xl:mt-16 max-xl:backdrop-blur-xl pb-3  max-xl:w-full    mt-4 max-xl:mt-0  ${
             menuVisible ? "showMenu" : ""
@@ -104,7 +103,11 @@ const Navbar = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div className={` p-2 lg:hidden  ${location.pathname==='/cv' && 'md:text-black'}   `}>
+          <div
+            className={` p-2 lg:hidden  ${
+              location.pathname === "/cv" && "md:text-black"
+            }   `}
+          >
             <h2 className="text-xl">Facundo Javier Varas</h2>
             <h2 className="text-lg">dev front/integrateur</h2>
           </div>
@@ -121,22 +124,32 @@ const Navbar = () => {
                 <li
                   className={`flex items-center max-xl:m-1 max-xl:border max-xl:rounded-xl
                    ${
-                    location.pathname === content[2] ? "lg:border-b-2 lg:border-t-2 lg:border-r-2 rounded-lg  max-xl:bg-cyan-600  " : ""
-                  }
-                   ${mode==="light" ? " max-xl:bg-cyan-100":"" }`}
+                     location.pathname === content[2]
+                       ? "lg:border-b-2 lg:border-t-2 lg:border-r-2 rounded-lg  max-xl:bg-cyan-600  "
+                       : ""
+                   }
+                   ${mode === "light" ? " max-xl:bg-cyan-100" : ""}`}
                 >
                   <ButtonNavBar
                     className="2xl:text-3xl text-xl font-black xl:text-2xl max-sm:text-xl"
                     text={content[1]}
                   />
-                  {location.pathname==="/cv" &&  location.pathname === content[2] ?(
-                   <p className={`max-xl:hidden text-xl 2xl:text-3xl  ${mode==='light' ? "text-cyan-900" :"text-cyan-500"}  `}>2024</p>
-                  ):("") }
+                  {location.pathname === "/cv" &&
+                  location.pathname === content[2] ? (
+                    <p
+                      className={`max-xl:hidden text-xl 2xl:text-3xl  ${
+                        mode === "light" ? "text-cyan-900" : "text-cyan-500"
+                      }  `}
+                    >
+                      2024
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </li>
               </NavLink>
             ))}
           </ul>
-      
         </div>
       </div>
     </div>
