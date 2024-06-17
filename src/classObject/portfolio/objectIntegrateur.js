@@ -4,6 +4,23 @@ import PortfolioModel from "./modelPortfolio";
 const integration = [
     new PortfolioModel({
       id:0,
+      type: "Tailwind,React,bootstrap",
+      titre: "page accueil",
+      tekno: "react,tailwind,Bootstrap",
+   
+      lien: "https://book.varascundo.com/",
+      description: "",
+      imageSrc:["/images/integration/integra4/i-0.PNG","/images/integration/integra4/i-1.PNG","/images/integration/integra4/i-2.PNG"],
+      titreHover: "",
+      text1: "utilisation de tableaux ou d'objets JS pour une page plus dynamique",
+      text2: "fetch api open library",
+      text3: "utilisation de bootstrap et tailwind",
+      text4: "responsive",
+      alt: "integra0",
+      video:""
+    }),
+    new PortfolioModel({
+      id:1,
       type: "Tailwind,Javascript",
       titre: "Page e-commerce",
       tekno: "react,tailwind",
@@ -20,7 +37,7 @@ const integration = [
       video:""
     }),
     new PortfolioModel({
-      id:1,
+      id:2,
       type: "Javascript,Bootstrap",
       titre: "Page e-commerce",
       tekno: "html5,Bootstrap,Javascript",
@@ -37,7 +54,7 @@ const integration = [
       video:""
     }),
     new PortfolioModel({
-      id:2,
+      id:3,
       type: "Tailwind,React",
       titre: "Page d'accueil",
       tekno: "react,tailwind",

@@ -24,6 +24,26 @@ const projects = [
     }),
     new PortfolioModel({
       id:1,
+      type: "Symfony,Reactjs",
+      titre: "CheatCode perso",
+      tekno: "Symfony,Reactjs/Tailwind",
+      lien: "https://frontpensebete.varascundo.com/",
+      lienCode: "https://github.com/cundovar/cheatcode",
+      description: "App simple pour regrouper les codes,astuces, pense-bête dont je peux avoir besoin dans divers projets",
+      imageSrc: ["/images/portfolio/cheat/C1.PNG",
+      "/images/portfolio/cheat/C2.PNG",
+      "/images/portfolio/cheat/C3.PNG",
+      "/images/portfolio/cheat/C4.PNG"],
+      titreHover: "",
+      text1: "BackOffice par symfony/easyAdminBundle",
+      text2: "Tous est dynamique ( menu sous-menu, contenu des articles) et géré par la backOffice",
+      text3: "Barre de recherche",
+      text4: "Un éditeur de code pour visualiser les composants",
+      alt: "image projet cheatCode",
+      video:"/video/cheat.mp4"
+    }),
+    new PortfolioModel({
+      id:2,
       type: "react, scss",
       titre: "Mini-projet space-tourism",
       tekno: "javascript/react",
@@ -43,7 +63,7 @@ const projects = [
       video:"/video/space.mp4"
     }),
     new PortfolioModel({
-      id:2,
+      id:3,
       type: "wordpress, php",
       titre: "Maison édition",
       tekno: "php",
@@ -79,7 +99,7 @@ const projects = [
     //     alt: "image portofolio1",
     //   }),
       new PortfolioModel({
-        id:3,
+        id:4,
         type: "wordpress, php",
         titre: "Asso d'artistes",
         tekno: "php",

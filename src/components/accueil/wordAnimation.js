@@ -10,7 +10,7 @@ const WordAnimation=()=>{
         <>
           <div className="absolute h-48 bottom-0 max-sm:hidden  overflow-hidden w-10/12 max-xl:h-11/12 ">
             <i id="cloud2" className="cloud">
-              <h1 className="text-sm">REACT</h1>
+              <h1 className="text-3xl text-pink-300">ReACt</h1>
             </i>
 
             <i id="cloud3" className="cloud">
@@ -21,7 +21,7 @@ const WordAnimation=()=>{
             </i>
 
             <i id="cloud8" className="cloud">
-              <h1 className="">api</h1>
+              <h1 className="">ApI</h1>
             </i>
 
             <i id="cloud9" className="cloud">
