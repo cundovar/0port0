@@ -17,7 +17,7 @@ const Navbar = () => {
   const { mode } = useContext(ColorModeContext);
   const [startX, setStartX] = useState(null);
   const menuContentRef = useRef(null);
-
+ 
   useEffect(() => {
     switch (location.pathname) {
       case "/":
