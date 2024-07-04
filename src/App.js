@@ -7,7 +7,6 @@ import React, {
 } from "react";
 import Page from "./pages/pages";
 import "./App.css";
-import AnimationSVG from "./components/animation/animationHome";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import Button from "@mui/material/Button";
 import LightModeRoundedIcon from "@mui/icons-material/LightModeRounded";
@@ -15,7 +14,6 @@ import NightlightRoundRoundedIcon from "@mui/icons-material/NightlightRoundRound
 import { Link, BrowserRouter as Router, useLocation } from "react-router-dom"; // Correction ici
 import ArticleIcon from "@mui/icons-material/Article";
 import PhotoSizeSelectActualIcon from "@mui/icons-material/PhotoSizeSelectActual";
-import { PhotoSizeSelectLarge } from "@mui/icons-material";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import HomeIcon from "@mui/icons-material/Home";
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });

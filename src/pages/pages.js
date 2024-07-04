@@ -59,7 +59,7 @@ const Page = () => {
 
       <button className=" max-lg:hidden absolute h-10  flex items-center justify-center z-50 mt-1 cursor-pointer pt-0 right-0  ">
 
-        <a className= "transition ease-in-out delay-150  hover:opacity-100   duration-300 bg-cyan-600   p-2 rounded-xl m-1" href={getLinkPage()[0]} target="_blank">
+        <a className= "transition ease-in-out delay-150  hover:opacity-100   duration-300 bg-cyan-600   p-2 rounded-xl m-1" rel="noreferrer" href={getLinkPage()[0]} target="_blank">
           <p className=" ">voir le code de : {getLinkPage()[1]} </p>
         </a>
       </button>

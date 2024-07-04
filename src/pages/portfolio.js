@@ -1,12 +1,10 @@
 import react, { useContext, useState } from "react";
 import projects from "../classObject/portfolio/objetPortfolio";
-import { Link } from "react-router-dom";
+
 import DetailPage from "./detaiPage.js";
-import DetailPageIntegration from "./datailPage_integration.js";
-import CardCrea1 from "../components/cardCrea/cardCrea.js";
-import { Fade, Hidden, Skeleton, Stack } from "@mui/material";
+
+import {  Skeleton} from "@mui/material";
 import {
-  ButtonNavBar,
   OutlinedButtons,
 } from "../components/common/button/button.js";
 import { CSSTransition } from "react-transition-group";
@@ -41,20 +39,20 @@ const Portfolio = () => {
           }}
           unmountOnExit
         >
-          <div>
+          <div className="  overflow-y-auto h-[35rem] xl:pb-[30rem]  ">
             {activeMenuItem === project &&
               model &&
               model.map((item) => (
                 <div
                   key={item.id}
-                  className={`flex max:lg:items-center mt-10   justify-end 2xl:m-10 lg:m- ${
+                  className={`flex max:lg:items-center mt-10  justify-end 2xl:m-10 lg:m- ${
                     activeProjectId === item.id
                       ? " border-b border-l shadow-2xl opacity-100"
                       : ""
                   } `}
                 >
                   <div
-                    className="flex  justify-center w-full max-sm:w-full max-lg:w-10/12 max-lg:m-auto  xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 mt-3 2xl:mt-0  "
+                    className="flex  justify-center w-full max-sm:w-full max-lg:w-10/12 max-lg:m-auto   xl:visible lg:relative  cursor-pointer hover:opacity-100 opacity-80 max-md:opacity-100 mt-3 2xl:mt-0  "
                     onClick={() => {
                       setActiveProjectId(item.id);
                       detail(item);
