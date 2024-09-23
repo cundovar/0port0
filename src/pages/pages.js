@@ -65,7 +65,7 @@ const Page = () => {
       </button>
       <div className="absolute w-16   z-20  lg:hidden m-2 rounded-full overflow-hidden top-0  left-0">
               <Link to="/">
-              <img className="rounded-full h-full w-full object-cover " src="./images/logo/logo_accueil/logo-accueil.png" alt='logo-accueil' />
+              <img className="rounded-full h-full w-full object-cover " src="./images/logo/logo_accueil/log-ac.webp" alt='logo-accueil' />
               </Link>
             </div>
 
