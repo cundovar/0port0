@@ -26,7 +26,7 @@ function AppContent() {
     <div className="2xl:p-20 p-2 max-sm:p-0 max-sm:pl-2 max-sm:pr-2 max-xl:h-full  xl:h-screen">
       <Page />
       {/* Bouton de basculement */}
-      <div className=" absolute fixed p-0 bottom-0 max-lg:hidden  2xl:bottom-20 max-sm:border max-sm:p-1  z-30 cursor-pointer">
+      <div className=" absolute fixed p-0 bottom-0 max-xl:hidden  2xl:bottom-20 max-sm:border max-sm:p-1  z-30 cursor-pointer">
         <Button onClick={toggleColorMode}>
           {mode === "dark" ? (
             <LightModeRoundedIcon fontSize="medium" />

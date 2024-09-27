@@ -18,6 +18,7 @@ import Accueil from "./accueil";
 import Cv from "./cv";
 
 
+
 const Page = () => {
   const location = useLocation();
 

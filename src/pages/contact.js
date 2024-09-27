@@ -7,13 +7,18 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TitrePage from "../components/common/titrePage.js/TitrePage";
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
-
+import { Helmet } from "react-helmet";
 const Contact = () => {
   const item = {
     imageSrc: "images/moi.jpg",
   };
 
   return (
+    <>
+     <Helmet>
+      <title>Contact</title>
+      <meta name="description" content="Bienvenue sur la page de formulaire de contact de mon portfolio de développeur web."/>
+    </Helmet>
     <div className="w-full  z-20 flex max-xl:flex-col max-xl:pb-96   xl:overflow-hidden max-xl:h-full  lg:h-screen xl:h-auto    2xl:pr-10">
       <div className="w-1/3   flex justify-center  max-xl:w-full  items-center   border-pink-300">
         <div className="w-96 h-96 shadow-2xl  max-xl:hidden  flex justify-center  items-center">
@@ -99,6 +104,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -4,10 +4,19 @@ import Title from "../components/accueil/title";
 import Logo from "../components/accueil/logo";
 import IconAccueil from "../components/accueil/icon";
 import WordAnimation from "../components/accueil/wordAnimation";
+import { Helmet } from "react-helmet";
+
 const Accueil = () => {
 
 
   return (
+    <>
+
+
+    <Helmet>
+      <title>accueil/varascundo.com</title>
+      <meta name="description" content="Bienvenue sur la page d'accueil de mon portfolio de développeur web."/>
+    </Helmet>
     <div className="  w-full  h-full ralative  flex items-center relative justify-center">
 
 
@@ -23,6 +32,7 @@ const Accueil = () => {
         <WordAnimation />
       </div>
     </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ import ParcoursPro from "../components/cv/milieu/parcourPro";
 import ParcoursScolair from "../components/cv/milieu/parcourscolaire";
 import Header from "../components/cv/header/header";
 import { ProgressBar } from "../components/home/graphique";
-
+import { Helmet } from "react-helmet";
 const Cv = () => {
   const Lign = () => {
     return (
@@ -15,6 +15,12 @@ const Cv = () => {
   };
 
   return (
+    <>
+     <Helmet>
+      <title>CV</title>
+      <meta name="description" content="Bienvenue sur la page CV de mon portfolio de développeur web."/>
+    </Helmet>
+    
     <div
       className="w-8/12 rounded-xl mt-2xl:mr-2 xl:h-full lg:mt-20 max-2xl:mt-20 max-2xl:w-11/12 bg-neutral-50 pb-96 max-xl:w-full  flex flex-col max-xl:mt-2 items-center text-slate-800 sm:overflow-y-scroll   absolute right-0 border"
       id="cv"
@@ -44,6 +50,7 @@ const Cv = () => {
         <ProgressBar />
       </section>
     </div>
+    </>
   );
 };
 

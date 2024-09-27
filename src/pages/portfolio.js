@@ -11,6 +11,7 @@ import { CSSTransition } from "react-transition-group";
 import ModalDetailpage from "../components/portfolio/modalDetailPage.js";
 import integration from "../classObject/portfolio/objectIntegrateur.js";
 
+import { Helmet } from "react-helmet";
 import DetailPageIntagration from "./datailPage_integration.js";
 import { ColorModeContext } from "../App.js";
 
@@ -28,6 +29,26 @@ const Portfolio = () => {
   const ListModel = ({ project, model, detail}) => {
     return (
       <>
+   <Helmet>
+      <title>Présentation</title>
+      <meta name="description" content="Découvrez mon portfolio de développeur web. Consultez mes projets de développement fullstack et d'intégration, avec détails sur mes compétences et expériences." />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Portfolio ${project}",
+        "description": "Découvrez mon travail en tant que développeur web dans la section ${project} de mon portfolio.",
+        "creator": {
+          "@type": "Person",
+          "name": "Facundo Varas"
+        },
+        "thumbnailUrl": "${item.imageSrc[0]}"
+      }
+    `}
+  </script>
+    </Helmet>
         <CSSTransition
           in={activeMenuItem === project}
           timeout={5000}

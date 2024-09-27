@@ -11,6 +11,7 @@ import TipeWriter from "../utils/typeWriter";
 import CarouselPresentation from "../components/home/carouselPresentation";
 import Grid from "../components/home/grid";
 import TitrePage from "../components/common/titrePage.js/TitrePage";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [isVisible, setIsvisible] = useState(false);
@@ -29,6 +30,12 @@ const Home = () => {
   }
 
   return (
+    <>
+   <Helmet>
+      <title>Présentation</title>
+      <meta name="description" content="Bienvenue sur la page de présentation de mon portfolio de développeur web."/>
+    </Helmet>
+    
     <div className=" w-full flex lg:mt-32 xl:mt-20  border-orange-600 max:lg:m-auto max-xl:flex-col  xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-10 z-20    ">
       <TitrePage titre="A propos"/>
       <div className=" md:hidden lg:absolute ml-2  flex items-center h-28">
@@ -65,6 +72,7 @@ const Home = () => {
        
       </div>
     </div>
+    </>
   );
 };
 
