@@ -16,6 +16,21 @@ const Accueil = () => {
     <Helmet>
       <title>accueil/varascundo.com</title>
       <meta name="description" content="Bienvenue sur la page d'accueil de mon portfolio de développeur web."/>
+      <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Accueil",
+        "description": "Venez lire mes compétences en developpement web en Reactjs, javascript, intégartion de maquettes et en fullstack",
+        "creator": {
+          "@type": "Person",
+          "name": "Facundo Varas"
+        }
+       
+      }
+    `}
+  </script>
     </Helmet>
     <div className="  w-full  h-full ralative  flex items-center relative justify-center">
 

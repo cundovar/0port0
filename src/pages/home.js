@@ -33,7 +33,23 @@ const Home = () => {
     <>
    <Helmet>
       <title>Présentation</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Bienvenue sur la page de présentation de mon portfolio de développeur web."/>
+      <script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Présentation",
+        "description": "Venez lire mes compétences en developpement web en Reactjs, javascript, intégartion de maquettes et en fullstack",
+        "creator": {
+          "@type": "Person",
+          "name": "Facundo Varas"
+        }
+       
+      }
+    `}
+  </script>
     </Helmet>
     
     <div className=" w-full flex lg:mt-32 xl:mt-20  border-orange-600 max:lg:m-auto max-xl:flex-col  xl:flex-row lg:justify-between max-lg:items-center relative max-xl:mt-10 z-20    ">
