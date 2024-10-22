@@ -5,6 +5,7 @@ import Logo from "../components/accueil/logo";
 import IconAccueil from "../components/accueil/icon";
 import WordAnimation from "../components/accueil/wordAnimation";
 import { Helmet } from "react-helmet";
+import ApiRepo from "../components/api-repo/repoApi";
 
 const Accueil = () => {
 
@@ -45,6 +46,7 @@ const Accueil = () => {
         <img className="h-36  opacity-50" src="./images/accueil/tv.webp" alt="tv"/>
           <div className="absolute opacity-70 top-5 shadow-4xl  h-24 w-[8.5rem] ml-4 ">
           <VideoBackground videoSrc={"./video/vid.mp4"} />
+       
           </div>
           </div>
      
