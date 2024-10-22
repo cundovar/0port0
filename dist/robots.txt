@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:/static/
+Allow:/
+Sitemap: https://varascundo.com/sitemap.xml
