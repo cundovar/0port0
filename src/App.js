@@ -43,7 +43,7 @@ function AppContent() {
           }`}
         >
           <Link
-            k
+            
             className={`w-1/4  flex flex-col justify-center  items-center ${
               location.pathname === "/apropos" && mode === "light"
                 ? "bg-cyan-300 rounded-lg"

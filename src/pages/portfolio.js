@@ -44,7 +44,7 @@ const Portfolio = () => {
           "@type": "Person",
           "name": "Facundo Varas"
         },
-        "thumbnailUrl": "${item.imageSrc[0]}"
+        
       }
     `}
   </script>

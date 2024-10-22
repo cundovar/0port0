@@ -39,9 +39,15 @@ const Accueil = () => {
       <Logo />
       <Title />
 
-      <div className=" w-full xl:p-20 h-full flex justify-center items-center  ">
-        <div className="absolute opacity-35 -top-20 rounded-3xl max-sm:hidden -right-96">
-          <VideoBackground videoSrc={"./video/space.mp4"} />
+      <div className=" w-full xl:p-20 h-full flex  justify-center items-center  ">
+        <div className="absolute top-20 right-60   rounded-3xl max-sm:right-40 max-sm:top-20 ">
+          <div className="relative shadow-cyan-500 shadow-2xl">
+        <img className="h-36  opacity-50" src="./images/accueil/tv.webp" alt="tv"/>
+          <div className="absolute opacity-70 top-5 shadow-4xl  h-24 w-[8.5rem] ml-4 ">
+          <VideoBackground videoSrc={"./video/vid.mp4"} />
+          </div>
+          </div>
+     
         </div>
 
         <WordAnimation />
