@@ -32,10 +32,10 @@ const ModalDetailpage = ({ onClose, project }) => {
     
       modalContent = (
         <>
-          <div className="absolute  flex items-center   max-sm:pt-10 sm:pt-20 sm:pb-20 max-sm:h-full max-xl:h-auto sm:h-full  border-pink-500   w-full  max-xl:visible xl:invisible backdrop-blur-xl modal   ">
-          <div className="  relative h-auto    m-auto md:w-4/6 max-md:w-11/12   ">
+          <div className="fixed top-0 flex items-center max-sm:h-screen  max-sm:p-1 sm:pt-20 sm:pb-20  max-xl:h-auto sm:h-full  border-pink-500   w-full  max-xl:visible xl:invisible backdrop-blur-xl modal   ">
+          <div className="  relative h-auto  max-sm:w-10/12    m-auto md:w-4/6 max-md:w-11/12   ">
               <button
-                className="close-btn absolute  -top-10 z-50 right-0 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
+                className="close-btn absolute  -top-10 z-50 left-0 p-1 rounded-3xl bg-red-300 opacity-100 hover:bg-red-400"
                 onClick={onClose}
               >
                 <CloseIcon fontSize="medium" color="disabled" />

@@ -62,7 +62,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full xl:w-3/5  max-lg:pt-5   lg:h-full xl:flex justify-center items-start 2xl:items-center   justify-start max-md:visible border-blue-700   ">
+      <div className="w-full xl:w-3/5  max-lg:pt-5 xl:overflow-hidden xl:overflow-y-scroll 2xl:pt-[35rem] xl:flex justify-center items-start 2xl:items-center   justify-start max-md:visible border-blue-700   ">
         <div className=" sm:ml-2 w-full max-lg:mb-10   max-xl:visible xl:hidden ">
          
             <Titre titre="Créations"/>
@@ -70,14 +70,18 @@ const Home = () => {
           <ResponsiveSlider />
         </div>
   
-          <div className=  "w-full max-lg:mb-10   space-y-10 lg:w-2/3 lg:mt-10 xl:mt-0 lg:m-auto xl:w-full  lg:mb-10   " >
+          <div className=  "w-full max-lg:mb-10   space-y-10 lg:w-2/3 lg:mt-10 xl:mt-0 lg:m-auto xl:w-full xl:overflow-y-scroll  lg:mb-10   " >
             <Titre titre="Compétences"/>
               
             <Competence />
+      <div className=" bg-white bg-opacity-10 max-sm:hidden max-sm:absolute rounded-2xl p-3 ">
+          <ProgressBar/>
+
+      </div>
           </div>
         </div>
 
-      <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3  border-orange-900  max-xl:m-auto  xl:overflow-hidden relative  w-full  ">
+      <div className=" max-xl:pb-20  xl:w-2/5 md:w-2/3 border-orange-900  max-xl:m-auto  xl:overflow-hidden relative  w-full  ">
      
         <div className="xl:w-full   2xl:mr-0 h-full  max-md:w-full xl:mr-4 mr-0  border-emerald-500 xl:overflow-y-scroll   ">
 

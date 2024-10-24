@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="w-96 h-96 shadow-2xl  max-xl:hidden  flex justify-center  items-center">
           {item ? (
             <div className=" shadow-2xl  w-56 h-56">
-              <img src={item.imageSrc} alt="photo présentation" />
+              <img src={item.imageSrc} alt="présentation" />
             </div>
           ) : (
             <div className=" shadow-2xl  w-56 h-56">
@@ -68,9 +68,12 @@ const Contact = () => {
                 target="_blank"
               >
                 <div className="w-1/12 max-sm:mr-2"></div>
-                <div className=" opacity-50 ">
+                <div className="  relative opacity-50 ">
                   {" "}
-                  <FormatAlignJustifyIcon /> Laissez moi un message
+                  <div className="onCommence ">
+                  <FormatAlignJustifyIcon  /> Laissez moi un message
+
+                  </div>
                 </div>
               </a>
             </div>
@@ -82,6 +85,7 @@ const Contact = () => {
                 <div className="w-1/12 max-sm:mr-2"></div>
                 <div className=" opacity-50 ">
                   {" "}
+                  
                   <LinkedInIcon /> Mon profil LinkedIn
                 </div>
               </a>

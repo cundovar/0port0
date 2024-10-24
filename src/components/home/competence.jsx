@@ -56,7 +56,7 @@ const Competence = () => {
 
   return (
     <>
-      <div className="flex w-full  xl:z-50  xl:mb-32 2xl:mb-0 border-orange-700  flex-col xl:p-20 xl:pt-0  max-md:ml-1   items-center justify-center">
+      <div className="flex w-full  xl:z-50  xl:mb-32 2xl:mb-0 border-orange-700  flex-col xl:p-20 xl:pt-0 xl:pb-0  max-md:ml-1   items-center justify-center">
 
       
         <div className=" w-full xl:p-10  ">

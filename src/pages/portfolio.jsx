@@ -192,7 +192,7 @@ const Portfolio = () => {
 
       <div className=" lg:mt-10 xl:mt-0   xl:w-1/3 xl:1/2 max-xl:w-full 2xl:pt-10 lg:pt-10 ">
         
-        <div className="flex lg:space-x-3 max-xl:bg-gradient-to-l max-xl:from-cyan-600  xl:space-x-10 items-end p-2 xl:border-b max-sm:mb-5 max-xl:w-full max-xl:flex-col ">
+        <div className="flex lg:space-x-3 max-xl:bg-gradient-to-l  max-xl:from-cyan-600  xl:space-x-10 items-end p-2 xl:border-b max-sm:mb-5 max-xl:w-full max-xl:flex-col ">
           <h1>portfolio</h1>
           <div className="flex xl:flex xl:flex-col max-xl:justify-end max-md:justify-start max-xl:w-full xl:justify-center 2xl:flex-row">
             <OutlinedButtons
@@ -221,7 +221,7 @@ const Portfolio = () => {
             />
           </div>
         </div>
-        <div className="h-12/12 w-full pb-32 max-sm:pb-0    border-amber-900 xl:overflow-y-scroll">
+        <div className="h-12/12 w-full pb-32  max-sm:pb-96 max-sm:mb-96  border-amber-900 xl:overflow-y-scroll">
           <ListModel
             project="projet"
             model={projects}

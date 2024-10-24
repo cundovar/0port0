@@ -83,6 +83,14 @@ const frameworkData = {
       
     },
     {
+      label: "VueJs",
+      data: [, 0, 0, 20],
+      borderColor: "rgb(150, 219, 146)",
+      backgroundColor: "rgb(150, 219, 146)",
+      
+    },
+    
+    {
       label: "symfony",
       data: [, 0, 20, 30],
       borderColor: "rgb(175, 122, 197)",
@@ -174,12 +182,12 @@ export function ProgressBar() {
     setCurrentData(diversData);
   };
   return (
-    < div className="opacity-70 max-sm:hidden pb-32">
+    < div className="opacity-70 max-sm:hidden  pb-32">
 
       <Line options={options} data={currentData} />
 
 
-      <div className="mt-10  flex justify-center items-center">
+      <div className="mt-5   flex justify-center items-center">
     
         
         <ButtonNavBar text="Languages" onClick={handleButtonLanguage}/>
