@@ -19,7 +19,7 @@ const projects = [
       text2: "api/crud des articles,possibilité de liker les oeuvres",
       text3: "front tailwind, backOffice bootstrap twig",
       text4: "possibilité de changer texte/images de la page d'acceuil via backOffice",
-      alt: "Image projet peinture react",
+      alt: "Image projet peinture react,creation petite API symfony avec micro-service",
       video:"/video/art.mp4"
     }),
     new PortfolioModel({

@@ -33,6 +33,9 @@ const Portfolio = () => {
       <title>Présentation</title>
       <meta name="description" content="Découvrez mon portfolio de développeur web. Consultez mes projets de développement fullstack et d'intégration, avec détails sur mes compétences et expériences." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="keywords" 
+        content="intégrateur web, développeur front-end, React, Vue.js, portfolio" />
+        <meta name="google-site-verification" content="RLNuYaEsZJ1AkNoytpD26ogr0wGi2HcuxkjenfrqCbE" />
       <script type="application/ld+json">
     {`
       {

@@ -18,6 +18,7 @@ const Contact = () => {
      <Helmet>
       <title>Contact</title>
       <meta name="description" content="Bienvenue sur la page de formulaire de contact de mon portfolio de développeur web."/>
+      <meta name="google-site-verification" content="RLNuYaEsZJ1AkNoytpD26ogr0wGi2HcuxkjenfrqCbE" />
     </Helmet>
     <div className="w-full  z-20 flex max-xl:flex-col max-xl:pb-96   xl:overflow-hidden max-xl:h-full  lg:h-screen xl:h-auto    2xl:pr-10">
       <div className="w-1/3   flex justify-center  max-xl:w-full  items-center   border-pink-300">

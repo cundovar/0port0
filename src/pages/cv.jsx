@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import DebutLeft from "../components/cv/debut/left";
 import DebutRight from "../components/cv/debut/right";
 import CompetenceDigital from "../components/cv/milieu/compétenceDigital";
@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 const Cv = () => {
   const Lign = () => {
     return (
-      <div className="w-2/3 m-auto border border-2 border-yellow-500  rounded-lg "></div>
+      <div className="w-2/3 m-auto  border-2 border-yellow-500  rounded-lg "></div>
     );
   };
 
@@ -18,7 +18,8 @@ const Cv = () => {
     <>
      <Helmet>
       <title>CV</title>
-      <meta name="description" content="Bienvenue sur la page CV de mon portfolio de développeur web."/>
+      <meta name="description" content="Bienvenue sur la page CV de mon portfolio de développeur web.Intégration API front-end en React"/>
+      <meta name="google-site-verification" content="RLNuYaEsZJ1AkNoytpD26ogr0wGi2HcuxkjenfrqCbE" />
     </Helmet>
     
     <div

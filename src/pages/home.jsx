@@ -34,7 +34,9 @@ const Home = () => {
    <Helmet>
       <title>Présentation</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Bienvenue sur la page de présentation de mon portfolio de développeur web."/>
+      <meta name="description" content="Bienvenue sur la page de présentation de mon portfolio de développeur web freelence.Avec une expertise en React et Vue.js, je conçois des applications dynamiques.Création d'app reactjs VueJs, "/>
+      <meta name="keywords" content="intégrateur web React, développeur front-end Vue.js, freelance JavaScript, création de sites responsives, optimisation de performance front-end,optimisation de performance pour sites React ile de france" />
+ 
       <script type="application/ld+json">
     {`
       {

@@ -16,7 +16,7 @@ const integration = [
     text2: "VueJs",
     text3: "",
     text4: "",
-    alt: "emploi",
+    alt: "intégration tailwind vuejs",
     video:""
   }),
     new PortfolioModel({
@@ -33,7 +33,7 @@ const integration = [
       text2: "fetch api open library",
       text3: "utilisation de bootstrap et tailwind",
       text4: "responsive",
-      alt: "integra0",
+      alt: "intégration d'une page d'accueil bibliothèque reactjs",
       video:""
     }),
     new PortfolioModel({
@@ -50,7 +50,7 @@ const integration = [
       text2: "react",
       text3: "",
       text4: "",
-      alt: "integra1",
+      alt: "integration pas ecommerce",
       video:""
     }),
     new PortfolioModel({
