@@ -57,7 +57,7 @@ const Presentation = () => {
             bibliothèques Javascript{" "}
           </span>
         </p>
-        <p className="text-xl text-justify">
+        {/* <p className="text-xl text-justify">
           Je suis conscient que devenir un développeur accompli ne se fait pas
           en un claquement de doigts, mais cela fait déjà
           <span
@@ -68,7 +68,7 @@ const Presentation = () => {
           </span>
           que je me plonge intensément dans le monde du développement, explorant
           divers langages de manière autodidacte.
-        </p>
+        </p> */}
       </div>
     </div>
   );

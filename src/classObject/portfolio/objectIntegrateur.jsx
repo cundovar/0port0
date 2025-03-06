@@ -36,23 +36,23 @@ const integration = [
       alt: "intégration d'une page d'accueil bibliothèque reactjs",
       video:""
     }),
-    new PortfolioModel({
-      id:2,
-      type: "Tailwind,Javascript",
-      titre: "Page e-commerce",
-      tekno: "react,tailwind",
+    // new PortfolioModel({
+    //   id:2,
+    //   type: "Tailwind,Javascript",
+    //   titre: "Page e-commerce",
+    //   tekno: "react,tailwind",
    
-      lien: "https://crea2.varascundo.com/crea2",
-      description: "",
-      imageSrc:["/images/integration/integra1.PNG"],
-      titreHover: "",
-      text1: "Tailwind,Javascript",
-      text2: "react",
-      text3: "",
-      text4: "",
-      alt: "integration pas ecommerce",
-      video:""
-    }),
+    //   lien: "https://crea2.varascundo.com/crea2",
+    //   description: "",
+    //   imageSrc:["/images/integration/integra1.PNG"],
+    //   titreHover: "",
+    //   text1: "Tailwind,Javascript",
+    //   text2: "react",
+    //   text3: "",
+    //   text4: "",
+    //   alt: "integration pas ecommerce",
+    //   video:""
+    // }),
     new PortfolioModel({
       id:3,
       type: "Javascript,Bootstrap",
@@ -69,24 +69,25 @@ const integration = [
       text4: "",
       alt: "",
       video:""
-    }),
-    new PortfolioModel({
-      id:4,
-      type: "Tailwind,React",
-      titre: "Page d'accueil",
-      tekno: "react,tailwind",
+    })
+    // ,
+    // new PortfolioModel({
+    //   id:4,
+    //   type: "Tailwind,React",
+    //   titre: "Page d'accueil",
+    //   tekno: "react,tailwind",
      
-      lien: "https://crea.varascundo.com/crea3",
-      description: "",
-      imageSrc:["/images/integration/integra2.PNG"],
-      titreHover: "",
-      text1: "react,tailwind",
-      text2: "ui material",
-      text3: "",
-      text4: "",
-      alt: "integra2",
-      video:""
-    }),
+    //   lien: "https://crea.varascundo.com/crea3",
+    //   description: "",
+    //   imageSrc:["/images/integration/integra2.PNG"],
+    //   titreHover: "",
+    //   text1: "react,tailwind",
+    //   text2: "ui material",
+    //   text3: "",
+    //   text4: "",
+    //   alt: "integra2",
+    //   video:""
+    // }),
 
 
 

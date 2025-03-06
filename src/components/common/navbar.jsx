@@ -141,7 +141,7 @@ const Navbar = () => {
                         mode === "light" ? "text-cyan-900" : "text-cyan-500"
                       }  `}
                     >
-                      2024
+                      2025
                     </p>
                   ) : (
                     ""

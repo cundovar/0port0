@@ -3,7 +3,7 @@ import H3Titre from "../h3titre";
 
 const DebutLeft = () => {
   const competences = [
-    "reponsive design",
+    "responsive design",
     "Model Vue Controller",
     "StoryBook",
     "composants réutilisables",

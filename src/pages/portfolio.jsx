@@ -100,7 +100,7 @@ const Portfolio = () => {
                       
                       {item ? (
                         <img
-                          className=" h-20 w-20 rounded-full shadow-3xl"
+                          className=" h-20 w-20 object-cover rounded-full shadow-3xl"
                           src={item.imageSrc[0]}
                           alt={item.titre}
                         />
